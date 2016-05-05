@@ -18,9 +18,9 @@
 		
 		<div class="TituloActa">
 
-			<h4>Ajuntament de L’Hospitalet
-				Àrea de Seguretat, Convivència i Civisme</br>
-				Servei de la Guàrdia Urbana
+			<h4>Ayuntamiento de L’Hospitalet
+				Area de Seguredad, Convivencia y Civismo</br>
+				Servicio de la Guardia Urbana
 			</h4>
 
 		</div>	

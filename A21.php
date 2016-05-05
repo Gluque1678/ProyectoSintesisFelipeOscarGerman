@@ -18,9 +18,9 @@
 			
 			<div class="TituloActa">
 
-			<h4>Ajuntament de L’Hospitalet
-				Àrea de Seguretat, Convivència i Civisme</br>
-				Servei de la Guàrdia Urbana
+			<h4>Ayuntamiento de L’Hospitalet
+				Area de Seguredad, Convivencia y Civismo</br>
+				Servicio de la Guardia Urbana
 			</h4>
 
 			</div>
@@ -68,7 +68,7 @@
 
 				<label class="" for="permiso">Número de permiso de conducir</label>
 				<input id="permiso" name= "permiso" class="nombre" maxlength="255" size="24" value=""/></br></br>
-				<hr style="margin-top: -10px;/>
+				<hr style="margin-top: -10px;"/>
 
 				<label class="" for="">Sexo</label></br>
 				<input id="sexo" name="sexo" class="sexo1" type="radio" value="1" />
