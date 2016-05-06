@@ -11,7 +11,8 @@ Tareas a realizar:
 - Creación de pdfs a partir de datos de la base de datos
 - Impresión de pdfs
 
-Diario de tareas
+Diario de tareas.
+
 2/5/2016
 
 Análisis del proyecto seleccionado.
