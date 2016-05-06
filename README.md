@@ -1,7 +1,7 @@
 # ProyectoSintesisFelipeOscarGerman
 Sintesis
 
-Tareas a realizar
+Tareas a realizar:
 - BBDD
 - Login Ajax
 - Búsqueda por dos palabras clave
