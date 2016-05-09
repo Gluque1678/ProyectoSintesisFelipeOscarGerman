@@ -3,10 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>T27</title>
-<link rel="stylesheet" type="text/css" href="styles.css" media="all">
+<meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+
 <!--<script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="validaFormulario.js"></script>-->
+
 </head>
+
 <body id="main_body" >
 
 	<img id="logo" src="img/Ajun.jpg" width="60px" height="50px" alt="">
@@ -14,9 +21,9 @@
 	
 
 		
-		<form id="T27" class="T27"  method="" action="" onsubmit="return validaFormulario();">
+		<form class="form-incline" class="T27"  method="" action="" onsubmit="return validaFormulario();">
 		
-		<div class="TituloActa">
+		<div class="form-group">
 
 			<h4>Ayuntamiento de L’Hospitalet
 				Area de Seguredad, Convivencia y Civismo</br>
@@ -26,38 +33,146 @@
 		</div>	
 
 		<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
+		</br></br>
+		
 
-		<div id="datos_acta">
+
+		<div class="row">
+			<div class="col-xs-2"
 				
-				<h3>Datos del acta</h3>
-				<hr style="margin-top: -20px;" />
-
-				<label class="diligencias" for="">Numero de Diligencias</label></br>
-				<input id="Numero" name= "diligencias" class="dili" maxlength="255" size="24" value=""/></br></br>
-				<hr style="margin-top: -10px;" />
-
-				<label class="agentes" for="">Agentes actuantes</label>
-				<input id="tip" name= "agentes" class="agentes" maxlength="255" size="24" value=""/>
-
-				<label class="dia" for="">Dia</label>
-				<input id="dia" name= "dia" class="dia" maxlength="255" size="24" value=""/>
-
-				<label class="hora" for="">Hora</label>
-				<input id="hora" name= "hora" class="hora" maxlength="255" size="24" value=""/>
-
-				<hr style="margin-top: 10px;"/>
-
-				<label class="lugar" for="">Lugar</label>
-				<input id="lugar" name= "lugar" class="lugar" maxlength="255" size="24" value=""/>
-				<hr  />
-
+				<label class="sr-only" for="NºDiligencias"></label>
+				<input type="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+				
 			</div>
 
+			<div class="col-xs-1">
+				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+			</div>
+
+			<div class="col-xs-1">
+				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+			</div>
+
+			<div class="col-xs-1">
+			<input type="dia" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+			</div>
+
+			<div class="col-xs-1">
+			<input type="hora" name= "hora" class="form-control" placeholder="hora" value=""/>
+			</div>
+
+			<div class="col-xs-3">
+			<input type="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+			</div>
+
+		</div>
+
+		</br>
+
+		
 			<div class="Acta generica">
 			
-			<label for=""></label><h3 style="margin-top: -5px;">Acta genérica de alcohol y/o drogas tóxicas,estupefacientes o substancias psicotrópicas</h3>
-			<hr style="margin-top: -10px;" />
+				<label for=""></label><h3 style="margin-top: -5px;">Acta genérica de alcohol y/o drogas tóxicas,estupefacientes o substancias psicotrópicas</h3>
+			</div>
 			
+
+			<div class="checkbox">
+			
+				<label>
+					<input type="checkbox" value="">
+					Control preventivo
+				</label>
+			</div>
+
+
+
+
+
+
+
+
+
+			<div class="row">
+			<div class="col-xs-2"
+				
+				<label class="sr-only" for="NºDiligencias"></label>
+				<input type="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+				
+			</div>
+
+			<div class="col-xs-1">
+				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+			</div>
+
+			<div class="col-xs-1">
+				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+			</div>
+
+			<div class="col-xs-1">
+			<input type="dia" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+			</div>
+
+			<div class="col-xs-1">
+			<input type="hora" name= "hora" class="form-control" placeholder="hora" value=""/>
+			</div>
+
+			<div class="col-xs-3">
+			<input type="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+			</div>
+
+		</div>
+
+		</br>
+
+		
+			<div class="Acta generica">
+			
+				<label for=""></label><h3 style="margin-top: -5px;">Acta genérica de alcohol y/o drogas tóxicas,estupefacientes o substancias psicotrópicas</h3>
+			</div>
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<label for="actuación">Actuación originada por</label>
 			
 			<input id="control" name="control" class="control" maxlength="5" value="" type="radio">
@@ -86,11 +201,11 @@
 			<label for="requerida"><h3 style="margin-top: -5px;">Datos de la persona requerida</h3></label>
 			<hr style="margin-top: -10px; "/>
 
-			<label class="nombre" for="">Nombre y</label>
+			<label class="nombre" for="">Nombre </label>
 			<input id="nombre" name= "nombre" class="nombre" maxlength="255" size="24" value=""/>
 
 			<label class="apellidos" for="">Apellidos</label>
-			<input id="apellidos" name= "apellidos" class="apellidos" maxlength="255" size="24" value=""/>
+			<input id="apellidos" name= "apellidos" class="apellidos" maxlength="255" size="40" value=""/>
 			<hr style="margin-top: 10px; "/>
 		</div>
 
@@ -172,6 +287,8 @@
 		<label for="ley">En cumplimiento de lo establecido en el artículo 5 de la Ley Orgánica 15/1999, de 13 de diciembre, de protección de datos de carácter personal, le informamos que los datos recogidos en este formulario se incorporarán a un fichero automatizado propiedad de este Ayuntamiento con el fin de tramitar las diligencias administrativas pertinentes. En cuanto al tratamiento y al uso de estos datos de carácter personal, le recordamos que en cualquier momento puede ejercer los derechos de acceso, rectificación, cancelación y oposición ante la Oficina de Atención al ciudadano (calle de Girona, 10, planta baja).
 		</label>
 		
-
+		<script src="js/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+		</script>
 	</body>
 </html>

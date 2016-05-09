@@ -3,9 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>T15</title>
-<link rel="stylesheet" type="text/css" href="styles.css" media="all">
+<meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
 <!--<script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="validaFormulario.js"></script>-->
+
+
 </head>
 <body id="main_body" >
 
@@ -81,6 +86,10 @@
 			Ciudadano (calle de Girona, 10, planta baja).
 
 			</div>
+
+			<script src="js/jquery.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+			</script>
 
 </body>
 </html>

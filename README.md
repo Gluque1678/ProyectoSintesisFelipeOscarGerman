@@ -1,36 +1,24 @@
 # ProyectoSintesisFelipeOscarGerman
 Sintesis
 
-Tareas a realizar:
-- BBDD
-- Login Ajax
-- B煤squeda por dos palabras clave
-- Mostrar datos de la bbdd
-- Formularios de cada acta
-- Insert en bbdd en cada formulario
-- Creaci贸n de pdfs a partir de datos de la base de datos
-- Impresi贸n de pdfs
-
-Diario de tareas.
-
 2/5/2016
 
-An谩lisis del proyecto seleccionado.
-Identificaci贸n de las necesidades del proyecto.
-Obtenci贸n de datos de uso por parte del usuario.
+An醠isis del proyecto seleccionado.
+Identificaci髇 de las necesidades del proyecto.
+Obtenci髇 de datos de uso por parte del usuario.
 Requisitos para la base de datos.
 
 3/5/2016
 
-Realizaci贸n de base de datos.
-Distribuci贸n de tareas en el equipo.
+Realizaci髇 de base de datos.
+Distribuci髇 de tareas en el equipo.
 
 4/5/2016
 
-Insercci贸n de campos en la base de datos.
-Realizaci贸n de formularios A21, T27.
+Insercci髇 de campos en la base de datos.
+Realizaci髇 de formularios A21, T27.
 
 5/05/2016
 
-Relaci贸n de las tablas de la base de datos.
-Realizaci贸n de formularios T15,N08,A13.
+Relaci髇 de las tablas de la base de datos.
+Realizaci髇 de formularios T15,N08,A13.
