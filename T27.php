@@ -50,17 +50,25 @@
 			</div>
 
 			<div class="col-xs-1">
-				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" /></br>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-xs-2">
+			<input type="date" name= "dia" class="form-control" placeholder="Fecha" value=""/>
 			</div>
 
 			<div class="col-xs-1">
-			<input type="dia" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+			<input type="time" name= "hora" class="form-control" placeholder="hora" value=""/></br>
 			</div>
 
-			<div class="col-xs-1">
-			<input type="hora" name= "hora" class="form-control" placeholder="hora" value=""/>
-			</div>
-
+		</div>
+		
+		<div class="row">
+			
 			<div class="col-xs-3">
 			<input type="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
 			</div>
@@ -75,217 +83,179 @@
 				<label for=""></label><h3 style="margin-top: -5px;">Acta genérica de alcohol y/o drogas tóxicas,estupefacientes o substancias psicotrópicas</h3>
 			</div>
 			
-
-			<div class="checkbox">
+			
+			<div class="radio">
 			
 				<label>
-					<input type="checkbox" value="">
+					<label for=""></label><h4 style="margin-top: -5px;">Actuación originada por</h4>
+					
+				</label>
+
+
+
+				<label>
+					
+					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
 					Control preventivo
 				</label>
+
+				<label>
+					
+					<input type="radio" name="opciones" id="opciones_2"value="opcion_2" checked>
+					Accidente de transit
+				</label>
+
+				<label>
+					
+					<input type="radio" name="opciones" id="opciones_3"value="opcion_3" checked>
+					Infracción del Reglamento
+				</label>
+
+				<label>
+					
+					<input type="radio" name="opciones" id="opciones_4"value="opcion_4" checked>
+					Simptomas
+				</label>
+
 			</div>
 
 
 
 
+			<div class="radio">
+			
+				<label>
+					<label for=""></label><h4 style="margin-top: -5px;">Datos de la persona requerida</h4>
+					
+				</label>
+
+			</div>
 
 
-
-
-
-			<div class="row">
+		<div class="row">
 			<div class="col-xs-2"
 				
-				<label class="sr-only" for="NºDiligencias"></label>
-				<input type="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+				<label class="sr-only" for=""></label>
+				<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
 				
 			</div>
 
-			<div class="col-xs-1">
-				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+			<div class="col-xs-4">
+				<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
 			</div>
 
-			<div class="col-xs-1">
-				<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+			<div class="col-xs-2">
+				<input type="número " name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
 			</div>
-
-			<div class="col-xs-1">
-			<input type="dia" name= "dia" class="form-control" placeholder="Fecha" value=""/>
-			</div>
-
-			<div class="col-xs-1">
-			<input type="hora" name= "hora" class="form-control" placeholder="hora" value=""/>
-			</div>
-
-			<div class="col-xs-3">
-			<input type="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
-			</div>
-
+			</br></br></br>
+			
 		</div>
 
-		</br>
-
-		
-			<div class="Acta generica">
-			
-				<label for=""></label><h3 style="margin-top: -5px;">Acta genérica de alcohol y/o drogas tóxicas,estupefacientes o substancias psicotrópicas</h3>
-			</div>
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<label for="actuación">Actuación originada por</label>
-			
-			<input id="control" name="control" class="control" maxlength="5" value="" type="radio">
-			<label for="control">Control preventivo</label>
-			
-			<input id="accidente" name="accidente" class="accidente" maxlength="5" value="" type="radio">
-			<label for="accidente">Accidente de tránsit</label>
-			
-			<input id="infracción" name="infracción" class="infracción" maxlength="5" value="" type="radio">
-			<label for="Infracción">Infracción del Reglamento</label>
-			
-			<input id="simptomas" name="simptomas" class="simptomas" maxlength="5" value="" type="radio">
-			<label for="simptomas">Simptomas</label>
-
-
-			<hr style="margin-top: 10px; "/>
-			
-
-		</div>
-
-
-
-
-		<div class="requerida">
-
-			<label for="requerida"><h3 style="margin-top: -5px;">Datos de la persona requerida</h3></label>
-			<hr style="margin-top: -10px; "/>
-
-			<label class="nombre" for="">Nombre </label>
-			<input id="nombre" name= "nombre" class="nombre" maxlength="255" size="24" value=""/>
-
-			<label class="apellidos" for="">Apellidos</label>
-			<input id="apellidos" name= "apellidos" class="apellidos" maxlength="255" size="40" value=""/>
-			<hr style="margin-top: 10px; "/>
-		</div>
 
 		<div class="información de los derechos">
 		<label for="información de los derechos"><h3 style="margin-top: -5px;">Información de los derechos</h3></label>
-		<hr style="margin-top: -10px; "/><br><br></br></br>
-
+		
 		</div>	
 
-		<hr></hr>
+		<div class="radio">
 
-		<div class="alegaciones">
+			<label for="alegaciones"><h3 style="margin-top: -5px;">Alegaciones y derechos de la persona requerida delante la realización de las pruevas de detención</h3>
+			</label></br>
 
-			<label for="alegaciones"><h3 style="margin-top: -5px;">Alegaciones y derechos de la persona requerida delante la realización de las pruevas de detención</h3></label>
-			<hr style="margin-top: -10px; "/>
+			<label for="expresamente">La persona ha manifestado que
+			</label>
+			</br></br>
 
-			<label for="expresamente">La persona ha manifestado expresamente que</label>
-			<input id="expresamente" name="expresamente" class="expresamente" maxlength="5" value="" type="radio">
-			<label for="si">Si   /</label>
+			<input type="radio" style="margin-left: 10px;" name="opciones" id="opciones_1" value="opcion_1" checked>
+			<label for="si">&nbsp;Si   
+			</label>
 
-			<input id="accidente" name="accidente" class="accidente" maxlength="5" value="" type="radio">
-			<label for="accidente">No quiere hacer la prueva de contraste</label></br>
-
-			<label for="expresamente1">La persona ha manifestado expresamente que</label>
-			<input id="expresamente1" name="expresamente1" class="expresamente1" maxlength="5" value="" type="radio">
-			<label for="si">Si   /</label>
-
-			<input id="accidente1" name="accidente1" class="accidente1" maxlength="5" value="" type="radio">
-			<label for="accidente1">No quiere acompañar de forma voluntaria a los agentes a un centre hospitalario o instituto médico para hacer la prueva que el personal sanitario estime adecuado, con relación a la detección de drogas toxicas, estupefacientes o substancias psicotrópicas</label></br>
-
-			<input id="manifestar" name="manifestar" class="manifestar" maxlength="5" value="" type="radio">
-			<label for="manifestar"> Quiere manifestar lo siguiente:</label>
-			<hr style="margin-top: 20px; "/>
+			<input type="radio" style="margin-left: 10px;" name="opciones" id="opciones_2" value="opcion_2" checked>
+			<label for="si">&nbsp;No quiere hacer la prueva de contraste
+			</label>
 
 		</div>
 
+	
 		<div class="negativa">
 
-			<label for="negativa"><h3>Negativa a someterse a las pruevas de detección</h3></label>
-			<hr style="margin-top: 10px; "/>
-
-			<label for="texto">Se hace constar que a las    horas de la fecha indicada se ha requerido la persona reseñada para que se sometiera a las pruebas legalmente establecidas, a fin de comprobar las tasas de alcoholemia y la presencia de drogas tóxicas, estupefacientes y sustancias psicotrópicas a las que se refiere el artículo 379 del Código penal, que ha sido informada sobre los derechos de realización de las pruebas y que se ha negado.
-			Tras haber sido informada de las consecuencias de la negativa a hacer la prueba, la persona requerida ha manifestado expresamente que no quiere hacer la prueba de detección y se reafirma en la negativa de someterse a ella.
+			<label for="negativa"><h3>Negativa a someterse a las pruebas de detección</h3></label>
+			
+			<label for="texto">Se hace constar que a las <input type="time" />   horas de la fecha indicada se ha requerido la persona reseñada para que se sometiera a las pruebas legalmente establecidas, a fin </br>
+			de comprobar las tasas de alcoholemia y la presencia de drogas tóxicas, estupefacientes y sustancias psicotrópicas a las que se refiere el artículo 379 </br> del Código penal, que ha sido informada sobre los derechos de realización de las
+			 pruebas y que se ha negado.Tras haber sido informada de las consecuencias </br>
+			 de la negativa a hacer la prueba, la persona requerida ha manifestado expresamente que no quiere hacer la prueba de detección y se reafirma en la negativa de someterse a ella.
    		   </label>
    		</div>
 
-   		   <hr style="margin-top: 10px; "/>
-
+   		  
    		<div class="autorizacion">
 
    		   <label for="autorización"><h3>Autorización para substituir la persona conductora</h3></label>
-   		   <hr style="margin-top: 10px; "/>
+   		  </br>
 
-   		   <input id="autorizacion" name="autorizacion" class="autorizacion" maxlength="5" value="" type="radio">
-   		   <label for="autorizacion">Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br>
-		   Nombre y apellidos &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		   Núm. de permiso de conducir &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		   Clase  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-			
-		   <hr style="margin-top: 20px; "/>
+   		</div>
+
+   		<div class="autorizacion">
+
+   		<label class="checkbox-inline">
+  			<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br></br>
+		</label>
+		
+		</div>
+
+
+		<div class="row">
+			<div class="col-xs-2"
+				
+				<label class="sr-only" for=""></label>
+				<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+				
+			</div>
+
+			<div class="col-xs-4">
+				<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+			</div>
+
+			<div class="col-xs-2">
+				<input type="número " name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+			</div>
+
+			<div class="col-xs-2">
+				<input type="clase " name= "clase" class="form-control" placeholder="Clase" /></br>
+			</div>
 
 		</div>
+
 
 		<div class="firmas">
 
 		<label for="firmas">Firmas</label>
-		<hr style="margin-top: 10px; "/>
+		</br>
 
-		<label for="firmas">Firmo este impreso entrega, como prueba de conformidad, junto con las personas que han intervenido.</br>
-		Agentes actuantes &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		Persona requerida &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-		Testigo (si los hay) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		Persona conductora sustituta  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+		<label for="firmas">Firmo este impreso entrega, como prueba de conformidad, junto con las personas que han intervenido.</br></br>
+		
+		<div class="row">
+			<div class="col-xs-3"
+				
+				<label class="sr-only" for=""></label>
+				<input type="nombre" name= "nombre" class="form-control" placeholder="Agentes actuantes"/>
+				
+			</div>
 
+			<div class="col-xs-3">
+				<input type="requerida" name= "requerida" class="form-control" placeholder="Persona requerida" />
+			</div>
 
+			<div class="col-xs-3">
+				<input type="testigo " name= "testigo" class="form-control" placeholder="Testigo" />
+			</div>
+
+			<div class="col-xs-3">
+				<input type="número " name= "número" class="form-control" placeholder="Persona conductora" />
+			</div>
 		</div>
 
-		<hr style="margin-top: 60px; "/>
-		<label for="ley">En cumplimiento de lo establecido en el artículo 5 de la Ley Orgánica 15/1999, de 13 de diciembre, de protección de datos de carácter personal, le informamos que los datos recogidos en este formulario se incorporarán a un fichero automatizado propiedad de este Ayuntamiento con el fin de tramitar las diligencias administrativas pertinentes. En cuanto al tratamiento y al uso de estos datos de carácter personal, le recordamos que en cualquier momento puede ejercer los derechos de acceso, rectificación, cancelación y oposición ante la Oficina de Atención al ciudadano (calle de Girona, 10, planta baja).
-		</label>
 		
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">

@@ -1,0 +1,35 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+body{
+
+	font-family: 'Asap','sans-serif';
+
+}
+
+
+.ibody{
+
+	background-color: red; 
+	width: 500px;
+}
+
+
+header, section, footer, aside, nav, article, figure, figcaption,
+hgroup{
+display: block;
+}
+
+div.texto {
+
+text-align: justify;
+}
+h4 {
+
+	margin-left: 20px;
+}
+
