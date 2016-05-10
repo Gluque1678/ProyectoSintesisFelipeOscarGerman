@@ -2,6 +2,7 @@
 
 session_start();
 include("conexion.proc.php");
+include("buscador.php");
 
 $qry1 = "SELECT * FROM dni WHERE Num='$_REQUEST[Num]'";
 
@@ -39,5 +40,6 @@ else {
 	// echo 'false';
 }
 
+	
 
 ?>

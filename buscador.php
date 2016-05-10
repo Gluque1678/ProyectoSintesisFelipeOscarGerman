@@ -34,6 +34,6 @@ include 'conexion.proc.php';
 			}
 	?>!-->
 		<br>
-		<a href="logout.php">LOGOUT</a>
+		
 	</body>
 </html>
