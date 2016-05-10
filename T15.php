@@ -6,86 +6,137 @@
 <meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 <!-- Latest compiled and minified JavaScript -->
+
 <!--<script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="validaFormulario.js"></script>-->
 
-
 </head>
-<body id="main_body" >
 
-	<img id="logo" src="img/Ajun.jpg" width="60px" height="50px" alt="">
+<body id="main_body" style="background-color:#F5F6CE";>
+
+	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
+			<div class="panel-heading">
+				<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
+			
+			<form class="form-incline" class="T15"  method="" action="" onsubmit="return validaFormulario();">
 		
-	
+			<div class="form-group">
+				<div id="texto">
+					AYUNTAMIENTO DEL HOSPITALET DE LLOBREGAT
+					AREA DE SEGUREDAD, CONVIVENCIA Y CIVISMO
+					SERVICIO DE LA GUARDIA URBANA
+			
+				</div>
+
+			</div>	
+		</div>
 
 		
-		<form id="T27" class="T27"  method="" action="" onsubmit="return validaFormulario();">
-		
-		<div class="TituloActa">
+		<div class="panel panel-success">
+			<div class="panel-heading">
 
-			<h4>Ayuntamiento de L’Hospitalet
-				Area de Seguredad, Convivencia y Civismo</br>
-				Servicio de la Guardia Urbana
-			</h4>
-
-		</div>	
-
-		<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
-
-		<div id="datos_acta">
+				<div id="datos_acta">
 				
 				<h3>Datos del acta</h3>
-				<hr style="margin-top: -20px;" />
-
-				<label class="diligencias" for="">Numero de Diligencias</label></br>
-				<input id="Numero" name= "diligencias" class="dili" maxlength="255" size="24" value=""/></br></br>
-				<hr style="margin-top: -10px;" />
-
-				<label class="agentes" for="">Agentes actuantes</label>
-				<input id="tip" name= "agentes" class="agentes" maxlength="255" size="24" value=""/>
-
-				<label class="dia" for="">Dia</label>
-				<input id="dia" name= "dia" class="dia" maxlength="255" size="24" value=""/>
-
-				<label class="hora" for="">Hora</label>
-				<input id="hora" name= "hora" class="hora" maxlength="255" size="24" value=""/>
-
-				<hr style="margin-top: 10px;"/>
-
-				<label class="lugar" for="">Lugar</label>
-				<input id="lugar" name= "lugar" class="lugar" maxlength="255" size="24" value=""/>
 				
-				<hr style="margin-top: 10px;" />
+				</div>
 
+
+				<div class="row">
+					<div class="col-xs-2"
+				
+						<label class="sr-only" for="NºDiligencias"></label>
+						<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+				
+					</div>
+
+					<div class="col-xs-1">
+						<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente 1" />
+					</div>
+
+					<div class="col-xs-1">
+						<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente 2" /></br>
+					</div>
+
+					<div class="col-xs-2">
+						<input type="date" id="date" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+					</div>
+
+
+					<div class="col-md-2">
+						<input type="time" id="time" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
+					</div>
+
+					<div class="col-xs-3">
+						<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+					</div>
+				</div>
+
+		
 			</div>
-
-
-			<div id="datos_acta">
+		</div>
 
 
 
-			<label class="tickets" for=""><h3>Hoja de comprovacion de pruevas de alcoholemia</h3></label>
-			<hr style="margin-top: 10px;" />
+		<div class="panel panel-danger">
+			<div class="panel-heading">
 
-			<label class="datos" for="">Apellidos y nombres de la persona</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<label class="datos" for="">Tipo de documento de identidad y número</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<hr style="margin-top: 25px;" />
+				<div class="radio">
+				
+					<label>
+						<label for=""></label><h4 style="margin-top: -5px;">Datos de la persona requerida</h4>
+						
+					</label>
 
-			</div>
+				</div>
 
-			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+				<div class="row">
+					<div class="col-xs-2">
+						<label class="sr-only" for=""></label>
+						<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+					</div>
+
+					<div class="col-xs-2">
+						<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+					</div>
+
+					<div class="col-xs-3">
+						<input type="text" id="número" name= "número" class="form-control" placeholder="Tipo de documento identificativo y número" />
+					</div>
+					</br></br></br>
+				</div>
+
+
+		<div class="panel panel-warning">
+			<div class="panel-heading">	
+				<div class="row">
+					
+
+					<div class="col-xs-2">
+						<input type="text" id="prueva 1" name= "prueva1" class="form-control" placeholder="Prueva 1" />
+					</div>
+
+					<div class="col-xs-2">
+						<input type="text" id="prueva2" name= "prueva2" class="form-control" placeholder="Prueva 2" /></br>
+					</div>
+
+					
 			
-			
+				</div>
 
-			<div id="pie">
-
-			<hr style="margin-top: 25px;" />
-			En cumplimiento de lo establecido en el artículo 5 de la Ley Orgánica 15/1999, de 13 de diciembre, de protección de datos de carácter personal, le informamos que los datos recogidos en
-			este formulario se incorporarán a un fichero automatizado propiedad de este Ayuntamiento con el fin de tramitar las diligencias administrativas pertinentes. En cuanto al tratamiento y al uso
-			de estos datos de carácter personal, le recordamos que en cualquier momento puede ejercer los derechos de acceso, rectificación, cancelación y oposición ante la Oficina de Atención al
-			Ciudadano (calle de Girona, 10, planta baja).
-
+		
 			</div>
+		</div>
+
+
+
+			
+			</div>	
+		</div>
+	</div>
 
 			<script src="js/jquery.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">

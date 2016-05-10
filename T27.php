@@ -14,9 +14,10 @@
 
 </head>
 
-<body id="main_body" >
+<body id="main_body" style="background-color:#F5F6CE";>
 
-	<div class="panel panel-primary">
+	
+	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 		<div class="panel-heading">
 				<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
 			
@@ -50,16 +51,16 @@
 					<div class="col-xs-2"
 				
 						<label class="sr-only" for="NºDiligencias"></label>
-						<input type="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
-				
+						<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+					
 					</div>
 
 					<div class="col-xs-1">
-						<input type="tip1" name= "agentes" class="form-control" placeholder="Agente 1" />
+						<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente 1" />
 					</div>
 
 					<div class="col-xs-1">
-						<input type="tip2" name= "agentes" class="form-control" placeholder="Agente 2" /></br>
+						<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente 2" /></br>
 					</div>
 
 					<div class="col-xs-2">
@@ -67,12 +68,12 @@
 					</div>
 
 
-					<div class="col-xs-1">
+					<div class="col-xs-2">
 						<input type="time" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
 					</div>
 
 					<div class="col-xs-3">
-						<input type="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+						<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
 					</div>
 				</div>
 
@@ -105,25 +106,25 @@
 
 					<label>
 					
-					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
+					<input type="radio" name="opciones" id="opcontrol"value="opcion_1" checked>
 					Control preventivo
 					</label>
 
 					<label>
 					
-						<input type="radio" name="opciones" id="opciones_2"value="opcion_2" checked>
+						<input type="radio"  name="opciones" id="opaccidente"value="opcion_2" checked>
 						Accidente de transit
 					</label>
 
 					<label>
 					
-						<input type="radio" name="opciones" id="opciones_3"value="opcion_3" checked>
+						<input type="radio" name="opciones" id="opinfraccion"value="opcion_3" checked>
 						Infracción del Reglamento
 					</label>
 
 					<label>
 					
-						<input type="radio" name="opciones" id="opciones_4"value="opcion_4" checked>
+						<input type="radio" name="opciones" id="opsimptomas"value="opcion_4" checked>
 						Simptomas
 					</label>
 
@@ -148,16 +149,16 @@
 				<div class="col-xs-2"
 				
 					<label class="sr-only" for=""></label>
-					<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
 				
 				</div>
 
 				<div class="col-xs-2">
-					<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+					<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
 				</div>
 
 				<div class="col-xs-2">
-					<input type="número " name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+					<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
 				</div>
 				</br></br></br>
 			
@@ -192,11 +193,11 @@
 				</label>
 				
 				
-				<input type="radio" style="margin-left: 10px;" name="opciones" id="opciones_1" value="opcion_1" checked>
+				<input type="radio" style="margin-left: 10px;" name="opciones" id="opsi" value="opcion_1" checked>
 				<label for="si">&nbsp;Si   
 				</label>
 
-				<input type="radio" style="margin-left: 10px;" name="opciones" id="opciones_2" value="opcion_2" checked>
+				<input type="radio" style="margin-left: 10px;" name="opciones" id="opno" value="opcion_2" checked>
 				<label for="si">&nbsp;No quiere hacer la prueva de contraste
 				</label>
 			</div>
@@ -248,20 +249,20 @@
 			<div class="col-xs-2"
 				
 				<label class="sr-only" for=""></label>
-				<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+				<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
 				
 			</div>
 
 			<div class="col-xs-2">
-				<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+				<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
 			</div>
 
 			<div class="col-xs-2">
-				<input type="número " name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+				<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
 			</div>
 
 			<div class="col-xs-2">
-				<input type="clase " name= "clase" class="form-control" placeholder="Clase" /></br>
+				<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase" /></br>
 			</div>
 
 		</div>
@@ -283,27 +284,27 @@
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for=""></label>
-							<input type="nombre" name= "nombre" class="form-control" placeholder="Agente 1"/>
+							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Agente 1"/>
 				
 						</div>
 
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for=""></label>
-							<input type="nombre" name= "nombre" class="form-control" placeholder="Agentes 2"/>
+							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Agentes 2"/>
 				
 						</div>
 
 						<div class="col-xs-2">
-							<input type="requerida" name= "requerida" class="form-control" placeholder="Persona requerida" />
+							<input type="text" id="requerida" name= "requerida" class="form-control" placeholder="Persona requerida" />
 						</div>
 
 						<div class="col-xs-2">
-							<input type="testigo " name= "testigo" class="form-control" placeholder="Testigo" />
+							<input type="text" id="testigo" name= "testigo" class="form-control" placeholder="Testigo" />
 						</div>
 
 						<div class="col-xs-2">
-							<input type="número " name= "número" class="form-control" placeholder="Persona conductora" />
+							<input type="text" id="número " name= "número" class="form-control" placeholder="Persona conductora" />
 						</div>
 					</div>
 
