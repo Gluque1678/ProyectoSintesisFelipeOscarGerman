@@ -10,7 +10,7 @@ $(document).ready(function(){
 		   success: function(html){
 			    if(html=='true'){
 
-			         window.location="busqueda.php";
+			         window.location="buscador.php";
 			    }
     			else{
       		    $("#add_err").css('display', 'inline', 'important');
