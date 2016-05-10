@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-05-2016 a las 10:32:42
+-- Tiempo de generación: 10-05-2016 a las 08:52:38
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -148,8 +148,18 @@ CREATE TABLE IF NOT EXISTS `vehiculo` (
   `Color` varchar(50) COLLATE utf8_bin NOT NULL,
   `Titular` int(9) NOT NULL,
   `Direccion` varchar(150) COLLATE utf8_bin NOT NULL,
-  `Municipio` varchar(75) COLLATE utf8_bin NOT NULL
+  `Municipio` varchar(75) COLLATE utf8_bin NOT NULL,
+  `Segurovigente` tinyint(1) NOT NULL,
+  `Estadorobo` tinyint(1) NOT NULL,
+  `Itvvigente` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `vehiculo`
+--
+
+INSERT INTO `vehiculo` (`DNI`, `Matricula`, `Marca`, `Modelo`, `Color`, `Titular`, `Direccion`, `Municipio`, `Segurovigente`, `Estadorobo`, `Itvvigente`) VALUES
+('46997126F', '6666KLS', 'Audi', 'TT Sport', 'Blanco', 46997126, 'Calle Mineria 9', 'Barcelona', 0, 0, 0);
 
 --
 -- Índices para tablas volcadas
