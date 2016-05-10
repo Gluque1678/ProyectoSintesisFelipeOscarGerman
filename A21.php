@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+$dni=$_SESSION['dni_datos'];
+var_dump($dni);
+$tip=$_SESSION['TIP'];
+var_dump($tip);
+include("conexion.proc.php");
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -65,7 +75,7 @@
 						</div>
 					
 						<div class="col-xs-2">		
-						<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" />
+						<input type="tip" name= "agentes" class="form-control" placeholder="Agentes" value="<?php echo $tip; ?>" readonly/>
 					</div>
 
 						<div class="col-xs-2">
@@ -97,17 +107,17 @@
 					<div class="col-xs-2"
 				
 						<label class="sr-only" for="apellidos"></label>
-						<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos"/>
+						<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
 						
 							
 					</div>
 					
 					<div class="col-xs-2">		
-					<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre" />
+					<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
 					</div>
 
 					<div class="col-xs-2">
-					<input type="permiso" name= "permiso" class="form-control" placeholder="Núm permiso de conducir" value=""/>
+					<input type="permiso" name= "permiso" class="form-control" placeholder="Núm permiso de conducir" value="<?php echo $dni['Num']; ?>" readonly/>
 					</div>
 
 					<div class="radio">
@@ -119,7 +129,7 @@
 				<label>
 					
 					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
-					Hombre
+					Hombre &nbsp
 				</label>
 
 				<label>
