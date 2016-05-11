@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	$dni=$_SESSION['dni_datos'];
-
+	$_SESSION['diligencias']=$_REQUEST['Numdiligencias'];
 
 	include("conexion.proc.php");
 
@@ -89,7 +89,7 @@ if (empty($_REQUEST['Psicomotricidad_movimientooscilante'])) {
 		`Expresion_fugaideas`, `Psicomotricidad_vacilante`, `Psicomotricidad_imprecision`, `Psicomotricidad_disminucionreflejos`, `Psicomotricidad_apreciacionfalsa`, 
 		`Psicomotricidad_movimientooscilante`, `Descripcionmotricidad`) 
 		VALUES ('$dni[Num]',
-			'$_REQUEST[Numdiligencias]',
+			'$_SESSION[diligencias]',
 			'$_REQUEST[agentes]',
 			'$_REQUEST[dia]',
 			'$_REQUEST[hora]',
@@ -132,4 +132,5 @@ if (empty($_REQUEST['Psicomotricidad_movimientooscilante'])) {
 	$resultado=mysqli_query($congu, $sqla21);
 	echo $sqla21;
 	mysqli_close($congu);
+	header("location: T27.php");
 ?>

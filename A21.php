@@ -8,6 +8,9 @@ $tip=$_SESSION['TIP'];
 include("conexion.proc.php");
 
 
+$hora= date ("h:i:s");
+$fecha= date ("d/m/Y");
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -21,7 +24,6 @@ include("conexion.proc.php");
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="js/prueba.js"></script>
 <!--<script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="validaFormulario.js"></script>-->
 
@@ -34,12 +36,8 @@ include("conexion.proc.php");
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				
-				<img id="logo" src="img/Ajun.jpg" width="60px" height="50px" alt="">
-				<h4>Ayuntamiento de L’Hospitalet
-							Area de Seguredad,</br>
-							Convivencia y Civismo
-							Servicio de la Guardia Urbana
-				</h4>
+				<img id="logo" src="img/logoUrbanaActas.png" width="60px" height="50px" alt="">
+				<h4>GUARDIA URBANA</h4>
 	<form class="form-incline" class="A21"  method="" action="a21.proc.php" >
 						
 			</div>
@@ -71,25 +69,24 @@ include("conexion.proc.php");
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for="NºDiligencias"></label>
-							<input type="diligencias" name= "Numdiligencias" id="Numdiligencias" class="form-control" placeholder="Número de Diligencias"/></br>
-						
+							<input type="text" name= "Numdiligencias" id="Numdiligencias" class="form-control" placeholder="Número de Diligencias"/></br>
 						
 						</div>
 					
 						<div class="col-xs-2">		
-						<input type="tip" name= "agentes" id="agentes" class="form-control" placeholder="Agentes" value="<?php echo $tip; ?>" readonly/>
+						<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agentes" value="<?php echo $tip; ?>" readonly/>
 					</div>
 
 						<div class="col-xs-2">
-						<input type="date" name= "dia" id="dia" class="form-control" placeholder="Fecha" value=""/>
+						<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
 						</div>
 
 						<div class="col-xs-1">
-						<input type="time" name= "hora" id="hora" class="form-control" placeholder="hora" value=""/>
+						<input type="text" name= "hora" id="hora" class="form-control" placeholder="hora" value="<?php echo $hora; ?>" readonly/>
 						</div>
 
 						<div class="col-xs-3">
-						<input type="lugar" name= "lugar" id="lugar" class="form-control" placeholder="Lugar" value=""/>
+						<input type="text" name= "lugar" id="lugar" class="form-control" placeholder="Lugar" value=""/>
 						</div>
 
 						
@@ -109,17 +106,17 @@ include("conexion.proc.php");
 					<div class="col-xs-2"
 				
 						<label class="sr-only" for="apellidos"></label>
-						<input type="apellidos" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
+						<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
 						
 							
 					</div>
 					
 					<div class="col-xs-2">		
-					<input type="nombre" name= "nombre" id="nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
+					<input type="text" name= "nombre" id="nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
 					</div>
 
 					<div class="col-xs-2">
-					<input type="permiso" name= "permiso" id="permiso" class="form-control" placeholder="Núm permiso de conducir" value="<?php echo $dni['Num']; ?>" readonly/>
+					<input type="text" name= "permiso" id="permiso" class="form-control" placeholder="Núm permiso de conducir" value="<?php echo $dni['Num']; ?>" readonly/>
 					</div>
 
 					<div class="radio">
@@ -141,11 +138,11 @@ include("conexion.proc.php");
 				</label>
 
 				<div class="col-xs-1">
-					<input type="altura" name= "altura" id="altura" class="form-control" placeholder="Altura" value=""/>
+					<input type="text" name= "altura" id="altura" class="form-control" placeholder="Altura" value=""/>
 				</div>
 
 				<div class="col-xs-1">
-					<input type="peso" name= "peso" id="peso" class="form-control" placeholder="Peso" value=""/>
+					<input type="text" name= "peso" id="peso" class="form-control" placeholder="Peso" value=""/>
 				</div>
 				
 			</div>
