@@ -35,7 +35,7 @@ Análisis del generador de pdfs FPDF/mPDF
 10/05/2016
 Navegación y usabilidad
 =======
-
+Realizacion de la Acta "A32" y darle formato con bootstrap a todas las actas.
 
 Análisis y organización para la inserción de campos
 
