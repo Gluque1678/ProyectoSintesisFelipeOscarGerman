@@ -19,16 +19,13 @@
 	
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 		<div class="panel-heading">
-				<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
+				<img id="logo" src="img/logoUrbanaActas.png" alt="">
 			
 			<form class="form-incline" class="T27"  method="" action="" onsubmit="return validaFormulario();">
 		
 			<div class="form-group">
-				<div id="texto">
-					AYUNTAMIENTO DEL HOSPITALET DE LLOBREGAT
-					AREA DE SEGUREDAD, CONVIVENCIA Y CIVISMO
-					SERVICIO DE LA GUARDIA URBANA
-			
+				<div id="fuente" style="font-size:60px; margin-top: -80px; text-align: center;">
+				GUARDIA URBANA
 				</div>
 
 			</div>	
@@ -236,21 +233,18 @@
    		</div>
 	</div>
    		
-   		<div class="autorizacion">
+   		<div class="radio">
 
    		<label class="checkbox-inline">
+  			&nbsp
   			<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br></br>
 		</label>
 		
 		</div>
 
-
-		<div class="row">
-			<div class="col-xs-2"
-				
-				<label class="sr-only" for=""></label>
+		<div class="col-xs-12">
+			<div class="col-xs-2">			
 				<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
-				
 			</div>
 
 			<div class="col-xs-2">
@@ -265,7 +259,7 @@
 				<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase" /></br>
 			</div>
 
-		</div>
+		</div><br /><br /><br />
 
 
 		<div class="panel panel-danger">
@@ -277,10 +271,10 @@
 			</div>
 
 		</div>
-
+					&nbsp
 					<label for="firmas">Firmo este impreso entrega, como prueba de conformidad, junto con las personas que han intervenido.</br></br>
 		
-					<div class="row">
+					<div class="">
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for=""></label>
@@ -306,6 +300,8 @@
 						<div class="col-xs-2">
 							<input type="text" id="número " name= "número" class="form-control" placeholder="Persona conductora" />
 						</div>
+
+						</br></br></br>
 					</div>
 
 					

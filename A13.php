@@ -3,302 +3,537 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>A13</title>
-<link rel="stylesheet" type="text/css" href="styles.css" media="all">
+<meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<!-- Latest compiled and minified JavaScript -->
+
 <!--<script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="validaFormulario.js"></script>-->
+
 </head>
-<body id="main_body" >
 
-	<img id="logo" src="img/Ajun.jpg" width="60px" height="50px" alt="">
+<body id="main_body" style="background-color:#F5F6CE";>
+
+
+	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
+		<div class="panel-heading">
+				<img id="logo" src="img/logoUrbanaActas.png" alt="">
+			
+			<form class="form-incline" class="A13"  method="" action="" onsubmit="return validaFormulario();">
 		
-	
+			<div class="form-group">
+				<div id="fuente" style="font-size:60px; margin-top: -80px; text-align: center;">
+							 GUARDIA URBANA
+				</div>
+
+			</div>	
+		</div>
+
+		</br></br>
+		
+		<div class="panel panel-success">
+			<div class="panel-heading">
+
+				<div id="datos_acta">
+				
+				<h3>Datos del acta</h3>
+				
+				</div>
+			</div>
+		</div>
+
+
+				<div class="">
+					<div class="col-xs-2"
+						
+						</br>
+						<label class="sr-only" for="NºDiligencias"></label>
+						<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+					
+					</div>
+
+					<div class="col-xs-1">
+						<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente 1" />
+					</div>
+
+					<div class="col-xs-1">
+						<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente 2" /></br>
+					</div>
+					</br>
+				
+				</div>
+			
+		
+					</br></br>
+
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div id="inmobilizacion">
+					<h3>Acta de immobilización de vehículo</h3>
+				</div>
+			</div>		
+		</div>
+
+			<div class="">
+				<div class="col-xs-2">
+					<input type="text" id="lugar" name="lugar" class="form-control" placeholder="Lugar"/>
+				</div>
+					
+				<div class="col-xs-2">
+					<input type="date" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+				</div>
+				
+				<div class="col-xs-2">
+					<input type="time" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+				</div>
+				
+				</br></br></br>
+
+				<div class="col-xs-3">
+					<input type="text" id="immobilizacion" name="immobilizacion" class="form-control" placeholder="Motivo de la immobilizacion"/>
+				</div>
+
+				<div class="col-xs-3">
+					<input type="text" id="denuncia" name="denuncia" class="form-control" placeholder="Denuncia número"/>
+				</div>
+
+				</br></br>
+
+				<div class="col-xs-5">
+
+				<label>
+				</br>
+					<input type="checkbox" name="municipal" id="municipal"value="municipal"> Municipal&nbsp
+					<input type="checkbox" name="transito" id="transitio"value="transito"> Servicio Catalan de Tránsito
+				</label>
+		
+				</div>
+
+				</br></br></br>
+				
+				<div class="col-xs-3">
+					<input type="text" id="lugarinmob" name="lugar" class="form-control" placeholder="Lugar de la Immobilización"/>
+				</div>
+				
+				<div class="col-xs-3">
+					<input type="text" id="sistema" name="sistema" class="form-control" placeholder="Sistema de la Immobilización"/>
+				</div>
+				
+				<div class="col-xs-1">
+					<input type="text" id="kilometros" name="kilometros" class="form-control" placeholder="Kms"/>
+				</div>
+				
+			</div>
 
 		
-		<form id="A13" class="A13"  method="" action="" onsubmit="return validaFormulario();">
-		
-		<div class="Inmobilización">
+			</br></br></br>	
 
-			<h4>Ayuntamiento de L’Hospitalet
-				Area de Seguredad, Convivencia y Civismo</br>
-				Servicio de la Guardia Urbana
-			</h4>
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<div id="conductor">
+				<h3>Datos de la persona conductora</h3>
+			</div>	
 
 		</div>	
+	</div>
 
-		<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
+		</br>		
+	
+			<div class="col-xs-3">
+					<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre"/>
+			</div>
 
-		<div id="datos_acta">
+			<div class="col-xs-2">
+					<input type="text" id="apellido1" name="apellido1" class="form-control" placeholder="Primer Apellido"/>
+			</div>
+
+			<div class="col-xs-2">
+					<input type="text" id="apellido2" name="apellido2" class="form-control" placeholder="Segundo Apellido"/>
+			</div>
+
+			</br></br></br>
+
+			<div class="col-xs-2">
+					<input type="text" id="permiso" name="permiso" class="form-control" placeholder="Nº permiso de conducir"/>
+			</div>	
 				
-				<label class="diligencias" for="">Numero de Diligencias</label></br>
-				<input id="Numero" name= "diligencias" class="dili" maxlength="255" size="18" value=""/></br></br>
-				<hr style="margin-top: -10px;" />
+			<div class="col-xs-2">
+					<input type="text" id="clase" name="clase" class="form-control" placeholder="Clase"/>
+			</div>
 
-				<label class="agentes" for="">Agentes actuantes</label>
-				<input id="tip1" name= "agentes" class="agentes" maxlength="255" size="8" value=""/>
-				<input id="tip2" name= "agentes" class="agentes" maxlength="255" size="8" value=""/>
+			<div class="col-xs-2">
+					<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición"/>
+			</div>	
 
+			</br></br></br>
+
+			<div class="col-xs-2">
+					<input type="text" id="direccion" name="direccion" class="form-control" placeholder="Direccion"/>
+			</div>	
 				
-				<hr  />
+			<div class="col-xs-2">
+					<input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono"/>
+			</div>		
+
+			<div class="col-xs-2">
+					<input type="text" id="nacionalidad" name="nacionalidad" class="form-control" placeholder="Nacionalidad"/>
+			</div>	
+
+			</br></br></br>
+
+		
+
+	<div class="panel panel-danger">
+		<div class="panel-heading">		
+			<div id="vehiculo">
+				<h3>Datos del vehículo</h3>
+				
+			</div>
+		</div>
+	</div>			
+			</br>
+
+			<div class="col-xs-2">
+				<input type="text" id="matricula" name="matricula" class="form-control" placeholder="Matrícula/bastidor"/>
+			</div>	
+
+			<div class="col-xs-2">
+				<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca"/>
+			</div>
+
+			<div class="col-xs-2">
+				<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo"/>
+			</div>	
+
+			</br></br></br>
+				
+			<div class="col-xs-2">
+				<input type="text" id="tipo" name="tipo" class="form-control" placeholder="Tipo"/>
+			</div>	
+
+			<div class="col-xs-2">
+				<input type="text" id="color" name="color" class="form-control" placeholder="Color"/>
+			</div>	
+			
+			</br></br></br>
+
+			<div class="col-xs-2">
+				<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular"/>
+			</div>	
+				
+			<div class="col-xs-2">
+				<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="Primer Apellido titular"/>
+			</div>
+
+			<div class="col-xs-2">
+				<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="Segundo Apellido titular"/>
+			</div>	
+
+			</br></br></br>
+
+			<div class="col-xs-3">
+				<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Direccion del titular"/>
+			</div>	
+
+			<div class="col-xs-2">
+				<input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono"/>
+			</div>	
+
+			
+	
+
+			</br></br></br>
+
+			
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div id="disposicion">
+					<h3>Vehículo a disposición de:</h3>
+				
+				</div>
+			</div>
+		</div>
+
+				<div class="col-xs-3">
+					<select class="form-control">
+					<option value="">Selecciona una opción</option>
+	  				<option value="">Juzgado de Guardia</option>
+	 				<option value="">Titular</option>
+	  				<option value="">Otro conductor habilitado</option>
+	  				<option value="">Otros</option>
+	 				</select>
+				</div>
+
+			</br></br></br>
+
+
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div class="firmas">
+
+					<label for="firmas"><h3>Firmas</h3></label>
+				</div>
+			</div>
 
 		</div>
 
+				
+					<div class="">
+						<div class="col-xs-2">
+							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Firma agente 1"/>
+						</div>
+
+						<div class="col-xs-2">
+							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Firma agente 2"/>
+						</div>
+
+						<div class="col-xs-3">
+							<input type="text" id="número " name= "número" class="form-control" placeholder="Persona conductora" />
+						</div>
+					</div>
+	
+		</br></br></br>
+
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<div class="Rotura">
+				<label for="firmas"><h3>Rotura de la immobilización:</h3></label>
+
+
+			</div>
+		</div>
+	</div>
+
 		
-		<div id="">
+			<div class="">
+				<div class="col-xs-3">
+					<input type="date" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+				</div>
+
+				<div class="col-xs-2">
+					<input type="time" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+				</div>
 				
-				<h3>Acta de immobilización de vehículo</h3>
-				<hr style="margin-top: -10px;" />
+				<div class="col-xs-2">
+					<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
+				</div>
 
-				<label class="lugar" for="lugar">Lugar de los hechos</label>
-				<input id="lugar" name= "lugar" class="lugar" maxlength="255" size="50" value=""/>
+				<div class="col-xs-2">
+					<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" />
 				
-				<label class="fecha" for="fecha">Fecha</label>
-				<input id="fecha" name= "fecha" class="fecha" maxlength="255" size="6" value=""/>
+				</div>	
 
-				<label class="hora" for="hora">Hora</label>
-				<input id="hora" name= "hora" class="hora" maxlength="255" size="6" value=""/></br></br>
 
-				<label class="immobilizacion" for="immobilizacion">Motivo de la immobilizacion</label>
-				<input id="immobilizacion" name= "immobilizacion" class="immobilizacion" maxlength="255" size="12" value=""/>
+				</br></br></br>
 
-				<label class="denuncia" for="denuncia">Denuncia número</label>
-				<input id="denuncia" name= "denuncia" class="denuncia" maxlength="255" size="10" value=""/>
-
-				<label class="municipal" for="municipal">Municipal</label>
-				<input id="municipal" name= "municipal" class="municipal" maxlength="255" size="1" value=""/></br></br>
+				<div class="col-xs-4">
+					<input type="text" id="atestado" name= "atestado" class="form-control" placeholder="Se instruye atestado por desobediencia grave número" />
+				</br>
+				</div>	
 				
-				<label class="transit" for="transit">Servicio Catalan de Transit</label>
-				<input id="transit" name= "transit" class="transit" maxlength="255" size="1" value=""/></br></br>
-				
-				<label class="lugarimmob" for="lugarimmob">Lugar de la Immobilización</label>
-				<input id="lugarimmob" name= "lugarimmob" class="lugarimmob" maxlength="255" size="50" value=""/>
-
-				<label class="sistema" for="sistema">Sistema de la Immobilización</label>
-				<input id="sistema" name= "sistema" class="sistema" maxlength="255" size="10" value=""/>
-
-				<label class="kilometros" for="kilometros">Kilometros actuales</label>
-				<input id="kilometros" name= "kilometros" class="kilometros" maxlength="255" size="6" value=""/>
-				
-				<hr style="margin-top: 10px;" />
-
-				
+				</br></br></br>
+			
 			</div>
 
+			
+			<div class="panel panel-success">
+			<div class="panel-heading">
 
-			<div id="conductor">
-				
-				<h3>Datos de la persona conductora</h3>
-				<hr style="margin-top: -10px;" />
-
-				<label class="NomApell" for="NomApell">Nombre y Apellidos</label>
-				<input id="NomApell" name= "NomApell" class="NomApell" maxlength="255" size="50" value=""/>
-				
-				<label class="permiso" for="permiso">Número de permiso de conducir</label>
-				<input id="permiso" name= "permiso" class="permiso" maxlength="255" size="8" value=""/>
-
-				<label class="clase" for="clase">Clase</label>
-				<input id="clase" name= "clase" class="clase" maxlength="255" size="4" value=""/>
-
-				<label class="pais" for="pais">Pais de Expedición</label>
-				<input id="pais" name= "pais" class="pais" maxlength="255" size="20" value=""/></br></br>
-				
-				<label class="direccion" for="direccion">Direccion</label>
-				<input id="direccion" name= "direccion" class="direccion" maxlength="255" size="40" value=""/>
-
-				<label class="telefono" for="telefono">Telefono</label>
-				<input id="telefono" name= "telefono" class="telefono" maxlength="255" size="8" value=""/>
-
-				<label class="nacionalidad" for="nacionalidad">Nacionalidad</label>
-				<input id="nacionalidad" name= "nacionalidad" class="nacionalidad" maxlength="255" size="25" value=""/></br></br>
-
-				<hr style="margin-top: 10px;" />
-
-			</div>
-
-			<div id="vehiculo">
-
-				<h3>Datos del vehículo</h3>
-				<hr style="margin-top: -10px;" />
-
-				<label class="matricula" for="matricula">Matrícula/bastidor del vehículo</label>
-				<input id="matricula" name= "matricula" class="matricula" maxlength="255" size="20" value=""/>
-				
-				<label class="marca" for="marca">Marca</label>
-				<input id="marca" name= "marca" class="marca" maxlength="255" size="10" value=""/>
-
-				<label class="modelo" for="modelo">Modelo</label>
-				<input id="modelo" name= "modelo" class="modelo" maxlength="255" size="10" value=""/>
-
-				<label class="tipo" for="tipo">Tipo</label>
-				<input id="tipo" name= "tipo" class="tipo" maxlength="255" size="10" value=""/>
-				
-				<label class="color" for="color">Color</label>
-				<input id="color" name= "color" class="color" maxlength="255" size="10" value=""/></br></br>
-
-				<label class="nomtitular" for="nomtitular">Nombre y Apellidos del titular</label>
-				<input id="nomtitular" name= "nomtitular" class="nomtitular" maxlength="255" size="30" value=""/>
-
-				<label class="diretitu" for="diretitu">Direccion del titular</label>
-				<input id="diretitu" name= "diretitu" class="diretitu" maxlength="255" size="40" value=""/>
-
-				<label class="telefono" for="telefono">Teléfono</label>
-				<input id="telefono" name= "telefono" class="telefono" maxlength="255" size="8" value=""/></br></br>
-
-				<hr style="margin-top: 10px;" />
-
-
-			</div>
-
-
-			<div id="disposicion">
-
-				<h3>Vehículo a disposición de:</h3>
-				<hr style="margin-top: -10px;" />
-
-				<label class="juzgado" for="juzgado">Juzgado de Guardia</label>
-				<input id="juzgado" name= "juzgado" class="juzgado" maxlength="255" size="1" value=""/>
-				
-				<label class="titular" for="titular">Titular</label>
-				<input id="titular" name= "titular" class="titular" maxlength="255" size="1" value=""/>
-
-				<label class="otro" for="otro">Otro conductor habilitado</label>
-				<input id="otro" name= "otro" class="otro" maxlength="255" size="1" value=""/>
-
-				<label class="otros" for="otros">Otros</label>
-				<input id="Otros" name= "otros" class="otros" maxlength="255" size="1" value=""/>
 					
-				<hr style="margin-top: 10px;" />
+					<div class="col-xs-12">
+					<label class="observaciones" for="observaciones">Observaciones</label>
+					</br></br></br>
+					<textarea class="form-control" rows="4">
+					</textarea>
+					</div>
+
+				</br></br>
 
 			</div>
+		</div>
 
 
-			<div id="información">
 
-				<h3>Información sobre la Immobilización:</h3>
-				<hr style="margin-top: -10px;" />
 
-				<h3>Firmas:</h3>
-				<hr style="margin-top: -10px;" />
+			</br></br></br></br></br>
 
-				Conductor  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAgentes
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<div class="firmas">
+				<label for="firmas"><h3>Firmas</h3></label>
+			</div>
+		</div>
+
+	</div>
+
+			
 		
+					<div class="">
+						<div class="col-xs-2"
 				
-
+							<label class="sr-only" for=""></label>
+							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Firma agente 1"/>
 				
-				<hr style="margin-top: 10px;" />
+						</div>
 
-			</div>
-
-			<div id="Rotura">
-
-				<h3>Rotura de la immobilización:</h3>
-				<hr style="margin-top: -10px;" />
-
-				<label class="fecha" for="fecha">Fecha</label>
-				<input id="fecha" name= "fecha" class="fecha" maxlength="255" size="6" value=""/>
+						<div class="col-xs-2"
 				
-				<label class="hora" for="hora">Hora</label>
-				<input id="hora" name= "hora" class="hora" maxlength="255" size="6" value=""/>
+							<label class="sr-only" for=""></label>
+							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Firma agente 2"/>
+				
+						</div>	
+				
+						<div class="col-xs-2">
+							<input type="text" id="persona " name= "persona" class="form-control" placeholder="Conductor" />
+						</div>
+					</div>
 
-				<label class="actuantes" for="actuantes">Agentes actuantes</label>
-				<input id="actuantes" name= "actuantes" class="actuantes" maxlength="255" size="6" value=""/>
+			</br></br></br>
 
-				<label class="actuantes1" for="actuantes1"></label>
-				<input id="actuantes1" name= "actuantes1" class="actuantes1" maxlength="255" size="6" value=""/>
-
-				<label class="atestado" for="atestado">Se instruye atestado per desobediencia grave con número</label>
-				<input id="atestado" name= "atestado" class="atestado" maxlength="255" size="10" value=""/>
-					
-				<hr style="margin-top: 10px;" />
-
-				<label class="observaciones" for="observaciones">Observaciones</label>
-				<textarea rows="4" cols="185">
-				</textarea>
-
-				<hr style="margin-top: 10px;" />
-				<label class="firmas" for="firmas">Firmas</label>
-				<hr style="margin-top: 10px;" />
-
-				Conductor  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAgentes
-			</div>
-
-		</br></br>
-
-			<hr style="margin-top: 10px;" />
-
+			
+	<div class="panel panel-danger">
+		<div class="panel-heading">		
 			<div id="Levantamiento">
+				<label for="firmas"><h3>Motivo del levantamiento de la inmobilitzación:</h3></label>
+			</div>
+		</div>
+	</div>
 
-				<h3>Motivo del levantamiento de la inmobilitzación:</h3>
-				<hr style="margin-top: -10px;" />
 
-				<label class="causas" for="causas">Desaparecer las causas que la van motivaron</label>
-				<input id="causas" name= "causas" class="causas" maxlength="255" size="1" value=""/></br></br>
+			<div class="col-xs-3">
+					<select class="form-control">
+					
+					<option value="">Selecciona una opción</option>
+					<option value="">Desaparecer las causas que lo motivaron</option>
+	  				<option value="">Hacerse cargo otro conductor habilitado</option>
+	 				<option value="">Ingreso al depósito por transcurrir más de 24 horas</option>
+	  				
+	 				</select>
+			</div>
+
+
+				<div id="Rotura1">
+
+				<div class="">
+				<div class="col-xs-2">
+					<input type="date" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+				</div>
+
+				<div class="col-xs-2">
+					<input type="time" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+				</div>
+
+			    </br></br></br>
 				
-				<label class="cargo" for="cargo">Hacerse cargo otro conductor habilitado</label>
-				<input id="cargo" name= "cargo" class="cargo" maxlength="255" size="1" value=""/></br></br>
+				<div class="col-xs-1">
+					<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
+				</div>
 
-				<label class="ingreso" for="ingreso">Ingreso al depósito por transcurrir más de 24 horas</label>
-				<input id="ingreso" name= "ingreso" class="ingreso" maxlength="255" size="1" value=""/></br></br>
+				<div class="col-xs-1">
+					<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" /></br>
+				</div>	
+
+				</br></br></br>
+				
+				<div class="col-xs-4">
+				<label><h4>Persona que se hace cargo del vehículo</h4>
+				</label>
+				</div>
+
+				</br></br></br>
+
+				<div class="col-xs-2">
+					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre " />
+				</div>	
+				
+				<div class="col-xs-2">
+					<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Primer Apellido" />
+				</div>	
+				<div class="col-xs-2">
+					<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Segundo Apellido" />
+				</div>	
+
+				</br></br></br>
+				
+				<div class="col-xs-2">
+					<input type="text" id="permiso" name= "permiso" class="form-control" placeholder="Permiso de conducir Nº" />
+				</div>	
+
+				<div class="col-xs-2">
+					<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase " />
+				</div>	
+
+				<div class="col-xs-2">
+					<input type="text" id="pais" name= "pais" class="form-control" placeholder="Pais Expedición " />
+				</div>	
+
 
 			</div>
 
-			<div id="Rotura1">
 
-				<label class="fecha" for="fecha">Fecha</label>
-				<input id="fecha" name= "fecha" class="fecha" maxlength="255" size="6" value=""/>
+		</br></br></br></br>
 
-				<label class="hora" for="hora">Hora</label>
-				<input id="hora" name= "hora" class="hora" maxlength="255" size="6" value=""/>
+		<div class="panel panel-danger">
+			<div class="panel-heading">
 
-				<label class="actuante" for="actuante">Agente actuante</label>
-				<input id="actuante" name= "actuante" class="actuante" maxlength="255" size="6" value=""/>
+				<div id="Firmas">
 
-				<hr style="margin-top: 10px;" />
-
-				<label class="persona" for="persona">Nombre y Apellido de la persona que se hace cargo</label>
-				<input id="persona" name= "persona" class="persona" maxlength="255" size="30" value=""/>
-
-				<label class="permiso" for="permiso">Número permiso de conducir</label>
-				<input id="permiso" name= "permiso" class="permiso" maxlength="255" size="8" value=""/>
-
-				<label class="clase" for="clase">Clase</label>
-				<input id="clase" name= "clase" class="clase" maxlength="255" size="4" value=""/>
-
-				<label class="pais" for="pais">Pais de expedición</label>
-				<input id="pais" name= "pais" class="pais" maxlength="255" size="20" value=""/>
-
-				<hr style="margin-top: 10px;" />
-
-				<label class="firmas" for="firmas">Firmas</label>
-				<hr style="margin-top: 10px;" />
-
-			</div>	
-
-			<div id="vehículo">
-
-				<label class="autoriza" for="autoriza">Persona que autoriza:</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<label class="firmas" for="firmas"><h3>Firmas</h3></label>
 				
-				<label class="cargo" for="cargo">Persona que se hace cargo del vehículo</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-				
-				<label class="actuante" for="actuante">Agente </label>&nbsp&nbsp&nbsp&nbsp&nbsp</br></br>
-				
-				
+				</div>
 
-				<label class="retirada" for="retirada">Retirada y ingreso al depósito municipal de vehículos</label></br>
-				
-				<label class="victor0" for="victor0">Victor-0, C/Glórias,s/n</label>
-				<input id="victor0" name= "victor0" class="victor0" maxlength="255" size="1" value=""/></br>
-
-				<label class="victor30" for="victor30">Victor-30, parque de la Serpiente</label>
-				<input id="victor30" name= "victor30" class="victor30" maxlength="255" size="1" value=""/></br>
-
-				<label class="victor10" for="victor10">Victor-10</label>
-				<input id="victor10" name= "victor10" class="victor10" maxlength="255" size="1" value=""/></br>
-
-				<hr style="margin-top: 10px;" />
+			</div>
+		</div>
 
 				
+				<div class="">
+												
+						<div class="col-xs-2">
+							<input type="text" id="persona" name= "persona" class="form-control" placeholder="Persona que Autoriza" />
+						</div>
+						
+						<div class="col-xs-3">
+							<input type="text" id="persona" name= "persona" class="form-control" placeholder="Persona que se hace cargo del vehículo" />
+						</div>
+						
+						</br></br></br>
+
+						<div class="col-xs-1">
+							<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
+						</div>
+
+						<div class="col-xs-1">
+							<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" /></br>
+						</div>		
+
+						
+						<div class="col-xs-3">
+							<select class="form-control">
+					
+							<option value="">Retirada y ingreso al depósito municipal de vehículos</option>
+							<option value="">Victor-0, calle de la Glòria s/n</option>
+	  						<option value="">Victor-30, parque de la Serpiente</option>
+	 						<option value="">Victor-10</option>
+	  				
+	 						</select>
+			
+
+						</div>
 				
-			</div>	
+
+				</div>
+				
+				</br></br></br>
+
+				
+	</div>			
+		<script src="js/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+		</script>
+				
+				
 
 
 	</body>

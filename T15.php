@@ -18,16 +18,13 @@
 
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 			<div class="panel-heading">
-				<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
+				<img id="logo" src="img/logoUrbanaActas.png" alt="">
 			
 			<form class="form-incline" class="T15"  method="" action="" onsubmit="return validaFormulario();">
 		
 			<div class="form-group">
-				<div id="texto">
-					AYUNTAMIENTO DEL HOSPITALET DE LLOBREGAT
-					AREA DE SEGUREDAD, CONVIVENCIA Y CIVISMO
-					SERVICIO DE LA GUARDIA URBANA
-			
+				<div id="fuente" style="font-size:60px; margin-top: -80px; text-align: center;">
+				GUARDIA URBANA
 				</div>
 
 			</div>	
