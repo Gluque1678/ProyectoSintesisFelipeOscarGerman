@@ -53,20 +53,22 @@
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente 1" />
+						<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente 2" /></br>
+						<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" /></br>
 					</div>
 
 					<div class="col-xs-2">
-						<input type="date" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+						<input type="text" name= "dia" class="form-control" placeholder="Fecha" value=""/>
 					</div>
+
+					</br></br></br>
 
 
 					<div class="col-xs-2">
-						<input type="time" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
+						<input type="text" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
 					</div>
 
 					<div class="col-xs-3">
@@ -102,27 +104,19 @@
 
 
 					<label>
-					
-					<input type="radio" name="opciones" id="opcontrol"value="opcion_1" checked>
-					Control preventivo
+						<input type="radio" name="opactuacion" id="opactuacion" value="1">Control preventivo
 					</label>
 
 					<label>
+						<input type="radio" name="opactuacion" id="opactuacion" value="2">Accidente de tránsito
+					</label>
 					
-						<input type="radio"  name="opciones" id="opaccidente"value="opcion_2" checked>
-						Accidente de transit
+					<label>
+						<input type="radio" name="opactuacion" id="opactuacion" value="3">Infracción del Reglamento
 					</label>
 
 					<label>
-					
-						<input type="radio" name="opciones" id="opinfraccion"value="opcion_3" checked>
-						Infracción del Reglamento
-					</label>
-
-					<label>
-					
-						<input type="radio" name="opciones" id="opsimptomas"value="opcion_4" checked>
-						Simptomas
+						<input type="radio" name="opactuacion" id="opactuacion" value="4">Síntomas
 					</label>
 
 				</div>
@@ -146,16 +140,20 @@
 				<div class="col-xs-2"
 				
 					<label class="sr-only" for=""></label>
-					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
 				
 				</div>
 
 				<div class="col-xs-2">
-					<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+					<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Primer Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
 				</div>
 
 				<div class="col-xs-2">
-					<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+					<input type="text" id="apellido1" name= "apellidos" class="form-control" placeholder="Segundo " value="<?php echo $dni['Primerapellido']; ?>" readonly/>
+				</div>
+
+				<div class="col-xs-2">
+					<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" value="<?php echo $dni['Num']; ?>" readonly/>
 				</div>
 				</br></br></br>
 			
@@ -190,11 +188,11 @@
 				</label>
 				
 				
-				<input type="radio" style="margin-left: 10px;" name="opciones" id="opsi" value="opcion_1" checked>
+				<input type="radio" style="margin-left: 10px;" name="negacion" id="negacion" value="1" checked>
 				<label for="si">&nbsp;Si   
 				</label>
 
-				<input type="radio" style="margin-left: 10px;" name="opciones" id="opno" value="opcion_2" checked>
+				<input type="radio" style="margin-left: 10px;" name="negacion" id="negacion" value="0" checked>
 				<label for="si">&nbsp;No quiere hacer la prueva de contraste
 				</label>
 			</div>
@@ -209,7 +207,7 @@
 
 				<label for="negativa"><h3>Negativa a someterse a las pruebas de detección</h3></label>
 			
-				<label for="texto">Se hace constar que a las <input type="time" />   horas de la fecha indicada se ha requerido la persona reseñada para que se sometiera a las pruebas legalmente establecidas, a fin </br>
+				<label for="texto">Se hace constar que a las <input type="time" id="Horanegativa" name="Horanegativa"/>   horas de la fecha indicada se ha requerido la persona reseñada para que se sometiera a las pruebas legalmente establecidas, a fin </br>
 				de comprobar las tasas de alcoholemia y la presencia de drogas tóxicas, estupefacientes y sustancias psicotrópicas a las que se refiere el artículo 379 </br> del Código penal, que ha sido informada sobre los derechos de realización de las
 				 pruebas y que se ha negado.Tras haber sido informada de las consecuencias </br>
 				 de la negativa a hacer la prueba, la persona requerida ha manifestado expresamente que no quiere hacer la prueba de detección y se reafirma en la negativa de someterse a ella.
@@ -236,30 +234,42 @@
    		<div class="radio">
 
    		<label class="checkbox-inline">
-  			&nbsp
-  			<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br></br>
+  			
+  			<input type="checkbox" id="autorizacion" name="autorizacion" value="1"> Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br></br>
 		</label>
 		
 		</div>
 
-		<div class="col-xs-12">
-			<div class="col-xs-2">			
-				<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+		<div class="row">
+			<div class="col-xs-2"
+				
+				<label class="sr-only" for=""></label>
+				<input type="text" id="nombresustituto" name= "nombresustituto" class="form-control" placeholder="Nombre"/>
+				
 			</div>
 
 			<div class="col-xs-2">
-				<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+				<input type="text" id="apellidossustituto" name= "apellidossustituto" class="form-control" placeholder="Primer Apellido" />
 			</div>
 
 			<div class="col-xs-2">
-				<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+				<input type="text" id="apellidossustituto1" name= "apellidossustituto" class="form-control" placeholder="Segundo Apellido" />
+			</div>
+
+			</br></br></br>
+
+			<div class="col-xs-2">
+				<input type="text" id="numerosustituto" name= "numerosustituto" class="form-control" placeholder="Núm. permiso de conducir" />
 			</div>
 
 			<div class="col-xs-2">
-				<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase" /></br>
+				<input type="text" id="clasesustituto" name= "clasesustituto" class="form-control" placeholder="Clase" /></br>
 			</div>
 
-		</div><br /><br /><br />
+		</div>
+
+
+
 
 
 		<div class="panel panel-danger">
@@ -278,32 +288,38 @@
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for=""></label>
-							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Agente 1"/>
+							<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
 				
 						</div>
 
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for=""></label>
-							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Agentes 2"/>
+							<input type="text" id="agente2" name= "nombre" class="form-control" placeholder="Agentes2"/>
 				
 						</div>
 
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 							<input type="text" id="requerida" name= "requerida" class="form-control" placeholder="Persona requerida" />
 						</div>
+
+						</br></br></br>
 
 						<div class="col-xs-2">
 							<input type="text" id="testigo" name= "testigo" class="form-control" placeholder="Testigo" />
 						</div>
 
-						<div class="col-xs-2">
+						<div class="col-xs-4">
 							<input type="text" id="número " name= "número" class="form-control" placeholder="Persona conductora" />
 						</div>
 
 						</br></br></br>
+
+
 					</div>
 
+					<input type="submit"/>
+					</br></br></br>
 					
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
