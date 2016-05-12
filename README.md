@@ -1,77 +1,43 @@
-<<<<<<< HEAD
-# ProyectoSintesisFelipeOscarGerman
+
+
 Sintesis
 
 2/5/2016
 
-An醠isis del proyecto seleccionado.
-Identificaci髇 de las necesidades del proyecto.
-Obtenci髇 de datos de uso por parte del usuario.
+An谩lisis del proyecto seleccionado.
+Identificaci贸n de las necesidades del proyecto.
+Obtenci贸n de datos de uso por parte del usuario.
 Requisitos para la base de datos.
 
 3/5/2016
 
-Realizaci髇 de base de datos.
-Distribuci髇 de tareas en el equipo.
+Realizaci贸n de base de datos.
+Distribuci贸n de tareas en el equipo.
 
 4/5/2016
 
-Insercci髇 de campos en la base de datos.
-Realizaci髇 de formularios A21, T27.
+Insercci贸n de campos en la base de datos.
+Realizaci贸n de formularios A21, T27.
 
 5/05/2016
 
-Relaci髇 de las tablas de la base de datos.
-Realizaci髇 de formularios T15,N08,A13.
+Relaci贸n de las tablas de la base de datos.
+Realizaci贸n de formularios T15,N08,A13.
 
 9/05/2016
 
-Implementaci髇 de Bootstrap en formularios
-Comprobaci髇 de Login agente en db GU
-Comprobaci髇 de DNI del requerido en db Mossos
-Comprobaci髇 de Matr韈ula del veh韈ulo en db Mossos
-An醠isis del generador de pdfs FPDF/mPDF
+Implementaci贸n de Bootstrap en formularios
+Comprobaci贸n de Login agente en db GU
+Comprobaci贸n de DNI del requerido en db Mossos
+Comprobaci贸n de Matr铆cula del veh铆culo en db Mossos
+An谩lisis del generador de pdfs FPDF/mPDF
 
 10/05/2016
-Navegaci髇 y usabilidad
+Navegaci贸n y usabilidad
 =======
-# ProyectoSintesisFelipeOscarGerman
-Sintesis
 
-2/5/2016
 
-An醠isis del proyecto seleccionado.
-Identificaci髇 de las necesidades del proyecto.
-Obtenci髇 de datos de uso por parte del usuario.
-Requisitos para la base de datos.
-
-3/5/2016
-
-Realizaci髇 de base de datos.
-Distribuci髇 de tareas en el equipo.
-
-4/5/2016
-
-Insercci髇 de campos en la base de datos.
-Realizaci髇 de formularios A21, T27.
-
-5/05/2016
-
-Relaci髇 de las tablas de la base de datos.
-Realizaci髇 de formularios T15,N08,A13.
-
-9/05/2016
-
-Implementaci髇 de Bootstrap en formularios
-Comprobaci髇 de Login agente en db GU
-Comprobaci髇 de DNI del requerido en db Mossos
-Comprobaci髇 de Matr韈ula del veh韈ulo en db Mossos
-An醠isis del generador de pdfs FPDF/mPDF
-
-10/05/2016
-Navegaci髇 y usabilidad
-
-An醠isis y organizaci髇 para la inserci髇 de campos
+An谩lisis y organizaci贸n para la inserci贸n de campos
 
 11/05/2016
-Inserci髇 de campos en DB acta A21
+Inserci贸n de campos en DB acta A21
