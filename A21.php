@@ -61,13 +61,13 @@ $fecha= date ("d/m/Y");
 		</div>	
 
 
-				<div class="row">
-					<div class="col-xs-2"
+				<div class="col-xs-12">
+					<div class="col-xs-2">
 				
 						<label class="sr-only" for="NºDiligencias"></label>
 							<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
 						
-				</div>
+					</div>
 					
 					<div class="col-xs-2">		
 						<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
@@ -93,11 +93,10 @@ $fecha= date ("d/m/Y");
 						</div>
 
 						
-
 				</div>
 			
 		
-	</br>
+		</br></br></br></br></br></br>
 
 		<div class="panel panel-danger">
 			<div class="panel-heading">	
@@ -115,7 +114,7 @@ $fecha= date ("d/m/Y");
 							
 					</div>
 					
-					<div class="col-xs-2"
+					<div class="col-xs-2">
 				
 						<label class="sr-only" for="apellidos"></label>
 						<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Sedundo Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
@@ -169,7 +168,7 @@ $fecha= date ("d/m/Y");
 	</div>	
 		
 
-		<div class="panel panel-info">
+		<div class="panel panel-success">
 			<div class="panel-heading">
 				<div class="Descripcion_conduccion">
 					<label class="Descripcion"  for=""><h3 style="margin-top: -5px;">Descripcion de la conduccion</h3></label>
@@ -177,7 +176,7 @@ $fecha= date ("d/m/Y");
 					</textarea>	
 				</div>
 
-					</br>
+					
 			</div>
 		</div>
 
@@ -205,32 +204,31 @@ $fecha= date ("d/m/Y");
 				</label>
 
 
+				</div>
 			</div>
-		</div>
+				
+
+			<div class="col-xs-12">
 				<label class="checkbox-inline">
-					
 					<input type="checkbox" name="halitosis" id="halitosis" value="1" checked>
 					El olor que desprende es claramente detectable
 				</label>
-
-				<hr />
 			</div>
+
+				
+		</div>
 
 		<div class="panel panel-success">
 			<div class="panel-heading">	
-
-				<div class="">
-			
+				<div class="constitucion">
 					<label for="fisica"><h4 style="margin-top: -5px;">Constitución física</h4>
-					
 					</label>
-				
+				</div>
+			</div>		
 
-			</div>
-		</div>		
-
+		
+			<div class="col-xs-12">		
 				<label>
-					
 					<input type="radio" name="constitucion" id="constitucion" value="Corpulenta" checked>
 					Corpulenta
 				</label>
@@ -246,9 +244,9 @@ $fecha= date ("d/m/Y");
 					<input type="radio" name="constitucion" id="constitucion" value="Pequeña" checked>
 					Pequeña
 				</label>
-
-				<hr />
+			</div>
 				
+								
 				</div>
 
 		<div class="panel panel-success">
@@ -260,39 +258,46 @@ $fecha= date ("d/m/Y");
 					
 					</label>
 					</br>
+				</div>
+
+
 			</div>
-		</div>
-			&nbsp&nbsp&nbsp&nbsp
-			<label class="checkbox-inline">
+
+			<div class="col-xs-12">
+
+			
+				<label class="checkbox-inline">
   				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"> Agresivo
-			</label>
+				</label>
 			
-			<label class="checkbox-inline">
+				<label class="checkbox-inline">
  				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"> Insultante
-			</label>
+				</label>
 			
-			<label class="checkbox-inline">
- 			 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"> Irrespetuoso
-			</label>
+				<label class="checkbox-inline">
+ 				 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"> Irrespetuoso
+				</label>
 
-			<label class="checkbox-inline">
- 			 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"> Eufórico
-			</label>
+				<label class="checkbox-inline">
+ 				 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"> Eufórico
+				</label>
 
-			<label class="checkbox-inline">
- 			 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"> Locuaz
-			</label>
+				<label class="checkbox-inline">
+ 				 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"> Locuaz
+				</label>
 
-			<label class="checkbox-inline">
- 			 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"> Excitado
-			</label>
+				<label class="checkbox-inline">
+ 				 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"> Excitado
+				</label>
 
-			<label class="checkbox-inline">
- 			 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"> Variaciones obtadas de comportamiento o estado de ánimo
-			</label>
-		</div>
+				<label class="checkbox-inline">
+ 				 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"> Variaciones obtadas de comportamiento o estado de ánimo
+				</label>
+				</div>
 
-		<hr />
+				
+			</div>
+
 
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -312,16 +317,17 @@ $fecha= date ("d/m/Y");
 
 	<div class="panel panel-success">
 			<div class="panel-heading">
-
 				<div class="Ojos">
 			
 				<label for="ojos"><h4 style="margin-top: -5px;">Ojos-Mirada&nbsp</h4>
 					
 				</label>
 				</br>
+				</div>
 			</div>
-	</div>
-			&nbsp&nbsp&nbsp
+			
+		<div class="col-xs-12">
+
 			<label class="checkbox-inline">
   				<input type="checkbox" id="Mirada_midriaticos" name="Mirada_midriaticos" value="1"> Dilatación pupila
 			</label>
@@ -341,35 +347,38 @@ $fecha= date ("d/m/Y");
 			<label class="checkbox-inline">
  			 <input type="checkbox" id="Mirada_perdida" name="Mirada_perdida" value="1"> Perdida
 			</label>
-
-			
-
-			
+		
 		</div>
 
-		</br>
+			
+	</div>
 
-
+		
 		<div class="panel panel-success">
 			<div class="panel-heading">
 				<div class="Descripcion del habla">
 
 					<label for="habla"><h4>Descripcion del habla</h4>
-					</label></br>
+					</label>
 				</div>
 			</div>
-					
-					<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox">
-					<label for="pastosa">Pastosa
-					</label>
+			
+			
+			<div class="col-xs-12">
+
+				<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox">
+				<label for="pastosa">Pastosa
+				</label>
 				
-					<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
-					<label for="clara">Clara</label>
+				<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
+				<label for="clara">Clara
+				</label>
 				
-					<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
-					<label for="vacilante">Vacilante
-					</label>		
+				<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
+				<label for="vacilante">Vacilante
+				</label>		
 				
+			</div>
 		</div>
 
 
@@ -379,8 +388,11 @@ $fecha= date ("d/m/Y");
 
 				<label for="expresarse"><h4>Manera de Expresarse</h4></label></br>
 
+				</div>
 			</div>
-		</div>
+
+			<div class="col-xs-12">	
+
 
 				<input id="Expresion_ininteligibles" name="Expresion_ininteligibles" maxlength="5" value="1" type="checkbox">
 				<label for="respuestas">Respuestas Ininteligibles</label>
@@ -392,8 +404,10 @@ $fecha= date ("d/m/Y");
 				<label for="repetitivo">Repetitivo</label>
 
 				<input id="Expresion_fugaideas" name="Expresion_fugaideas" maxlength="5" value="1" type="checkbox">
-				<label for="Fuga de ideas">Fuga de ideas</label><hr />
-		</div>
+				<label for="Fuga de ideas">Fuga de ideas</label>
+		
+			</div>
+		</div>	
 
 
 
@@ -401,9 +415,11 @@ $fecha= date ("d/m/Y");
 		<div class="panel-heading">
 			<div class="Psicomotricidad">
 
-				<label for="psicomotricidad"><h4>Psicomotricidad</h4></label></br>
+				<label for="psicomotricidad"><h4>Psicomotricidad</h4></label>
 			</div>
 		</div>
+
+			<div class="col-xs-12">
 
 				<input id="Psicomotricidad_vacilante" name="Psicomotricidad_vacilante" maxlength="5" value="1" type="checkbox">
 				<label for="vacilante">Vacilante</label>
@@ -417,8 +433,8 @@ $fecha= date ("d/m/Y");
 				<input id="Psicomotricidad_apreciacionfalsa" name="Psicomotricidad_apreciacionfalsa" maxlength="5" value="1" type="checkbox">
 				<label for="reflejos">Falsa apreciación de las distancias</label>
 
-				<hr />
-
+			</div>
+			
 	</div>
 
 
@@ -429,11 +445,21 @@ $fecha= date ("d/m/Y");
 				<label for="motricidad"><h4>Descripción de la motricidad</h4></label></br>
 
 			</div>
+
 		</div>
+
+
+				
+			<div class="col-xs-12">
+
 				<textarea rows="4" cols="185" id="Descripcionmotricidad" name="Descripcionmotricidad">
 				</textarea>
 
+			</div>
+
 	</div>
+
+	</br></br></br></br>
 
 	<div class="panel panel-danger">
 		<div class="panel-heading">
