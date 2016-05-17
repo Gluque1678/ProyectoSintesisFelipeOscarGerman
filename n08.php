@@ -1,3 +1,15 @@
+<?php
+session_start();
+$dni=$_SESSION['dni_datos'];
+$tip=$_SESSION['TIP'];
+include("conexion.proc.php");
+
+$hora= date ("h:i:s");
+$fecha= date ("d/m/Y");
+
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,7 +31,7 @@
 
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 			<div class="panel-heading">
-				<img id="logo" src="img/logoUrbanaActas.png" alt="">
+				<img id="logo" src="img/placaPecho1.jpg" alt="">
 			
 					<form class="form-incline" class="N08"  method="" action="" onsubmit="return validaFormulario();">
 		
@@ -32,16 +44,7 @@
 						</div>
 				
 			</div>
-
-		
-				<div class="panel-body">
-					
-					<div class="form-group">
-
-					</div>	
-				</div>
-
-		
+	
 			
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -60,25 +63,26 @@
 					<div class="col-xs-2">
 				
 							<label class="sr-only" for="NºDiligencias"></label>
-							<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
-						
-						
+							<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
+					
 					</div>
 					
 						<div class="col-xs-1">		
-						<input type="text" id="agente1"  name= "agentes1" class="form-control" placeholder="Agente 1" value=""/>
+						<input type="text" id="agentes" name= "agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 						</div>
 
 						<div class="col-xs-1">		
-						<input type="text" id="agente2" name= "agentes2" class="form-control" placeholder="Agente 2" value=""/>
+						<input type="text" id="agente2" name= "agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
 						</div>
 
+					</br></br></br>
+
 						<div class="col-xs-2">
-						<input type="date" id="date" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+						<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
 						</div>
 
 						<div class="col-md-2">
-						<input type="time" id="time" name= "hora" class="form-control" placeholder="Hora" value=""/>
+						<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/></br>
 						</div>
 
 										
@@ -120,11 +124,11 @@
 
 			
 					<div class="col-xs-1">
-						<input type="text" id="tip1" name= "cuerpo" class="form-control" placeholder="Agente1" value=""/>
+						<input type="text" id="agentes" name= "cuerpo" class="form-control" placeholder="Agente1" value=""/>
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="tip2" name= "cuerpo" class="form-control" placeholder="Agente2" value=""/>
+						<input type="text" id="agente2" name= "cuerpo" class="form-control" placeholder="Agente2" value=""/>
 					</br>
 					</div>
 				
@@ -149,34 +153,34 @@
 						<div class="col-xs-2"
 				
 						<label class="sr-only" for=""></label>
-						<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
+						<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
 				
 					</div>
 
 					<div class="col-xs-2">
-							<input type="text" id="apellido2" name= "apellido2" class="form-control" placeholder="Segundo apellido" />
+							<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" />
 					</div>
 
 					<div class="col-xs-2">
-							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre" />
+							<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" />
 					</div>
 
 					<div class="col-xs-2">
-							<input type="text" id="nacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" />
+							<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" />
 					</div>
 
 						</br></br></br></br>
 							
 					<div class="col-xs-3">
-							<input type="text" id="documento" name= "documento" class="form-control" placeholder="Tipo de documento de identidad y pais" />
+							<input type="text" id="imputadodocumento" name= "documento" class="form-control" placeholder="Tipo de documento de identidad y pais" />
 					</div>
 						
 					<div class="col-xs-2">
-							<input type="text" id="numero" name= "numero" class="form-control" placeholder="Número" />
+							<input type="text" id="imputadonumero" name= "numero" class="form-control" placeholder="Número" />
 					</div>
 
 					<div class="col-xs-3">
-							<input type="date" id="fecha" name= "fecha" class="form-control" placeholder="Fecha de Nacimiento" />
+							<input type="text" id="imputadofecha" name= "fecha" class="form-control" placeholder="Fecha de Nacimiento" />
 					</div>
 
 						</br></br></br>
@@ -244,7 +248,7 @@
 
 					
 					<div class="col-xs-12">
-					<label class="observaciones" for="observaciones">Oservaciones</label>
+					<label class="observaciones" for="observaciones">Observaciones</label>
 					</br></br></br>
 					<textarea class="form-control" rows="4">
 					</textarea>
@@ -279,12 +283,12 @@
 					<div class="col-xs-2"
 				
 						<label class="sr-only" for=""></label>
-						<input type="date" id="fecha" name= "fecha" class="form-control" placeholder="Fecha"/>
+						<input type="text" id="diacomparecer" name= "fecha" class="form-control" placeholder="Fecha"/>
 				
 					</div>
 
 					<div class="col-xs-1">
-						<input type="time" id="hora" name= "hora" class="form-control" placeholder="Hora" />
+						<input type="text" id="horacomparecer" name= "hora" class="form-control" placeholder="Hora" />
 					</div>
 							
 				</div>
@@ -328,14 +332,14 @@
 				<div class="col-xs-2"
 				
 					<label class="sr-only" for=""></label>
-					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Agente 1"/>
+					<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
 				
 				</div>
 
 				<div class="col-xs-2"
 				
 					<label class="sr-only" for=""></label>
-					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Agentes 2"/>
+					<input type="text" id="agente" name= "nombre" class="form-control" placeholder="Agentes2"/>
 				
 				</div>
 
@@ -349,12 +353,12 @@
 
 			</br></br></br>
 			
-
+	</div>		
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 		</script>
 	
-		</div>
+		
 	</body>
 
 </html>

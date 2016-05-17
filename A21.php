@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+$dni=$_SESSION['dni_datos'];
+// var_dump($dni);
+$tip=$_SESSION['TIP'];
+// var_dump($tip);
+include("conexion.proc.php");
+
+
+$hora= date ("h:i:s");
+$fecha= date ("d/m/Y");
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,7 +33,7 @@
 
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 			<div class="panel-heading">
-				<img id="logo" src="img/logoUrbanaActas.png" alt="">
+				<img id="logo" src="img/placaPecho1.jpg" alt="">
 			
 					<form class="form-incline" class="A21"  method="" action="" onsubmit="return validaFormulario();">
 		
@@ -30,18 +45,7 @@
 						</div>
 				
 			</div>
-
-			
 	
-				<div class="panel-body">
-					
-
-					<div class="form-group">
-
-					</div>	
-				</div>
-
-		
 			
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -55,29 +59,31 @@
 				<div class="row">
 					<div class="col-xs-2"
 				
-							<label class="sr-only" for="NºDiligencias"></label>
-							<input type="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
+						<label class="sr-only" for="NºDiligencias"></label>
+							<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
 						
-						
-					</div>
+				</div>
 					
-						<div class="col-xs-1">		
-						<input type="text" name= "agentes1" class="form-control" placeholder="Agente 1" value=""/>
+					<div class="col-xs-2">		
+						<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
+					</div>
+
+
+						<div class="col-xs-2">		
+						<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
 						</div>
 
-						<div class="col-xs-1">		
-						<input type="text" name= "agentes2" class="form-control" placeholder="Agente 2" value=""/>
-						</div>
-
+						</br></br></br>
+						
 						<div class="col-xs-2">
-						<input type="date" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+						<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
 						</div>
 
 						<div class="col-md-2">
-						<input type="time" name= "hora" class="form-control" placeholder="Hora" value=""/>
+						<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
 						</div>
 
-						<div class="col-xs-3">
+						<div class="col-xs-2">
 						<input type="text" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
 						</div>
 
@@ -91,7 +97,7 @@
 
 		<div class="panel panel-danger">
 			<div class="panel-heading">	
-				<h3 style="margin-top: -5px;"> Acta de simptomatologia: Datos de la persona requerida </h3>
+			<h3 style="margin-top: -5px;"> Acta de simptomatologia: Datos de la persona requerida </h3>
 			
 				
 		
@@ -100,70 +106,76 @@
 					<div class="col-xs-2"
 				
 						<label class="sr-only" for="apellidos"></label>
-						<input type="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" value=""/>
+						<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Primer Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
 						
 							
 					</div>
 					
-					<div class="col-xs-2">	
-						<label class="sr-only" for="nombre"></label>	
-						<input type="nombre" name= "nombre" class="form-control" placeholder="Nombre" value=""/>
+					<div class="col-xs-2"
+				
+						<label class="sr-only" for="apellidos"></label>
+						<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Sedundo Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
+						
+							
+					</div>
+					
+					<div class="col-xs-2">		
+					<input type="text" name= "nombre" id="nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
 					</div>
 
 					<div class="col-xs-2">
-					<input type="permiso" name= "permiso" class="form-control" placeholder="Núm permiso de conducir" value=""/>
+					<input type="text" name= "permiso" id="permiso" class="form-control" placeholder="Núm permiso de conducir" value="<?php echo $dni['Num']; ?>" readonly/>
 					</div>
 
-				</br></br>
+					</br></br></br>
 
 					<div class="radio">
 			
-						<label>
-						<h4>Sexo &nbsp</h4>
-						</label>
+				<label>
+					<h4>Sexo &nbsp</h4>
+				</label>
 
-						<label>
+				<label>
 					
-						<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
-						Hombre
-						</label>
+					<input type="radio" name="sexo" id="sexo" value="Hombre" checked>
+					Hombre &nbsp
+				</label>
 
-						<label>
+				<label>
 					
-						<input type="radio" name="opciones" id="opciones_2"value="opcion_2" checked>
-						Mujer
-						</label>
+					<input type="radio" name="sexo" id="sexo" value="Mujer" checked>
+					Mujer
+				</label>
 
-					</div>	
+				<div class="col-xs-1">
+					<input type="text" name= "altura" id="altura" class="form-control" placeholder="Altura" value=""/>
+				</div>
 
-					
-						<div class="col-xs-1">
-						<input type="altura" name= "altura" class="form-control" placeholder="Altura" value=""/>
-						</div>
-
-						<div class="col-xs-1">
-						<input type="peso" name= "peso" class="form-control" placeholder="Peso" value=""/>
-						</div>
-			        
-
-					</div>
+				<div class="col-xs-1">
+					<input type="text" name= "peso" id="peso" class="form-control" placeholder="Peso" value=""/>
+				</div>
+				
 			</div>
-		</div>	
+
+
+				</div>
+
+			
+		</div>
+	</div>	
 		
 
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<div class="Descripcion_conduccion">
-					<label class="Descripcion" for=""><h3 style="margin-top: -5px;">Descripcion de la conduccion</h3></label>
-					<textarea class="form-control" rows="5">
+					<label class="Descripcion"  for=""><h3 style="margin-top: -5px;">Descripcion de la conduccion</h3></label>
+					<textarea class="form-control" rows="5" id="descripcion" name= "descripcion">
 					</textarea>	
 				</div>
 
 					</br>
-
-
-		</div>
 			</div>
+		</div>
 
 			
 		<div class="panel panel-info">
@@ -191,9 +203,9 @@
 
 			</div>
 		</div>
-				<label>
-					&nbsp&nbsp&nbsp
-					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
+				<label class="checkbox-inline">
+					
+					<input type="checkbox" name="halitosis" id="halitosis" value="1" checked>
 					El olor que desprende es claramente detectable
 				</label>
 
@@ -214,20 +226,20 @@
 		</div>		
 
 				<label>
-					&nbsp&nbsp&nbsp
-					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
+					
+					<input type="radio" name="constitucion" id="constitucion" value="Corpulenta" checked>
 					Corpulenta
 				</label>
 
 				<label>
-					&nbsp
-					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
+					
+					<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked>
 					Mediana
 				</label>
 				
 				<label>
-					&nbsp
-					<input type="radio" name="opciones" id="opciones_1"value="opcion_1" checked>
+					
+					<input type="radio" name="constitucion" id="constitucion" value="Pequeña" checked>
 					Pequeña
 				</label>
 
@@ -248,31 +260,31 @@
 		</div>
 			&nbsp&nbsp&nbsp&nbsp
 			<label class="checkbox-inline">
-  				<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> Agresivo
+  				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"> Agresivo
 			</label>
 			
 			<label class="checkbox-inline">
- 				 <input type="checkbox" id="checkboxEnLinea2" value="opcion_2"> Insultante
+ 				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"> Insultante
 			</label>
 			
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> Irrespetuoso
+ 			 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"> Irrespetuoso
 			</label>
 
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> Eufórico
+ 			 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"> Eufórico
 			</label>
 
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> Locuaz
+ 			 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"> Locuaz
 			</label>
 
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> Excitado
+ 			 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"> Excitado
 			</label>
 
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> Variaciones obtadas de comportamiento o estado de ánimo
+ 			 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"> Variaciones obtadas de comportamiento o estado de ánimo
 			</label>
 		</div>
 
@@ -284,7 +296,7 @@
 				<div class="Descripcion_Comportamiento">
 					<label class="comportamiento" for=""><h4 style="margin-top: -5px;">Descripción del comportamiento</h4>
 					</label>
-					<textarea class="form-control" rows="5">
+					<textarea class="form-control" rows="5" name="descripcioncomportamiento" id="descripcioncomportamiento">
 					</textarea>	
 				</div>
 
@@ -307,23 +319,23 @@
 	</div>
 			&nbsp&nbsp&nbsp
 			<label class="checkbox-inline">
-  				<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> Dilatación pupila
+  				<input type="checkbox" id="Mirada_midriaticos" name="Mirada_midriaticos" value="1"> Dilatación pupila
 			</label>
 			
 			<label class="checkbox-inline">
- 				 <input type="checkbox" id="checkboxEnLinea2" value="opcion_2"> Disminución pupila
+ 				 <input type="checkbox" id="Mirada_mioticos" name="Mirada_mioticos" value="1"> Disminución pupila
 			</label>
 			
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> Brillantes
+ 			 <input type="checkbox" id="Mirada_brillantes" name="Mirada_brillantes" value="1"> Brillantes
 			</label>
 
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea4" value="opcion_4"> Somnolientos
+ 			 <input type="checkbox" id="Mirada_somnolienta" name="Mirada_somnolienta" value="1"> Somnolientos
 			</label>
 
 			<label class="checkbox-inline">
- 			 <input type="checkbox" id="checkboxEnLinea5" value="opcion_5"> Perdida
+ 			 <input type="checkbox" id="Mirada_perdida" name="Mirada_perdida" value="1"> Perdida
 			</label>
 
 			
@@ -342,15 +354,15 @@
 					</label></br>
 				</div>
 			</div>
-					&nbsp&nbsp&nbsp
-					<input id="pastosa" name="pastosa" class="pastosa" maxlength="5" value="" type="checkbox">
+					
+					<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox">
 					<label for="pastosa">Pastosa
 					</label>
 				
-					<input id="clara" name="clara" class="disminucion" maxlength="5" value="" type="checkbox">
+					<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
 					<label for="clara">Clara</label>
 				
-					<input id="vacilante" name="vacilante" class="vacilante" maxlength="5" value="" type="checkbox">
+					<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
 					<label for="vacilante">Vacilante
 					</label>		
 				
@@ -365,19 +377,20 @@
 
 			</div>
 		</div>
-				&nbsp&nbsp&nbsp
-				<input id="respuestas" name="respuestas" class="respuestas" maxlength="5" value="" type="checkbox">
+
+				<input id="Expresion_ininteligibles" name="Expresion_ininteligibles" maxlength="5" value="1" type="checkbox">
 				<label for="respuestas">Respuestas Ininteligibles</label>
 				
-				<input id="incoherente" name="incoherente" class="incoherente" maxlength="5" value="" type="checkbox">
+				<input id="Expresion_incoherentes" name="Expresion_incoherentes" maxlength="5" value="1" type="checkbox">
 				<label for="incoherente">Respuestas Incoherentes</label>
 
-				<input id="repetitivo" name="repetitivo" class="otro" maxlength="5" value="" type="checkbox">
+				<input id="Expresion_repetitivo" name="Expresion_repetitivo" maxlength="5" value="1" type="checkbox">
 				<label for="repetitivo">Repetitivo</label>
 
-				<input id="ideas" name="ideas" class="ideas" maxlength="5" value="" type="checkbox">
+				<input id="Expresion_fugaideas" name="Expresion_fugaideas" maxlength="5" value="1" type="checkbox">
 				<label for="Fuga de ideas">Fuga de ideas</label><hr />
 		</div>
+
 
 
 	<div class="panel panel-success">
@@ -387,18 +400,18 @@
 				<label for="psicomotricidad"><h4>Psicomotricidad</h4></label></br>
 			</div>
 		</div>
-				&nbsp&nbsp&nbsp
-				<input id="" name="vacilante" class="vacilante" maxlength="5" value="" type="checkbox">
+
+				<input id="Psicomotricidad_vacilante" name="Psicomotricidad_vacilante" maxlength="5" value="1" type="checkbox">
 				<label for="vacilante">Vacilante</label>
 				
-				<input id="distancias" name="distancias" class="distancias" maxlength="5" value="" type="checkbox">
-				<label for="distancias">Falsa apreciación de las distancias</label>
+				<input id="Psicomotricidad_imprecision" name="Psicomotricidad_imprecision" maxlength="5" value="1" type="checkbox">
+				<label for="distancias">Imprecision en los movimientos</label>
 
-				<input id="movimientos" name="movimientos" class="movimientos" maxlength="5" value="" type="checkbox">
-				<label for="movimientos">Movimientos Oscilantes de la Verticalidad</label>
+				<input id="Psicomotricidad_disminucionreflejos" name="Psicomotricidad_disminucionreflejos" maxlength="5" value="1" type="checkbox">
+				<label for="movimientos">Disminución de los reflejos</label>
 
-				<input id="reflejos" name="reflejos" class="reflejos" maxlength="5" value="" type="checkbox">
-				<label for="reflejos">Disminución de los reflejos</label>
+				<input id="Psicomotricidad_apreciacionfalsa" name="Psicomotricidad_apreciacionfalsa" maxlength="5" value="1" type="checkbox">
+				<label for="reflejos">Falsa apreciación de las distancias</label>
 
 				<hr />
 
@@ -413,7 +426,7 @@
 
 			</div>
 		</div>
-				<textarea rows="4" cols="185">
+				<textarea rows="4" cols="185" id="Descripcionmotricidad" name="Descripcionmotricidad">
 				</textarea>
 
 	</div>
@@ -426,7 +439,26 @@
 			</div>
 		</div>
 
+	</br>
+
+		<div class="">
+			<div class="col-xs-2"
+				<label class="sr-only" for=""></label>
+				<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
+			</div>
+
+			<div class="col-xs-2"
+				<label class="sr-only" for=""></label>
+				<input type="text" id="agente2" name= "nombre" class="form-control" placeholder="Agentes2"/>
+				
+			</div>
+		</div>
+	</br></br>
+
 	</div>
+
+
+
 
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">

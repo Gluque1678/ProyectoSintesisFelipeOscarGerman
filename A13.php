@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+$dni=$_SESSION['dni_datos'];
+// var_dump($dni);
+$tip=$_SESSION['TIP'];
+// var_dump($tip);
+include("conexion.proc.php");
+
+
+$hora= date ("h:i:s");
+$fecha= date ("d/m/Y");
+
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,7 +35,7 @@
 
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 		<div class="panel-heading">
-				<img id="logo" src="img/logoUrbanaActas.png" alt="">
+				<img id="logo" src="img/placaPecho1.jpg" alt="">
 			
 			<form class="form-incline" class="A13"  method="" action="" onsubmit="return validaFormulario();">
 		
@@ -50,16 +66,16 @@
 						
 						</br>
 						<label class="sr-only" for="NºDiligencias"></label>
-						<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
-					
+						<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
+											
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente 1" />
+						<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente 2" /></br>
+						<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
 					</div>
 					</br>
 				
@@ -82,11 +98,11 @@
 				</div>
 					
 				<div class="col-xs-2">
-					<input type="date" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+					<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
 				</div>
 				
 				<div class="col-xs-2">
-					<input type="time" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+					<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
 				</div>
 				
 				</br></br></br>
