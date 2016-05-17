@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+$dni=$_SESSION['dni_datos'];
+// var_dump($dni);
+$tip=$_SESSION['TIP'];
+// var_dump($tip);
+include("conexion.proc.php");
+
+
+$hora= date ("h:i:s");
+$fecha= date ("d/m/Y");
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -38,7 +53,7 @@
 	<div class="row">
 		<div class="col-xs-2"
 			<label class="sr-only" for="NºDiligencias"></label>
-			<input type="text" name= "Numdiligencias" id="Numdiligencias" class="form-control" placeholder="Número de Diligencias"/></br>
+			<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
 						
 		</div>
 					
@@ -82,6 +97,7 @@
 					</br>
 				</div>
 			</div>
+		</div>
 			
 			</br>
 			
@@ -147,7 +163,7 @@
 
  			</br></br>
 
- 			<div class="panel panel-danger">
+ 			<div class="panel panel-success">
 				<div class="panel-heading">
 					<div id="vehículo">
 					<h3>Datos de la persona denunciada que conduce el vehículo</h3>
@@ -243,7 +259,7 @@
 
 		
 
-	<div class="panel panel-danger">
+	<div class="panel panel-success">
 		<div class="panel-heading">
 			<div id="conductor">
 				<h3>Permiso o licencia de conducir</h3>
@@ -278,7 +294,7 @@
 
 			</br></br></br>
 
-	<div class="panel panel-danger">
+	<div class="panel panel-success">
 		<div class="panel-heading">
 			<div id="conducia">
 				<h3>Vehículo que conducia</h3>
@@ -326,51 +342,126 @@
 
 		</br></br></br>
 
-		<div class="panel panel-danger">
+		<div class="panel panel-success">
 			<div class="panel-heading">
 				<div id="resultados">
-					<h3>Resultados pruevas de alcoholemia y estupefacientes</h3>
+					<h3>Resultados pruebas de alcoholemia y estupefacientes</h3>
 				</div>	
 
 			</div>	
 		</div>
 				
 		<div class="row">
-				<div class="col-xs-2"
 				
-					<label class="sr-only" for="NºDiligencias"></label>
-					<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias"/>
-				
+				<div class="col-xs-2">
+				<label>Prueba de Alcoholemia</label>	
+				</div>
+
+				</br></br>
+
+				<div class="col-xs-2">
+					<input type="text" id="marcaetilometro" name= "marcaetilometro" class="form-control" placeholder="Marca Etilómetro"/>
 				</div>
 
 				<div class="col-xs-1">
-					<input type="text" id="agentes" name= "agentes" class="form-control" placeholder="Agente1" />
-				</div>
-
-				<div class="col-xs-1">
-					<input type="text" id="agente2" name= "agentes" class="form-control" placeholder="Agente2" /></br>
+					<input type="text" id="modelo" name= "modelo" class="form-control" placeholder="Modelo" />
 				</div>
 
 				<div class="col-xs-2">
-					<input type="text" id="dia" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+					<input type="text" id="numeroserie" name= "numeroserie" class="form-control" placeholder="Numero de Serie" /></br>
+				</div>
+
+				<div class="col-xs-2">
+					<input type="text" id="calibrado" name= "calibrado" class="form-control" placeholder="Calibrado hasta" value=""/>
 				</div>
 
 				</br></br></br>
+
+				<div class="col-xs-2">
+				<label>Primera prueba</label>	
+				</div>
+
+				
+				<div class="col-xs-2">
+				<label>Resultado</label>	
+				</div>
+
+				<div class="col-xs-2">
+				<label>Segunda Prueba</label>	
+				</div>
+
+				<div class="col-xs-2">
+				<label>Resultado</label>	
+				</div>
+
+				</br></br>
 
 				<div class="col-md-2">
 					<input type="text" id="hora" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
 				</div>
 
-				<div class="col-xs-3">
-					<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+				<div class="col-xs-2">
+					<input type="text" id="mg" name= "mg" class="form-control" placeholder="mg/l aire expirado" value=""/>
 				</div>
 				
+				<div class="col-xs-2">
+					<input type="text" id="hora2" name= "hora2" class="form-control" placeholder="Hora" value=""/>
+				</div>
+
+				<div class="col-xs-2">
+					<input type="text" id="resultado2" name= "resultado2" class="form-control" placeholder="mg/l aire expirado" value=""/>
+				</div>
 
 		</div>
 
 		
-			
 
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div id="resultados">
+					<h3>Prueba de detección de drogas tóxicas, estupefacientes o substancias psicotrópicas</h3>
+				</div>	
+
+			</div>	
+		</div>	
+
+
+
+		<div class="container">
+  		
+  		<!-- Trigger the modal with a button -->
+ 		 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Prueba de drogas</button>
+
+  		<!-- Modal -->
+  			<div class="modal fade" id="myModal" role="dialog">
+   				 <div class="modal-dialog">
+    
+     		<!-- Modal content-->
+     				<div class="modal-content">
+        				<div class="modal-header">
+          				<button type="button" class="close" data-dismiss="modal">&times;</button>
+          				<h4 class="modal-title">DROGAS</h4>
+        				</div>
+        	
+        			<div class="modal-body">
+        				<p>La persona se somete voluntariamente al traslado y posteriormente se le práctica un reconocimiento médico y obtención de las muestras que el personal facultativo considere</br>
+        				mas oportuno.</br>
+        				Se adjunta acta T-12 PL de determinación voluntaria en centro médico.
+	 				</div>
+     			</div>
+   			</div>  
+		</div>
+	
+
+			</br></br>
+
+			<div class="col-md-2">
+					<input type="text" id="horatraslado" name= "horatraslado" class="form-control" placeholder="Hora de traslado" value=""/></br>
+			</div>
+			
+			<div class="col-md-2">
+					<input type="text" id="centromedico" name= "centromedico" class="form-control" placeholder="Centro médico" value=""/></br>
+			</div>
 			
 			
 	
@@ -381,8 +472,8 @@
 			
 
 			<script src="js/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
-		</script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+			</script>
 
 	</div>
 	</body>

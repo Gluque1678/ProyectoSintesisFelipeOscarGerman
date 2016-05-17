@@ -47,8 +47,7 @@ $fecha= date ("d/m/Y");
 			</div>	
 		</div>
 
-		</br></br>
-		
+			
 		<div class="panel panel-success">
 			<div class="panel-heading">
 
@@ -146,7 +145,7 @@ $fecha= date ("d/m/Y");
 		
 			</br></br></br>	
 
-	<div class="panel panel-danger">
+	<div class="panel panel-success">
 		<div class="panel-heading">
 			<div id="conductor">
 				<h3>Datos de la persona conductora</h3>
@@ -201,7 +200,7 @@ $fecha= date ("d/m/Y");
 
 		
 
-	<div class="panel panel-danger">
+	<div class="panel panel-success">
 		<div class="panel-heading">		
 			<div id="vehiculo">
 				<h3>Datos del vehículo</h3>
@@ -312,7 +311,7 @@ $fecha= date ("d/m/Y");
 	
 		</br></br></br>
 
-	<div class="panel panel-danger">
+	<div class="panel panel-success">
 		<div class="panel-heading">
 			<div class="Rotura">
 				<label for="firmas"><h3>Rotura de la immobilización:</h3></label>
@@ -409,7 +408,7 @@ $fecha= date ("d/m/Y");
 			</br></br></br>
 
 			
-	<div class="panel panel-danger">
+	<div class="panel panel-success">
 		<div class="panel-heading">		
 			<div id="Levantamiento">
 				<label for="firmas"><h3>Motivo del levantamiento de la inmobilitzación:</h3></label>

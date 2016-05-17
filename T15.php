@@ -47,6 +47,7 @@ $fecha= date ("d/m/Y");
 		</div>
 
 		
+		
 		<div class="panel panel-success">
 			<div class="panel-heading">
 
@@ -56,7 +57,9 @@ $fecha= date ("d/m/Y");
 				
 				</div>
 
-
+			</div>
+		</div>
+				
 				<div class="row">
 					<div class="col-xs-2"
 				
@@ -90,11 +93,10 @@ $fecha= date ("d/m/Y");
 				</div>
 
 		
-			</div>
-		</div>
+				</br>
 
 
-		<div class="panel panel-danger">
+		<div class="panel panel-success">
 			<div class="panel-heading">
 
 				<div class="radio">
@@ -106,6 +108,9 @@ $fecha= date ("d/m/Y");
 
 				</div>
 
+
+			</div>	
+		</div>
 
 				<div class="row">
 					<div class="col-xs-2">
@@ -128,7 +133,7 @@ $fecha= date ("d/m/Y");
 				</div>
 
 
-		<div class="panel panel-warning">
+		<div class="panel panel-danger">
 			<div class="panel-heading">	
 				<div class="row">
 					
@@ -150,8 +155,7 @@ $fecha= date ("d/m/Y");
 
 
 			
-			</div>	
-		</div>
+			
 	</div>
 
 			<script src="js/jquery.js"></script>
