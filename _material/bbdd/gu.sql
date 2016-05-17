@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-05-2016 a las 10:32:26
+-- Tiempo de generación: 17-05-2016 a las 08:59:30
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -33,8 +33,16 @@ CREATE TABLE IF NOT EXISTS `agente` (
   `TIP` int(4) NOT NULL,
   `Nombre` varchar(75) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
-  `Segudoapellido` varchar(75) COLLATE utf8_bin NOT NULL
+  `Segundoapellido` varchar(75) COLLATE utf8_bin NOT NULL,
+  `Password` varchar(25) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `agente`
+--
+
+INSERT INTO `agente` (`TIP`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Password`) VALUES
+(666, 'Raul', 'Perez', 'Portoles', '1234');
 
 -- --------------------------------------------------------
 
@@ -57,15 +65,16 @@ CREATE TABLE IF NOT EXISTS `dni` (
   `Hijode` varchar(100) COLLATE utf8_bin NOT NULL,
   `Domicilio` varchar(150) COLLATE utf8_bin NOT NULL,
   `Lugardomicilio` varchar(100) COLLATE utf8_bin NOT NULL,
-  `Equipo` varchar(9) COLLATE utf8_bin NOT NULL
+  `Equipo` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Foto` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `dni`
 --
 
-INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`, `Nacionalidad`, `Fechanacimiento`, `Validez`, `Lugarnacimiento`, `Provincia`, `Hijode`, `Domicilio`, `Lugardomicilio`, `Equipo`) VALUES
-('46997126F', 'Ortiz', 'Fernandez', 'Oscar', 'Hombre', 'ESP', '1995-12-19', '2018-02-02', 'Barcelona', 'Barcelona', 'Alberto/Cristina', 'C.Mineria 9 PO5 7', 'Barcelona', '08055L6D1');
+INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`, `Nacionalidad`, `Fechanacimiento`, `Validez`, `Lugarnacimiento`, `Provincia`, `Hijode`, `Domicilio`, `Lugardomicilio`, `Equipo`, `Foto`) VALUES
+('46997126F', 'Ortiz', 'Fernandez', 'Oscar', 'Hombre', 'ESP', '1995-12-19', '2018-02-02', 'Barcelona', 'Barcelona', 'Alberto/Cristina', 'C.Mineria 9 PO5 7', 'Barcelona', '08055L6D1', 'img/dni-foto/46997126F.jpg');
 
 -- --------------------------------------------------------
 
@@ -76,8 +85,11 @@ INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`,
 DROP TABLE IF EXISTS `f_a13pl`;
 CREATE TABLE IF NOT EXISTS `f_a13pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
-  `TIP2` int(4) NOT NULL,
+  `Lugar` varchar(255) COLLATE utf8_bin NOT NULL,
+  `Dia` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Hora` varchar(10) COLLATE utf8_bin NOT NULL,
   `Motivoinmobilizacion` varchar(100) COLLATE utf8_bin NOT NULL,
   `Numerodenuncia` int(6) NOT NULL,
   `Tipodenuncia` enum('Municipal','Servicio catalán de transito') COLLATE utf8_bin NOT NULL,
@@ -108,40 +120,44 @@ CREATE TABLE IF NOT EXISTS `f_a21pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
-  `TIP2` int(4) NOT NULL,
-  `Dia` date NOT NULL,
-  `Hora` int(4) NOT NULL,
+  `Dia` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Hora` varchar(10) COLLATE utf8_bin NOT NULL,
   `Lugar` varchar(255) COLLATE utf8_bin NOT NULL,
+  `Nombre` char(100) COLLATE utf8_bin NOT NULL,
+  `Primerapellido` char(100) COLLATE utf8_bin NOT NULL,
+  `Segundoapellido` char(100) COLLATE utf8_bin NOT NULL,
+  `Permiso` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Sexo` enum('Hombre','Mujer') COLLATE utf8_bin NOT NULL,
   `Altura` int(3) NOT NULL,
   `Peso` int(3) NOT NULL,
   `Descripcionconduccion` varchar(255) COLLATE utf8_bin NOT NULL,
   `Halitosi` tinyint(1) NOT NULL,
   `Constitucion` enum('Corpulento','Mediana','Pequeña') COLLATE utf8_bin NOT NULL,
-  `Comportamiento_agresivio` tinyint(1) DEFAULT NULL,
-  `Comportamiento_insultante` tinyint(1) DEFAULT NULL,
-  `Comportamiento_irrespetuoso` tinyint(1) DEFAULT NULL,
-  `Comportamiento_euforico` tinyint(1) DEFAULT NULL,
-  `Comportamiento_muyloquaz` tinyint(1) DEFAULT NULL,
-  `Comportamiento_excitado` tinyint(1) DEFAULT NULL,
-  `Comportamiento_variaciones` tinyint(1) DEFAULT NULL,
+  `Comportamiento_agresivo` tinyint(1) NOT NULL,
+  `Comportamiento_insultante` tinyint(1) NOT NULL,
+  `Comportamiento_irrespetuoso` tinyint(1) NOT NULL,
+  `Comportamiento_euforico` tinyint(1) NOT NULL,
+  `Comportamiento_muyloquaz` tinyint(1) NOT NULL,
+  `Comportamiento_excitado` tinyint(1) NOT NULL,
+  `Comportamiento_variaciones` tinyint(1) NOT NULL,
   `Descripcioncomportamiento` varchar(255) COLLATE utf8_bin NOT NULL,
-  `Mirada_midriaticos` tinyint(1) DEFAULT NULL,
-  `Mirada_mioticos` tinyint(1) DEFAULT NULL,
-  `Mirada_brillantes` tinyint(1) DEFAULT NULL,
-  `Mirada_somnolienta` tinyint(1) DEFAULT NULL,
-  `Mirada_perdida` tinyint(1) DEFAULT NULL,
-  `Habla_pastosa` tinyint(1) DEFAULT NULL,
-  `Habla_clara` tinyint(1) DEFAULT NULL,
-  `Habla_vacilante` tinyint(1) DEFAULT NULL,
-  `Expresion_ininteligibles` tinyint(1) DEFAULT NULL,
-  `Expresion_incoherentes` tinyint(1) DEFAULT NULL,
-  `Expresion_repetitivo` tinyint(1) DEFAULT NULL,
-  `Expresion_fugaideas` tinyint(1) DEFAULT NULL,
-  `Psicomotricidad_vacilante` tinyint(1) DEFAULT NULL,
-  `Psicomotricidad_imprecision` tinyint(1) DEFAULT NULL,
-  `Psicomotricidad_disminucionreflejos` tinyint(1) DEFAULT NULL,
-  `Psicomotricidad_apreciacionfalsa` tinyint(1) DEFAULT NULL,
-  `Psicomotricidad_movimientooscilante` tinyint(1) DEFAULT NULL,
+  `Mirada_midriaticos` tinyint(1) NOT NULL,
+  `Mirada_mioticos` tinyint(1) NOT NULL,
+  `Mirada_brillantes` tinyint(1) NOT NULL,
+  `Mirada_somnolienta` tinyint(1) NOT NULL,
+  `Mirada_perdida` tinyint(1) NOT NULL,
+  `Habla_pastosa` tinyint(1) NOT NULL,
+  `Habla_clara` varchar(1) COLLATE utf8_bin NOT NULL DEFAULT '0',
+  `Habla_vacilante` tinyint(1) NOT NULL,
+  `Expresion_ininteligibles` tinyint(1) NOT NULL,
+  `Expresion_incoherentes` tinyint(1) NOT NULL,
+  `Expresion_repetitivo` tinyint(1) NOT NULL,
+  `Expresion_fugaideas` tinyint(1) NOT NULL,
+  `Psicomotricidad_vacilante` tinyint(1) NOT NULL,
+  `Psicomotricidad_imprecision` tinyint(1) NOT NULL,
+  `Psicomotricidad_disminucionreflejos` tinyint(1) NOT NULL,
+  `Psicomotricidad_apreciacionfalsa` tinyint(1) NOT NULL,
+  `Psicomotricidad_movimientooscilante` tinyint(1) NOT NULL,
   `Descripcionmotricidad` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -153,7 +169,8 @@ CREATE TABLE IF NOT EXISTS `f_a21pl` (
 
 DROP TABLE IF EXISTS `f_n08pl`;
 CREATE TABLE IF NOT EXISTS `f_n08pl` (
-  `DNI` int(9) NOT NULL,
+  `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
   `TIP2` int(4) NOT NULL,
   `Cuerpoagente` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT 'Guardia Urbana',
@@ -169,23 +186,40 @@ CREATE TABLE IF NOT EXISTS `f_n08pl` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `f_t15pl`
+--
+
+DROP TABLE IF EXISTS `f_t15pl`;
+CREATE TABLE IF NOT EXISTS `f_t15pl` (
+  `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
+  `Dia` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Hora` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Ticket1` varchar(255) COLLATE utf8_bin NOT NULL,
+  `Ticket2` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `f_t27pl`
 --
 
 DROP TABLE IF EXISTS `f_t27pl`;
 CREATE TABLE IF NOT EXISTS `f_t27pl` (
-  `DNI` int(9) NOT NULL,
+  `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
-  `TIP2` int(4) NOT NULL,
+  `Dia` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Hora` varchar(10) COLLATE utf8_bin NOT NULL,
   `Actuacion` enum('Control preventivo','Accidente tráfico','Infracción del reglamento','Síntomas') COLLATE utf8_bin NOT NULL,
   `negacion` tinyint(1) NOT NULL,
-  `negaciondrogas` tinyint(1) NOT NULL,
-  `Manifesto` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `Horanegativa` time DEFAULT NULL,
   `autorizacion` tinyint(1) DEFAULT NULL,
   `Conductorsubstituto` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `Permisosubstituto` varchar(9) COLLATE utf8_bin DEFAULT NULL,
-  `Clasesubstituto` varchar(5) COLLATE utf8_bin DEFAULT NULL
+  `Clasesubstituto` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `Lugar` char(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -197,6 +231,7 @@ CREATE TABLE IF NOT EXISTS `f_t27pl` (
 DROP TABLE IF EXISTS `f_t32pl`;
 CREATE TABLE IF NOT EXISTS `f_t32pl` (
   `dni` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `tip1` int(4) NOT NULL,
   `tip2` int(4) NOT NULL,
   `seguridad_viaria` tinyint(1) NOT NULL DEFAULT '1',
@@ -272,23 +307,35 @@ ALTER TABLE `dni`
   ADD UNIQUE KEY `Num` (`Num`);
 
 --
+-- Indices de la tabla `f_a13pl`
+--
+ALTER TABLE `f_a13pl`
+  ADD PRIMARY KEY (`Numdiligencias`);
+
+--
 -- Indices de la tabla `f_a21pl`
 --
 ALTER TABLE `f_a21pl`
-  ADD PRIMARY KEY (`DNI`);
+  ADD PRIMARY KEY (`Numdiligencias`);
 
 --
 -- Indices de la tabla `f_n08pl`
 --
 ALTER TABLE `f_n08pl`
-  ADD PRIMARY KEY (`DNI`);
+  ADD PRIMARY KEY (`Numdiligencias`);
 
 --
 -- Indices de la tabla `f_t27pl`
 --
 ALTER TABLE `f_t27pl`
-  ADD PRIMARY KEY (`DNI`),
+  ADD PRIMARY KEY (`Numdiligencias`),
   ADD UNIQUE KEY `DNI` (`DNI`);
+
+--
+-- Indices de la tabla `f_t32pl`
+--
+ALTER TABLE `f_t32pl`
+  ADD PRIMARY KEY (`Numdiligencias`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
