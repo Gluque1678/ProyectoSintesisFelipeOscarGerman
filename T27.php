@@ -53,15 +53,13 @@ $fecha= date ("d/m/Y");
 				<h3>Datos del acta</h3>
 				
 				</div>
-
-
 		
 			</div>
 		</div>		
 
 
-				<div class="row">
-					<div class="col-xs-2"
+				<div class="col-xs-12">
+					<div class="col-xs-2">
 				
 						<label class="sr-only" for="NºDiligencias"></label>
 						<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
@@ -93,7 +91,7 @@ $fecha= date ("d/m/Y");
 				</div>
 
 		
-			
+				</br></br></br>	</br></br></br>
 
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -108,7 +106,7 @@ $fecha= date ("d/m/Y");
 			</div>
 		</div>	
 				
-				<div class="radio">
+				<div class="col-xs-12">
 			
 					<label>
 						<h4 style="margin-top: -5px;">Actuación originada por</h4>
@@ -133,12 +131,13 @@ $fecha= date ("d/m/Y");
 
 				</div>
 
+			</br></br>
+
 
 
 	<div class="panel panel-danger">
 		<div class="panel-heading">
-
-			<div class="radio">
+			<div class="requerida">
 			
 				<label>
 					<label for=""></label><h4 style="margin-top: -5px;">Datos de la persona requerida</h4>
@@ -161,7 +160,7 @@ $fecha= date ("d/m/Y");
 				</div>
 
 				<div class="col-xs-2">
-					<input type="text" id="apellido1" name= "apellidos" class="form-control" placeholder="Segundo " value="<?php echo $dni['Primerapellido']; ?>" readonly/>
+					<input type="text" id="apellido1" name= "apellidos" class="form-control" placeholder="Segundo Apellido " value="<?php echo $dni['Primerapellido']; ?>" readonly/>
 				</div>
 
 				<div class="col-xs-2">
@@ -221,8 +220,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 		
 	<div class="panel panel-success">
 		<div class="panel-heading">
-
-			<div class="radio">
+			<div class="Alegaciones">
 
 				<label for="alegaciones"><h3 style="margin-top: -5px;">Alegaciones y derechos de la persona requerida delante la realización de las pruevas de detención</h3>
 				</label></br>
@@ -245,7 +243,6 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 		
 	<div class="panel panel-success">
 		<div class="panel-heading">
-		
 			<div class="negativa">
 
 				<label for="negativa"><h3>Negativa a someterse a las pruebas de detección</h3></label>
@@ -274,7 +271,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
    		</div>
 	</div>
    		
-   		<div class="radio">
+   		<div class="col-xs-12">
 
    		<label class="checkbox-inline">
   			
@@ -283,8 +280,9 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 		
 		</div>
 
-		<div class="row">
-			<div class="col-xs-2"
+
+		<div class="col-xs-12">
+			<div class="col-xs-2">
 				
 				<label class="sr-only" for=""></label>
 				<input type="text" id="nombresustituto" name= "nombresustituto" class="form-control" placeholder="Nombre"/>
@@ -311,7 +309,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 		</div>
 
-
+	</br></br></br></br></br></br></br></br>
 
 
 
