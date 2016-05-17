@@ -3,6 +3,10 @@ session_start();
 $dni=$_SESSION['dni_datos'];
 $tip=$_SESSION['TIP'];
 include("conexion.proc.php");
+
+$hora= date ("h:i:s");
+$fecha= date ("d/m/Y");
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -28,7 +32,7 @@ include("conexion.proc.php");
 		<div class="panel-heading">
 				<img id="logo" src="img/Escutcolor.jpg" width="60px" height="50px" alt="">
 			
-			<form class="form-incline" class="T27"  method="" action="" onsubmit="return validaFormulario();">
+			<form class="form-incline" class="T27"  method="" action="t27.proc.php" onsubmit="return validaFormulario();">
 		
 			<div class="form-group">
 				<div id="texto">GUARDIA URBANA</div>
@@ -52,29 +56,26 @@ include("conexion.proc.php");
 					<div class="col-xs-2"
 				
 						<label class="sr-only" for="NºDiligencias"></label>
-						<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>"/>
+						<input type="text" id="diligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
 					
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="tip1" name= "agente1" class="form-control" placeholder="Agente 1" />
-					</div>
-
-					<div class="col-xs-1">
-						<input type="text" id="tip2" name= "agente2" class="form-control" placeholder="Agente 2" /></br>
-					</div>
-
-					<div class="col-xs-2">
-						<input type="text" name= "dia" class="form-control" placeholder="Fecha" value=""/>
+						<input type="text" id="agentes" name= "agentes" class="form-control" placeholder="Agente 1" value="<?php echo $tip; ?>" readonly/>
 					</div>
 
 
 					<div class="col-xs-2">
-						<input type="text" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
+						<input type="text" name= "dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
+					</div>
+
+
+					<div class="col-xs-2">
+						<input type="text" name= "hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/></br>
 					</div>
 
 					<div class="col-xs-3">
-						<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+						<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Lugar" value="<?php echo $_SESSION['lugar']; ?>" readonly/>
 					</div>
 				</div>
 
@@ -101,19 +102,19 @@ include("conexion.proc.php");
 					<label for=""><h4 style="margin-top: -5px;">Actuación originada por </h4></label>
 
 					<label>
-						<input type="radio" name="opciones" id="opactuacion" value="1">Control preventivo
+						<input type="radio" name="opactuacion" id="opactuacion" value="1">Control preventivo
 					</label>
 
 					<label>
-						<input type="radio" name="opciones" id="opactuacion" value="2">Accidente de tránsito
+						<input type="radio" name="opactuacion" id="opactuacion" value="2">Accidente de tránsito
 					</label>
 
 					<label>
-						<input type="radio" name="opciones" id="opactuacion" value="3">Infracción del Reglamento
+						<input type="radio" name="opactuacion" id="opactuacion" value="3">Infracción del Reglamento
 					</label>
 
 					<label>
-						<input type="radio" name="opciones" id="opactuacion" value="4">Síntomas
+						<input type="radio" name="opactuacion" id="opactuacion" value="4">Síntomas
 					</label>
 				</div>
 
@@ -134,16 +135,16 @@ include("conexion.proc.php");
 				<div class="col-xs-2"
 				
 					<label class="sr-only" for=""></label>
-					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
 				
 				</div>
 
 				<div class="col-xs-2">
-					<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+					<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
 				</div>
 
 				<div class="col-xs-2">
-					<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+					<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" value="<?php echo $dni['Num']; ?>" readonly/>
 				</div>
 				</br></br></br>
 			
@@ -178,11 +179,11 @@ include("conexion.proc.php");
 				</label>
 				
 				
-				<input type="radio" style="margin-left: 10px;" name="opciones" id="opsi" value="opcion_1" checked>
+				<input type="radio" style="margin-left: 10px;" name="negacion" id="negacion" value="1" checked>
 				<label for="si">&nbsp;Si   
 				</label>
 
-				<input type="radio" style="margin-left: 10px;" name="opciones" id="opno" value="opcion_2" checked>
+				<input type="radio" style="margin-left: 10px;" name="negacion" id="negacion" value="0" checked>
 				<label for="si">&nbsp;No quiere hacer la prueva de contraste
 				</label>
 			</div>
@@ -197,7 +198,7 @@ include("conexion.proc.php");
 
 				<label for="negativa"><h3>Negativa a someterse a las pruebas de detección</h3></label>
 			
-				<label for="texto">Se hace constar que a las <input type="time" />   horas de la fecha indicada se ha requerido la persona reseñada para que se sometiera a las pruebas legalmente establecidas, a fin </br>
+				<label for="texto">Se hace constar que a las <input type="time" id="Horanegativa" name="Horanegativa"/>   horas de la fecha indicada se ha requerido la persona reseñada para que se sometiera a las pruebas legalmente establecidas, a fin </br>
 				de comprobar las tasas de alcoholemia y la presencia de drogas tóxicas, estupefacientes y sustancias psicotrópicas a las que se refiere el artículo 379 </br> del Código penal, que ha sido informada sobre los derechos de realización de las
 				 pruebas y que se ha negado.Tras haber sido informada de las consecuencias </br>
 				 de la negativa a hacer la prueba, la persona requerida ha manifestado expresamente que no quiere hacer la prueba de detección y se reafirma en la negativa de someterse a ella.
@@ -224,7 +225,7 @@ include("conexion.proc.php");
    		<div class="autorizacion">
 
    		<label class="checkbox-inline">
-  			<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br></br>
+  			<input type="checkbox" id="autorizacion" name="autorizacion" value="1"> Autoriza como persona conductora sustituta, después de comprobar el resultado negativo en la prueba, a:</br></br>
 		</label>
 		
 		</div>
@@ -234,20 +235,20 @@ include("conexion.proc.php");
 			<div class="col-xs-2"
 				
 				<label class="sr-only" for=""></label>
-				<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+				<input type="text" id="nombresustituto" name= "nombresustituto" class="form-control" placeholder="Nombre"/>
 				
 			</div>
 
 			<div class="col-xs-2">
-				<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Apellidos" />
+				<input type="text" id="apellidossustituto" name= "apellidossustituto" class="form-control" placeholder="Apellidos" />
 			</div>
 
 			<div class="col-xs-2">
-				<input type="text" id="número" name= "número" class="form-control" placeholder="Núm. permiso de conducir" />
+				<input type="text" id="numerosustituto" name= "numerosustituto" class="form-control" placeholder="Núm. permiso de conducir" />
 			</div>
 
 			<div class="col-xs-2">
-				<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase" /></br>
+				<input type="text" id="clasesustituto" name= "clasesustituto" class="form-control" placeholder="Clase" /></br>
 			</div>
 
 		</div>
@@ -265,7 +266,7 @@ include("conexion.proc.php");
 
 					<label for="firmas">Firmo este impreso entrega, como prueba de conformidad, junto con las personas que han intervenido.</br></br>
 		
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-xs-2"
 				
 							<label class="sr-only" for=""></label>
@@ -291,8 +292,9 @@ include("conexion.proc.php");
 						<div class="col-xs-2">
 							<input type="text" id="número " name= "número" class="form-control" placeholder="Persona conductora" />
 						</div>
-					</div>
+					</div> -->
 
+					<input type="submit"/>
 					
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
