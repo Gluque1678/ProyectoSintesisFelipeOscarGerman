@@ -10,7 +10,7 @@ $fecha= date ("d/m/Y");
 ?>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -59,45 +59,41 @@ $fecha= date ("d/m/Y");
 			</div>
 		</div>
 				
-				<div class="">
+				<div class="col-xs-12">
 					<div class="col-xs-2">
-				
-							<label class="sr-only" for="NºDiligencias"></label>
-							<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
-					
+						<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
 					</div>
 					
-						<div class="col-xs-1">		
+					<div class="col-xs-1">		
 						<input type="text" id="agentes" name= "agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
-						</div>
+					</div>
 
-						<div class="col-xs-1">		
+					<div class="col-xs-1">		
 						<input type="text" id="agente2" name= "agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
-						</div>
+					</div>
 
 					</br></br></br>
 
-						<div class="col-xs-2">
+					<div class="col-xs-2">
 						<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
-						</div>
+					</div>
 
-						<div class="col-md-2">
+					<div class="col-md-2">
 						<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/></br>
-						</div>
+					</div>
 
 										
 				</div>	
 
 
-	</br></br></br>
+	</br></br></br></br></br></br>
 
 		<div class="panel panel-success">
 			<div class="panel-heading">	
-		
 				<div id="actuacion">
 
-				<h3>Acta de información a la persona imputada no detenida sobre sus derechos y de citación por causa penal</h3>
-				<h3>Datos donde se produce la actuación policial</h3>
+					<h3>Acta de información a la persona imputada no detenida sobre sus derechos y de citación por causa penal.</h3>
+					<h3>Datos donde se produce la actuación policial.</h3>
 		
 				</div>
 			</div>	
@@ -105,8 +101,8 @@ $fecha= date ("d/m/Y");
 		</div>	
 			
 
-			<div class="">
-				<div class="col-xs-12">
+			
+				<div class="col-xs-14">
 					
 					<div class="col-xs-4">
 						<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion(Tipo de via,nombre y número)" value=""/>
@@ -124,137 +120,130 @@ $fecha= date ("d/m/Y");
 
 			
 					<div class="col-xs-1">
-						<input type="text" id="agentes" name= "cuerpo" class="form-control" placeholder="Agente1" value=""/>
+						<input type="text" id="agentes" name= "agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 					</div>
 
 					<div class="col-xs-1">
-						<input type="text" id="agente2" name= "cuerpo" class="form-control" placeholder="Agente2" value=""/>
+						<input type="text" id="agente2" name= "agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
 					</br>
 					</div>
 				
 				</div>
 				
-			</div>
-			<br /><br /><br /><br /><br /><br />
-
-
-
-	<div class="panel panel-danger">
-			<div class="panel-heading">
-
-
-				<div id="imputada">
-				
-					<label class="persona" for=""><h3>Datos de la persona imputada</h3></label>
-
-					</br>
-				
-					<div class="row">
-						<div class="col-xs-2"
-				
-						<label class="sr-only" for=""></label>
-						<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
-				
-					</div>
-
-					<div class="col-xs-2">
-							<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" />
-					</div>
-
-					<div class="col-xs-2">
-							<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" />
-					</div>
-
-					<div class="col-xs-2">
-							<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" />
-					</div>
-
-						</br></br></br></br>
-							
-					<div class="col-xs-3">
-							<input type="text" id="imputadodocumento" name= "documento" class="form-control" placeholder="Tipo de documento de identidad y pais" />
-					</div>
-						
-					<div class="col-xs-2">
-							<input type="text" id="imputadonumero" name= "numero" class="form-control" placeholder="Número" />
-					</div>
-
-					<div class="col-xs-3">
-							<input type="text" id="imputadofecha" name= "fecha" class="form-control" placeholder="Fecha de Nacimiento" />
-					</div>
-
-						</br></br></br>
 			
-					</div>
-					
+			<br/><br/><br/>
+
+
+
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<div id="imputada">
+					<label class="persona" for=""><h3>Datos de la persona imputada</h3></label>
 				</div>
 			</div>
 		</div>
-
-			
-
-			<div class="panel panel-success">
-				<div class="panel-heading">
-
-					<div id="imputacion">
-				
-						<label class="motivo" for="imputacion"><h3>Motivo de la imputacion</h3></label>
-					
-						<textarea  class="form-control" rows="4">
-						</textarea>
-				
-				
-					</div>
-												
-				</div>
-
-			</div>				
-
-
-		<div class="panel panel-success">
-			<div class="panel-heading">
-
-				<div id="derechos">
-				<label class="derechos" for="derechos"><h3> Derechos que quiere  ejercer la persona imputada</h3></label>
-				</div>
-
-			</div>
-
-		</div>	
-
-					<div class="col-xs-4">
-							<input type="text" id="abogado" name= "privado" class="form-control" placeholder="Quiero que me asista el siguiente abogado" />
-					</div>
-				
-					<div class="col-xs-4">
-							<input type="text" id="intérprete" name= "intérprete" class="form-control" placeholder="Quiero que me asista un intérprete de" />
-					</div>
-
-
-					<div class="col-xs-5">
-
-					<label>
-					</br>
-						<input type="radio" name="oficio" id="oficio"value="oficio"> Quiero un abogado de oficio&nbsp&nbsp
-						<input type="radio" name="renuncio" id="renuncio"value="renuncio"> Renuncio a la asistencia letrada
-					</label>
-		
-					</div>
-
-					</br></br></br></br></br>
-
-		<div class="panel panel-success">
-			<div class="panel-heading">
-
 					
 					<div class="col-xs-12">
-					<label class="observaciones" for="observaciones">Observaciones</label>
+						<div class="col-xs-2">
+							<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
+						</div>
+
+						<div class="col-xs-2">
+								<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" />
+						</div>
+
+						<div class="col-xs-2">
+								<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" />
+						</div>
+
+						<div class="col-xs-2">
+								<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" />
+						</div>
+
+						</br></br></br>
+							
+						<div class="col-xs-2">
+						
+							<select class="form-control">
+								<option value="">Tipo de documento</option>
+				  				<option value="">DNI</option>
+				 				<option value="">NIE</option>
+				  				<option value="">PASAPORTE</option>
+			  				</select>
+						</div>
+
+						<div class="col-xs-2">
+								<input type="text" id="imputadodopais" name= "imputadodopais" class="form-control" placeholder="Pais" />
+						</div>
+							
+						<div class="col-xs-2">
+								<input type="text" id="imputadonumero" name= "imputadonumero" class="form-control" placeholder="Número" />
+						</div>
+
+						<div class="col-xs-2">
+								<input type="text" id="imputadofecha" name= "fecha" class="form-control" placeholder="Fecha de Nacimiento" />
+						</div>
+
+					
+					</div>
+				
+
+			</br></br></br></br></br></br>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<div id="imputacion">
+						<h3>Motivo de la imputacion</h3>
+					</div>			
+				</div>
+			</div>		
+						
+				<div class="col-xs-12">
+					<textarea  class="form-control" rows="4">
+					</textarea>
+				</div>
+							
+			</br></br></br></br></br></br>
+
+
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div id="derechos">
+					<h3> Derechos que quiere  ejercer la persona imputada</h3>
+				</div>
+			</div>
+		</div>	
+
+						
+			<div class="col-xs-12">
+				<input type="radio" name="oficio" id="oficio"value="oficio"> Quiero un abogado de oficio&nbsp&nbsp
+				<input type="radio" name="renuncio" id="renuncio"value="renuncio"> Renuncio a la asistencia letrada
+			</div>	
+			
+			</br></br>
+	
+			<div class="col-xs-5">
+				<input type="text" id="abogado" name= "privado" class="form-control" placeholder="Quiero que me asista el siguiente abogado" value="" />
+			</div>
+				
+			<div class="col-xs-5">
+				<input type="text" id="intérprete" name= "intérprete" class="form-control" placeholder="Quiero que me asista un intérprete de"value="" />
+			</div>
+		
+			
+			</br></br></br>
+
+
+	
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<div class="col-xs-12">
+					<label><h3>Observaciones</h3></label>
 					</br></br></br>
 					<textarea class="form-control" rows="4">
 					</textarea>
-					</div>
+				</div>
 
-				</br></br>
+				</br></br></br>
 
 			</div>
 		</div>
@@ -263,28 +252,16 @@ $fecha= date ("d/m/Y");
 
 		<div class="panel panel-success">
 			<div class="panel-heading">
-
 				<div id="compareciencia">
-				
-					<label class="compareciencia" for="compareciencia"><h3>Datos de la compareciencia por causa penal(imputado/ada)</h3>
-					</label>
-				
+					<h3>Datos de la compareciencia por causa penal(imputado/ada)</h3>
 				</div>
 			</div>
 		</div>
-					
-
-			
-	<div class="panel panel-danger">
-			<div class="panel-heading">
-
-
+							
+			<div class="col-xs-12">
 				<div class="citacion">
-					<div class="col-xs-2"
-				
-						<label class="sr-only" for=""></label>
+					<div class="col-xs-2">
 						<input type="text" id="diacomparecer" name= "fecha" class="form-control" placeholder="Fecha"/>
-				
 					</div>
 
 					<div class="col-xs-1">
@@ -293,7 +270,6 @@ $fecha= date ("d/m/Y");
 							
 				</div>
 
-			
 				<div class="col-xs-3">
 					<select class="form-control">
 					<option value="">Selecciona una opción</option>
@@ -306,59 +282,50 @@ $fecha= date ("d/m/Y");
 				</div>
 
 			
-					<label class="direccion" for="direccion"><h4>Dirección: Av.Carrilet,número 2(edificio H) </br> Hospitalet de LLobregat Teléfono 935548145</h4></label>		
+					<label><h4>Dirección: Av.Carrilet,número 2(edificio H) </br> Hospitalet de LLobregat Teléfono 935548145</h4></label>		
 					
-
 			</div>
-	</div>
-
-
+			<br /><br /><br />
 
 	<div class="panel panel-danger">
 			<div class="panel-heading">
-
 				<div id="Firmas">
-
-					<label class="firmas" for="firmas"><h3>Firmas</h3></label>
-				
+					<h3>Firmas</h3>
 				</div>
-
 			</div>
 	</div>
+			</br>
 
 			
-
-			<div class="">
-				<div class="col-xs-2"
-				
-					<label class="sr-only" for=""></label>
+				<div class="col-xs-2">
 					<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
-				
 				</div>
 
-				<div class="col-xs-2"
-				
-					<label class="sr-only" for=""></label>
+				<div class="col-xs-2">
 					<input type="text" id="agente" name= "nombre" class="form-control" placeholder="Agentes2"/>
-				
 				</div>
 
 
-				<div class="col-xs-2"
-				
-					<label class="sr-only" for=""></label>
+				<div class="col-xs-2">
 					<input type="text" id="imputado" name= "imputado" class="form-control" placeholder="Imputado"/>
-				
 				</div>	
-
-			</br></br></br>
 			
-	</div>		
+		<div class="col-xs-12">
+			<a href="">
+			</br>
+				<button type="button" class="btn btn-primary">Enviar</button>
+
+ 			</a>
+		</div>	
+
+			</br></br></br></br></br></br>
+			
+			
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 		</script>
 	
-		
-	</body>
+</div>
+</body>
 
 </html>

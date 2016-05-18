@@ -38,19 +38,18 @@ $fecha= date ("d/m/Y");
 			
 			<form class="form-incline" class="T15"  method="" action="" onsubmit="return validaFormulario();">
 		
-			<div class="form-group">
-				<div id="fuente" style="font-size:60px; margin-top: -80px; text-align: center;">
+				<div class="form-group">
+					<div id="fuente" style="font-size:60px; margin-top: -80px; text-align: center;">
 				GUARDIA URBANA
-				</div>
+					</div>
 
-			</div>	
-		</div>
+				</div>	
+			</div>
 
 		
 		
 		<div class="panel panel-success">
 			<div class="panel-heading">
-
 				<div id="datos_acta">
 				
 				<h3>Datos del acta</h3>
@@ -60,8 +59,8 @@ $fecha= date ("d/m/Y");
 			</div>
 		</div>
 				
-				<div class="row">
-					<div class="col-xs-2"
+				<div class="col-xs-12">
+					<div class="col-xs-2">
 				
 						<label class="sr-only" for="NºDiligencias"></label>
 						<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
@@ -87,35 +86,33 @@ $fecha= date ("d/m/Y");
 						<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
 					</div>
 
+					</br></br></br>
+
 					<div class="col-xs-3">
 						<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
 					</div>
+				
 				</div>
 
 		
-				</br>
+				</br></br></br></br></br></br></br></br></br>
 
 
 		<div class="panel panel-success">
 			<div class="panel-heading">
-
-				<div class="radio">
+				<div class="personarequerida">
 				
-					<label>
-						<label for=""></label><h4 style="margin-top: -5px;">Datos de la persona requerida</h4>
+					<h3>Hoja de comprobantes de pruebas de alcoholemia</h3>
 						
-					</label>
-
 				</div>
-
-
 			</div>	
 		</div>
 
-				<div class="row">
+				
+				<div class="col-xs-12">
+				
 					<div class="col-xs-2">
-						<label class="sr-only" for=""></label>
-						<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
+					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre"/>
 					</div>
 
 					<div class="col-xs-2">
@@ -125,42 +122,71 @@ $fecha= date ("d/m/Y");
 					<div class="col-xs-2">
 						<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Segundo Apellido" />
 					</div>
-					
-					<div class="col-xs-3">
-						<input type="text" id="tipodocumento" name= "número" class="form-control" placeholder="Tipo de documento identificativo y número" />
-					</div>
+
 					</br></br></br>
+					
+					<div class="col-xs-2">
+
+						<select class="form-control">
+							<option value="">Tipo de documento</option>
+	  						<option value="">DNI</option>
+	 						<option value="">NIE</option>
+	  						<option value="">PASAPORTE</option>
+	  					</select>
+
+	  				</div>
+					
+
+					<div class="col-xs-2">
+						<input type="text" id="imputadodopais" name= "imputadodopais" class="form-control" placeholder="Pais" />
+					</div>
+
+					<div class="col-xs-2">
+						<input type="text" id="imputadodonumero" name= "imputadodonumero" class="form-control" placeholder="Número" />
+					</div>
+
+					</br></br>
+
 				</div>
+
+				</br></br></br></br></br></br>
 
 
 		<div class="panel panel-danger">
 			<div class="panel-heading">	
-				<div class="row">
+				<div class="pruevas">
 					
-
+				</br></br>
+					
 					<div class="col-xs-2">
-						<input type="text" id="prueva1" name= "prueva1" class="form-control" placeholder="Prueva 1" />
+						<input type="text" id="prueba1" name= "prueba1" class="form-control" placeholder="Prueba 1" />
 					</div>
 
 					<div class="col-xs-2">
-						<input type="text" id="prueva2" name= "prueva2" class="form-control" placeholder="Prueva 2" /></br>
+						<input type="text" id="prueba2" name= "prueba2" class="form-control" placeholder="Prueba 2" />
 					</div>
 
-								
+					</br></br></br>
+
 				</div>
-
 			</div>
+		
+	
+				<div class="col-xs-12">
+					<a href="">
+					</br>
+					<button type="button" class="btn btn-primary">Enviar</button>
+ 					</a>
+				</div>	
+
 		</div>
 
-
-
+		</br></br></br>
 			
-			
-	</div>
-
 			<script src="js/jquery.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 			</script>
 
+</div>
 </body>
 </html>

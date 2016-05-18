@@ -69,12 +69,12 @@ $fecha= date ("d/m/Y");
 						
 					</div>
 					
-					<div class="col-xs-2">		
+					<div class="col-xs-1">		
 						<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 					</div>
 
 
-						<div class="col-xs-2">		
+						<div class="col-xs-1">		
 						<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
 						</div>
 
@@ -88,7 +88,7 @@ $fecha= date ("d/m/Y");
 						<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
 						</div>
 
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 						<input type="text" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
 						</div>
 
@@ -100,18 +100,12 @@ $fecha= date ("d/m/Y");
 
 		<div class="panel panel-danger">
 			<div class="panel-heading">	
-			<h3 style="margin-top: -5px;"> Acta de simptomatologia: Datos de la persona requerida </h3>
-			
-				
-		
+			<h3> Acta de simptomatologia: Datos de la persona requerida </h3>
 
-				<div class="row">
-					<div class="col-xs-2"
-				
-						<label class="sr-only" for="apellidos"></label>
+				<div class="col-xs-12">
+				</br></br>
+					<div class="col-xs-2">
 						<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Primer Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
-						
-							
 					</div>
 					
 					<div class="col-xs-2">
@@ -131,6 +125,7 @@ $fecha= date ("d/m/Y");
 					</div>
 
 					</br></br></br>
+
 
 					<div class="radio">
 			
@@ -168,10 +163,13 @@ $fecha= date ("d/m/Y");
 	</div>	
 		
 
+
+		</br></br></br></br></br></br>
+
 		<div class="panel panel-success">
 			<div class="panel-heading">
 				<div class="Descripcion_conduccion">
-					<label class="Descripcion"  for=""><h3 style="margin-top: -5px;">Descripcion de la conduccion</h3></label>
+					<label><h3>Descripcion de la conduccion</h3></label>
 					<textarea class="form-control" rows="5" id="descripcion" name= "descripcion">
 					</textarea>	
 				</div>
@@ -459,7 +457,7 @@ $fecha= date ("d/m/Y");
 
 	</div>
 
-	</br></br></br></br>
+	</br></br></br>
 
 	<div class="panel panel-danger">
 		<div class="panel-heading">
@@ -469,26 +467,31 @@ $fecha= date ("d/m/Y");
 			</div>
 		</div>
 
-	</br>
+	
 
-		<div class="">
-			<div class="col-xs-2"
-				<label class="sr-only" for=""></label>
+	</div>	
+			
+		
+			<div class="col-xs-2">
+				
 				<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
 			</div>
 
-			<div class="col-xs-2"
-				<label class="sr-only" for=""></label>
+			<div class="col-xs-2">
+				
 				<input type="text" id="agente2" name= "nombre" class="form-control" placeholder="Agentes2"/>
 				
 			</div>
-		</div>
-	</br></br>
 
-	</div>
-
-
-
+		</br></br></br>
+			
+			<div class="col-xs-12">
+						<a href="">
+						<button type="button" class="btn btn-primary">Enviar</button>
+ 						</a>
+			</div>
+		
+			</br></br></br>
 
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">

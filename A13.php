@@ -91,7 +91,7 @@ $fecha= date ("d/m/Y");
 			</div>		
 		</div>
 
-			<div class="">
+			
 				<div class="col-xs-2">
 					<input type="text" id="lugar" name="lugar" class="form-control" placeholder="Lugar"/>
 				</div>
@@ -100,7 +100,7 @@ $fecha= date ("d/m/Y");
 					<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 					<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
 				</div>
 				
@@ -110,7 +110,7 @@ $fecha= date ("d/m/Y");
 					<input type="text" id="immobilizacion" name="immobilizacion" class="form-control" placeholder="Motivo de la immobilizacion"/>
 				</div>
 
-				<div class="col-xs-3">
+				<div class="col-xs-2">
 					<input type="text" id="denuncia" name="denuncia" class="form-control" placeholder="Denuncia número"/>
 				</div>
 
@@ -140,7 +140,7 @@ $fecha= date ("d/m/Y");
 					<input type="text" id="kilometros" name="kilometros" class="form-control" placeholder="Kms"/>
 				</div>
 				
-			</div>
+		
 
 		
 			</br></br></br>	
@@ -156,7 +156,7 @@ $fecha= date ("d/m/Y");
 
 		</br>		
 	
-			<div class="col-xs-3">
+			<div class="col-xs-2">
 					<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre"/>
 			</div>
 
@@ -248,7 +248,7 @@ $fecha= date ("d/m/Y");
 
 			</br></br></br>
 
-			<div class="col-xs-3">
+			<div class="col-xs-4">
 				<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Direccion del titular"/>
 			</div>	
 
@@ -324,18 +324,18 @@ $fecha= date ("d/m/Y");
 		
 			<div class="">
 				<div class="col-xs-3">
-					<input type="date" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+					<input type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
 				</div>
 
 				<div class="col-xs-2">
-					<input type="time" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+					<input type="text" id="hora" name="hora" class="form-control" placeholder="Hora"/>
 				</div>
 				
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 					<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
 				</div>
 
-				<div class="col-xs-2">
+				<div class="col-xs-1">
 					<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" />
 				
 				</div>	
@@ -350,11 +350,11 @@ $fecha= date ("d/m/Y");
 				
 				</br></br></br>
 			
-			</div>
+				</div>
 
 			
 			<div class="panel panel-success">
-			<div class="panel-heading">
+				<div class="panel-heading">
 
 					
 					<div class="col-xs-12">
@@ -386,7 +386,7 @@ $fecha= date ("d/m/Y");
 			
 		
 					<div class="">
-						<div class="col-xs-2"
+						<div class="col-xs-2">
 				
 							<label class="sr-only" for=""></label>
 							<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Firma agente 1"/>
@@ -430,25 +430,26 @@ $fecha= date ("d/m/Y");
 
 
 				<div id="Rotura1">
+					<div class="">
+						<div class="col-xs-2">
+							<input type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+						</div>
 
-				<div class="">
-				<div class="col-xs-2">
-					<input type="date" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
-				</div>
+						<div class="col-xs-2">
+							<input type="text" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+						</div>
 
-				<div class="col-xs-2">
-					<input type="time" id="hora" name="hora" class="form-control" placeholder="Hora"/>
-				</div>
-
-			    </br></br></br>
+			    		</br></br></br>
 				
-				<div class="col-xs-1">
-					<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
-				</div>
+						<div class="col-xs-1">
+							<input type="text" id="tip1" name= "agentes" class="form-control" placeholder="Agente1" />
+						</div>
 
-				<div class="col-xs-1">
-					<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" /></br>
-				</div>	
+						<div class="col-xs-1">
+							<input type="text" id="tip2" name= "agentes" class="form-control" placeholder="Agente2" /></br>
+						</div>
+
+
 
 				</br></br></br>
 				
@@ -484,9 +485,9 @@ $fecha= date ("d/m/Y");
 					<input type="text" id="pais" name= "pais" class="form-control" placeholder="Pais Expedición " />
 				</div>	
 
-
 			</div>
-
+		</div>
+	
 
 		</br></br></br></br>
 
@@ -533,23 +534,25 @@ $fecha= date ("d/m/Y");
 	 						<option value="">Victor-10</option>
 	  				
 	 						</select>
-			
-
+							
 						</div>
-				
-
+			
 				</div>
 				
-				</br></br></br>
+					<div class="col-xs-12">
+						<a href="">
+						</br>
+						<button type="button" class="btn btn-primary">Enviar</button>
+						</a>
+					</div>	
+							
+									
+					</br></br></br></br></br></br></br>
 
-				
-	</div>			
+											
 		<script src="js/jquery.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 		</script>
-				
-				
-
-
+		</div>
 	</body>
 </html>

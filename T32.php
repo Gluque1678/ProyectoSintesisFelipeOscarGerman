@@ -50,18 +50,18 @@ $fecha= date ("d/m/Y");
 
 	</br>
 
-	<div class="row">
-		<div class="col-xs-2"
+
+		<div class="col-xs-2">
 			<label class="sr-only" for="NºDiligencias"></label>
 			<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
 						
 		</div>
 					
-		<div class="col-xs-2">		
+		<div class="col-xs-1">		
 			<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 		</div>
 
-		<div class="col-xs-2">		
+		<div class="col-xs-1">		
 		<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
 		</div>
 
@@ -80,12 +80,9 @@ $fecha= date ("d/m/Y");
 		<div class="col-xs-2">
 		<input type="text" name= "lugar" id="lugar" class="form-control" placeholder="Lugar" value=""/>
 		</div>
-
-						
-	</div>
 		
 	
-		</br>	
+		</br></br></br>	
 		
 		
 
@@ -100,6 +97,8 @@ $fecha= date ("d/m/Y");
 		</div>
 			
 			</br>
+
+		<div class="col-md-12">
 			
 			<label class="checkbox-inline">
   				<input type="checkbox" id="seguridadviaria" name="Comportamiento_agresivo" value="1"> Contra la seguridad viaria
@@ -159,9 +158,10 @@ $fecha= date ("d/m/Y");
 			<label class="checkbox-inline">
  			 <input type="checkbox" id="desobediencia" name="checkboxEnLinea" value="1"> Por desobediencia grave por rotura de immobilización
  			</label>
+ 		</div>
 
 
- 			</br></br>
+ 			</br></br></br></br></br></br></br></br></br></br>
 
  			<div class="panel panel-success">
 				<div class="panel-heading">
@@ -210,14 +210,28 @@ $fecha= date ("d/m/Y");
 
 			</br></br></br>
 
-			<div class="col-xs-2">
-				<input type="text" id="Tipopaisdocumento" name="Tipopaisdocumento" class="form-control" placeholder="Tipo pais del documento"/>
+			<div class="col-xs-3">
+
+				<select class="form-control">
+					<option value="">Tipo de documento</option>
+	  				<option value="">DNI</option>
+	 				<option value="">NIE</option>
+	  				<option value="">PASAPORTE</option>
+	  			</select>
+
+	  		</div>
+					
+
+			<div class="col-xs-3">
+							<input type="text" id="imputadodopais" name= "imputadodopais" class="form-control" placeholder="Pais" />
 			</div>
 
 			<div class="col-xs-2">
 				<input type="text" id="número" name="número" class="form-control" placeholder="Número"/>
 			</div>	
 				
+			</br></br></br>
+
 			<div class="col-xs-2">
 				<input type="text" id="Nombrepadre" name="Nombrepadre" class="form-control" placeholder="Nombre del padre"/>
 			</div>
@@ -226,12 +240,12 @@ $fecha= date ("d/m/Y");
 				<input type="text" id="Nombremadre" name="Nombremadre" class="form-control" placeholder="Nombre de la madre"/>
 			</div>
 
-			</br></br></br>
-
-			<div class="col-xs-3">
+			
+			<div class="col-xs-4">
 				<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value=""/>
 			</div>
 
+			</br></br></br>
 
 			<div class="col-xs-2">
 				<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value=""/>
@@ -241,9 +255,7 @@ $fecha= date ("d/m/Y");
 				<input type="text" id="comarca" name="comarca" class="form-control" placeholder="Comarca"/>
 			</div>
 
-			</br></br></br>
-
-
+			
 			<div class="col-xs-2">
 				<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais"/>
 			</div>
@@ -278,7 +290,7 @@ $fecha= date ("d/m/Y");
 					<input type="text" id="Tipocarnet" name="Tipocarnet" class="form-control" placeholder="Tipo de Carnet"/>
 			</div>
 
-			<div class="col-xs-2">
+			<div class="col-xs-3">
 					<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición"/>
 			</div>	
 
@@ -336,7 +348,7 @@ $fecha= date ("d/m/Y");
 			<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Direccion del titular"/>
 		</div>	
 
-		<div class="col-xs-2">
+		<div class="col-xs-3">
 			<input type="text" id="municipio" name="municipio" class="form-control" placeholder="Municipio"/>
 		</div>	
 
@@ -351,11 +363,11 @@ $fecha= date ("d/m/Y");
 			</div>	
 		</div>
 				
-		<div class="row">
-				
-				<div class="col-xs-2">
+		<div class="col-md-12">
+			
 				<label>Prueba de Alcoholemia</label>	
-				</div>
+				
+		</div>
 
 				</br></br>
 
@@ -363,7 +375,7 @@ $fecha= date ("d/m/Y");
 					<input type="text" id="marcaetilometro" name= "marcaetilometro" class="form-control" placeholder="Marca Etilómetro"/>
 				</div>
 
-				<div class="col-xs-1">
+				<div class="col-xs-2">
 					<input type="text" id="modelo" name= "modelo" class="form-control" placeholder="Modelo" />
 				</div>
 
@@ -412,7 +424,7 @@ $fecha= date ("d/m/Y");
 					<input type="text" id="resultado2" name= "resultado2" class="form-control" placeholder="mg/l aire expirado" value=""/>
 				</div>
 
-		</div>
+		</br></br></br>
 
 		
 
@@ -453,22 +465,33 @@ $fecha= date ("d/m/Y");
 		</div>
 	
 
-			</br></br>
+			</br></br></br>
 
-			<div class="col-md-2">
+			
+
+
+				</br>
+				<div class="col-xs-2">
 					<input type="text" id="horatraslado" name= "horatraslado" class="form-control" placeholder="Hora de traslado" value=""/></br>
-			</div>
+				</div>
 			
-			<div class="col-md-2">
+				<div class="col-xs-2">
 					<input type="text" id="centromedico" name= "centromedico" class="form-control" placeholder="Centro médico" value=""/></br>
-			</div>
-			
-			
-	
+				</div>
+
+				</br></br></br>
 
 
-			
-				
+
+		<div class="col-xs-12">
+			<a href="">
+			</br>
+			<button type="button" class="btn btn-primary">Enviar</button>
+ 			</a>
+ 		</br></br></br>
+		</div>	
+
+
 			
 
 			<script src="js/jquery.js"></script>

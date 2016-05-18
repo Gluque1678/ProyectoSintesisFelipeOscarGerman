@@ -148,7 +148,7 @@ $fecha= date ("d/m/Y");
 
 
 			<div class="row">
-				<div class="col-xs-2"
+				<div class="col-xs-2">
 				
 					<label class="sr-only" for=""></label>
 					<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
@@ -326,7 +326,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 					<label for="firmas">Firmo este impreso entrega, como prueba de conformidad, junto con las personas que han intervenido.</br></br>
 		
 					<div class="">
-						<div class="col-xs-2"
+						<div class="col-xs-2">
 				
 							<label class="sr-only" for=""></label>
 							<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
@@ -359,7 +359,12 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 					</div>
 
-					<input type="submit"/>
+					
+					<div class="col-xs-12">
+						
+						<button type="button" class="btn btn-primary">Enviar</button>
+ 
+					</div>
 					</br></br></br>
 					
 		<script src="js/jquery.js"></script>
