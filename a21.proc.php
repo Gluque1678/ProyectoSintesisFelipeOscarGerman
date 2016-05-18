@@ -2,7 +2,8 @@
 	session_start();
 	$dni=$_SESSION['dni_datos'];
 	$_SESSION['diligencias']=$_REQUEST['Numdiligencias'];
-
+	$_SESSION['lugar']=$_REQUEST['lugar'];
+	
 	include("conexion.proc.php");
 
 if (empty($_REQUEST['halitosis'])) {
@@ -81,7 +82,7 @@ if (empty($_REQUEST['Psicomotricidad_movimientooscilante'])) {
 		$_REQUEST['Psicomotricidad_movimientooscilante']=0;
 	}
 
-	$sqla21 = "INSERT INTO f_a21pl (`DNI`,`Numdiligencias`, `TIP1`, `Dia`, `Hora`, `Lugar`, `Nombre`, `Primerapellido`, 
+	$sqla21 = "INSERT INTO f_a21pl (`DNI`,`Numdiligencias`, `TIP1`, `Dia`, `Hora`, `Lugar`, `Nombre`, `Primerapellido`, `Segundoapellido`, 
 		`Permiso`, `Sexo`, `Altura`, `Peso`, `Descripcionconduccion`, `Halitosi`, `Constitucion`, `Comportamiento_agresivo`, 
 		`Comportamiento_insultante`, `Comportamiento_irrespetuoso`, `Comportamiento_euforico`, `Comportamiento_muyloquaz`, `Comportamiento_excitado`, 
 		`Comportamiento_variaciones`, `Descripcioncomportamiento`, `Mirada_midriaticos`, `Mirada_mioticos`, `Mirada_brillantes`, `Mirada_somnolienta`, 
@@ -93,9 +94,10 @@ if (empty($_REQUEST['Psicomotricidad_movimientooscilante'])) {
 			'$_REQUEST[agentes]',
 			'$_REQUEST[dia]',
 			'$_REQUEST[hora]',
-			'$_REQUEST[lugar]',
+			'$_SESSION[lugar]',
 			'$_REQUEST[nombre]',
 			'$_REQUEST[apellidos]',
+			'$_REQUEST[apellidos2]',
 			'$_REQUEST[permiso]',
 			'$_REQUEST[sexo]',
 			'$_REQUEST[altura]',
