@@ -22,12 +22,18 @@ $fecha= date ("d/m/Y");
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<link rel="stylesheet" type="text/css" href="fonts1.css" media="all">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="arriba.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <link href="../libs/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
 <!--<script type="text/javascript" src="view.js"></script>
 <script type="text/javascript" src="validaFormulario.js"></script>-->
 
 </head>
+
+<span class="ir-arriba icon-arrow-up"></span>
+<section class="contenido">
 
 <body id="main_body" style="background-color:#F5F6CE";>
 
@@ -140,7 +146,7 @@ $fecha= date ("d/m/Y");
 									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Provincia" value=""/>
 								</div>
 
-								</br></br></br></br></br></br>
+								</br></br></br></br></br></br></br></br>
 						</div>
 
 							
@@ -1625,11 +1631,14 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 		 							</a> 
 								</div>
 
-								</br></br></br>
+								</br></br></br></br></br>
 
 						</p>
 
 				</div>
+
+				
+				</section>
 
 
 			</div>	
