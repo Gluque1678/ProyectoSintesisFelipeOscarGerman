@@ -2,17 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>LOGIN</title>
   <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Login Form Template</title>
+        <title>Protocolo de Alcoholemia</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/form-elements.css">
+        <link rel="stylesheet" href="css/form-elements.css">
         <link rel="stylesheet" href="css/style.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -23,91 +22,53 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+        <link rel="shortcut icon" href="img/logoUrbanaActas.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/logoUrbanaActas.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/logoUrbanaActas.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/logoUrbanaActas.png">
+        <link rel="apple-touch-icon-precomposed" href="img/logoUrbanaActas.png">
 
 </head>
 <body>
       <div class="top-content">
-          
             <div class="inner-bg">
-                <div class="container">
+                <div class="container padding-top-6em">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1>Control de <strong>Alcoholemia</strong></h1>
+                            <h1>Control de Alcoholemia</h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                           <div class="form-top">
                             <div class="form-top-left">
-                              <h3></h3>
-                                <p>Introduzca su TIP y contraseña:</p>
+                              <h3>Introduzca su TIP y contraseña</h3>
                             </div>
                             
                             </div>
-                            <div class="form-bottom">
-                          <form role="form" action="" method="post" class="login-form">
-                            <div class="form-group">
-                              <label class="sr-only" for="form-username">TIP</label>
-                                <input type="text" name="TIP" placeholder="TIP" class="form-username form-control" id="TIP">
-                              </div>
-                              <div class="form-group">
-                                <label class="sr-only" for="form-password">Password</label>
-                                <input type="password" name="Password" placeholder="Password" class="form-password form-control" id="Password">
-                              </div>
-                              <button type="submit" class="btn" id="login" name="login" value="Login">Entrar</button>
-                          </form>
-                        </div>
+                            <div id="formulario" class="form-bottom">
+                              <form role="form" action="" method="post" class="login-form" >
+                                <div class="form-group">
+                                    <input type="text" name="TIP" placeholder="TIP" class="form-username form-control font-size-2em text-centro" id="TIP" autocomplete="off">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="password" name="Password" placeholder="Password" class="form-password form-control font-size-2em text-centro" id="Password" autocomplete="off">
+                                  </div>
+                                  <input type="submit" class="btn btn-success font-size-2em" id="login" name="login" value="Entrar">
+                              </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <div id='error' class="error font-size-2em"></div>    
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--   <div class="loginform-in">
-  <h1>Login</h1>
-  <fieldset>
-  	<form action="" method="post">
-  		<ul>
-  			<li> <label for="name">Usuario</label>
-  			<input type="text" size="30"  name="TIP" id="TIP"  /></li>
-  			<li> <label for="name">Contraseña</label>
-  			<input type="password" size="30"  name="Password" id="Password"  /></li>
-  			<li> <label></label>
-  			<input type="submit" id="login" name="login" value="Login" class="loginbutton" ></li>
-  		</ul>
-    </form>
-  </fieldset>
-  </div> -->
-
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/scripts.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="js/jquery-1.11.1.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="js/jquery.backstretch.js"></script>
+        <script src="js/script.js"></script>
         
 </body>
 </html>
