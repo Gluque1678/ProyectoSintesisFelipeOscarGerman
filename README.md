@@ -1,43 +1,100 @@
-
-
+# ProyectoSintesisFelipeOscarGerman
 Sintesis
 
 2/5/2016
 
-An谩lisis del proyecto seleccionado.
-Identificaci贸n de las necesidades del proyecto.
-Obtenci贸n de datos de uso por parte del usuario.
+An醠isis del proyecto seleccionado.
+Identificaci髇 de las necesidades del proyecto.
+Obtenci髇 de datos de uso por parte del usuario.
 Requisitos para la base de datos.
 
 3/5/2016
 
-Realizaci贸n de base de datos.
-Distribuci贸n de tareas en el equipo.
+Realizaci髇 de base de datos.
+Distribuci髇 de tareas en el equipo.
 
 4/5/2016
 
-Insercci贸n de campos en la base de datos.
-Realizaci贸n de formularios A21, T27.
+Insercci髇 de campos en la base de datos.
+Realizaci髇 de formularios A21, T27.
 
 5/05/2016
 
-Relaci贸n de las tablas de la base de datos.
-Realizaci贸n de formularios T15,N08,A13.
+Relaci髇 de las tablas de la base de datos.
+Realizaci髇 de formularios T15,N08,A13.
+
+6/05/2016
+
+Modificaciones en la base de datos.
+Correcciones en los formularios T15,N08,A13.
+
+7/05/2016
+
+Realizaci髇 del formulario T32 y comenzamos ha conectar 
+los usuarios.
+
+8/05/2016
+
+Seguimos con el formulario T32 y conectar la base de datos.
 
 9/05/2016
 
-Implementaci贸n de Bootstrap en formularios
-Comprobaci贸n de Login agente en db GU
-Comprobaci贸n de DNI del requerido en db Mossos
-Comprobaci贸n de Matr铆cula del veh铆culo en db Mossos
-An谩lisis del generador de pdfs FPDF/mPDF
+Buscamos informaci髇 de como pasar los datos al pdf.
+Seguimos con la conexion a la base de datos con Ajax.
 
 10/05/2016
 
-Realizacion de la Acta "A32" y darle formato con bootstrap a todas las actas.
-Navegaci贸n y usabilidad
-=======
-An谩lisis y organizaci贸n para la inserci贸n de campos
+Empezamos con el dise駉 con bootstrap.
+Comenzamos a crear los pdf.
 
 11/05/2016
-Inserci贸n de campos en DB acta A21
+
+Seguimos con el dise駉 y con la creaci髇 de los pdf.
+
+12/05/2016
+
+Continuamos dando dise駉 y buscando informacion de como
+hacer pesta馻s con bootstrap para una mejor visualizaci髇.
+Continuamos con la creaci髇 de los pdf.
+Rectificamos campos en la base de datos.
+
+13/05/2016
+
+Realizaci髇 de la denuncia municipal
+Finalizamos la creacion de los pdf.
+Le damos dise駉 al Loguin.
+
+14/05/2016
+
+Seguimos con el formulario de la denuncia municipal
+Seguimos con el dise駉 del Loguin.
+
+15/05/2016
+
+Acabamos el formulario de la denuncia municipal
+Comenzamos a integrar todo los formularios en pesta馻s.
+Buscamos informaci髇 de como enviar los formularios aun email.
+
+16/05/2016
+
+Seguimos con los integraci髇 de los formularios.
+Acabamos de dise馻r la pagina de login.
+Rectificamos campos en la base de datos.
+
+17/05/2016
+
+Acabamos con la integraci髇 de los formularios en pesta馻s.
+Comenzamos ha crear la p醙ina inicial y realizar busquedas.
+
+18/05/2016
+
+Continuamos con la realizaci髇 de las busquedas
+Corregimos errores en los formularios
+Realizamos botones nuevos en los formularios.
+
+19/05/2016
+
+Seguimos con las busquedas.
+Introducimos datos.
+
+

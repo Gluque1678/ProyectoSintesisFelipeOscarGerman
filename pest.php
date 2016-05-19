@@ -54,13 +54,13 @@ $fecha= date ("d/m/Y");
 					
 					<ul class="nav nav-pills" role="tablist">
 						<li role="presentacion" class="active">
-							<a href="#datos" role="tab" data-toggle="tab">DATOS ACTA</a>
+							<a href="#datos" role="tab" data-toggle="tab">DATOS</a>
 						</li>
 						<li role="presentacion">
 							<a href="#requerida" role="tab" data-toggle="tab">INFRACTOR</a>
 						</li>
 						<li role="presentacion">
-							<a href="#simptomas" role="tab" data-toggle="tab">SIMPTOMATOLOGIA</a>
+							<a href="#simptomas" role="tab" data-toggle="tab">SIMPTOMAS</a>
 						</li>
 						<li role="presentacion">
 							<a href="#resultados" role="tab" data-toggle="tab">RESULTADOS</a>
@@ -76,10 +76,13 @@ $fecha= date ("d/m/Y");
 							<a href="#imputacion" role="tab" data-toggle="tab">IMPUTACION</a>
 						</li>
 						<li role="presentacion">
-							<a href="#message" role="tab" data-toggle="tab">A13 PL</a>
+							<a href="#vehiculo" role="tab" data-toggle="tab">VEHÍCULO</a>
 						</li>
 						<li role="presentacion">
-							<a href="#settings" role="tab" data-toggle="tab">Denuncia Municipal</a>
+							<a href="#muni" role="tab" data-toggle="tab">DENUNCIA</a>
+						</li>
+						<li role="presentacion">
+							<a href="#firmas1" role="tab" data-toggle="tab">FIRMAS</a>
 						</li>
 					</ul>	
 	
@@ -133,16 +136,20 @@ $fecha= date ("d/m/Y");
 									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value=""/>
 								</div>
 
-								</br></br></br>
+								<div class="col-xs-3">
+									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Provincia" value=""/>
+								</div>
+
+								</br></br></br></br></br></br>
 						</div>
 
 							
 
 
-						</p>
+					</p>
 				
 
-					</div>
+				</div>
 
 					
 
@@ -252,6 +259,14 @@ $fecha= date ("d/m/Y");
 								</br></br></br>
 
 								<div class="col-xs-2">
+									<input type="text" id="clase" name="clase" class="form-control" placeholder="Clase de Permiso"/>
+								</div>
+
+								<div class="col-xs-2">
+									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición"/>
+								</div>	
+
+								<div class="col-xs-2">
 									<input type="text" name= "altura" id="altura" class="form-control" placeholder="Altura" value=""/>
 								</div>
 
@@ -281,8 +296,8 @@ $fecha= date ("d/m/Y");
 							</div>
 
 
-			</p>
-				</div>
+						</p>
+					</div>
 
 				
 				
@@ -297,214 +312,213 @@ $fecha= date ("d/m/Y");
 					</div>
 				</div>
 
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="simptoma">
-						<h3>Simptomatologia: Se hace constar que la persona requerida presentava la simptomatologia siguiente</h3>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<div class="simptoma">
+							<h3>Simptomatologia: Se hace constar que la persona requerida presentava la simptomatologia siguiente</h3>
+						</div>
 					</div>
-				</div>
-			</div>             
+				</div>             
 
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<div class="">
-					<h4>Habilitosi de alcohol</h4>
-					
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<div class="">
+						<h4>Habilitosi de alcohol</h4>
+						
+						</div>
 					</div>
-				</div>
 				
-				<div class="col-xs-12">
-					<label class="checkbox-inline">
-						<input type="checkbox" name="halitosis" id="halitosis" value="1" checked>
-						El olor que desprende es claramente detectable
-					</label>
-				</div>
-
-			</div>
-
-			<div class="panel panel-success">
-				<div class="panel-heading">	
-					<div class="constitucion">
-						<label for="fisica"><h4 style="margin-top: -5px;">Constitución física</h4>
+					<div class="col-xs-12">
+						<label class="checkbox-inline">
+							<input type="checkbox" name="halitosis" id="halitosis" value="1" checked>
+							El olor que desprende es claramente detectable
 						</label>
 					</div>
-				</div>		
+
+				</div>
+
+				<div class="panel panel-success">
+					<div class="panel-heading">	
+						<div class="constitucion">
+							<label for="fisica"><h4 style="margin-top: -5px;">Constitución física</h4>
+							</label>
+						</div>
+					</div>		
 
 		
-			<div class="col-xs-12">		
-				<label>
-					<input type="radio" name="constitucion" id="constitucion" value="Corpulenta" checked>
-					Corpulenta
-				</label>
+					<div class="col-xs-12">		
+						<label>
+							<input type="radio" name="constitucion" id="constitucion" value="Corpulenta" checked>
+							Corpulenta
+						</label>
 
-				<label>
-					
-					<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked>
-					Mediana
-				</label>
-				
-				<label>
-					
-					<input type="radio" name="constitucion" id="constitucion" value="Pequeña" checked>
-					Pequeña
-				</label>
-			</div>
+						<label>
+							
+							<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked>
+							Mediana
+						</label>
+						
+						<label>
+							
+							<input type="radio" name="constitucion" id="constitucion" value="Pequeña" checked>
+							Pequeña
+						</label>
+					</div>
 				
 								
-		</div>
-
-		<div class="panel panel-success">
-			<div class="panel-heading">
-
-				<div class="Comportamiento">
-					
-					<label for="fisica"><h4 style="margin-top: -5px;">Comportamiento</h4>
-					
-					</label>
-					</br>
-				</div>
-			</div>
-
-			<div class="col-xs-12">
-
-			
-				<label class="checkbox-inline">
-  				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"> Agresivo
-				</label>
-			
-				<label class="checkbox-inline">
- 				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"> Insultante
-				</label>
-			
-				<label class="checkbox-inline">
- 				 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"> Irrespetuoso
-				</label>
-
-				<label class="checkbox-inline">
- 				 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"> Eufórico
-				</label>
-
-				<label class="checkbox-inline">
- 				 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"> Locuaz
-				</label>
-
-				<label class="checkbox-inline">
- 				 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"> Excitado
-				</label>
-
-				<label class="checkbox-inline">
- 				 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"> Variaciones obtadas de comportamiento o estado de ánimo
-				</label>
 				</div>
 
-				
-			</div>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+
+							<div class="Comportamiento">
+								
+								<label for="fisica"><h4 style="margin-top: -5px;">Comportamiento</h4>
+								
+								</label>
+								</br>
+							</div>
+						</div>
+
+						<div class="col-xs-12">
+
+						
+							<label class="checkbox-inline">
+			  				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"> Agresivo
+							</label>
+						
+							<label class="checkbox-inline">
+			 				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"> Insultante
+							</label>
+						
+							<label class="checkbox-inline">
+			 				 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"> Irrespetuoso
+							</label>
+
+							<label class="checkbox-inline">
+			 				 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"> Eufórico
+							</label>
+
+							<label class="checkbox-inline">
+			 				 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"> Locuaz
+							</label>
+
+							<label class="checkbox-inline">
+			 				 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"> Excitado
+							</label>
+
+							<label class="checkbox-inline">
+			 				 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"> Variaciones obtadas de comportamiento o estado de ánimo
+							</label>
+							</div>
+
+							
+						</div>
 
 
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<div class="Descripcion_Comportamiento">
-					<label class="comportamiento" for=""><h4 style="margin-top: -5px;">Descripción del comportamiento</h4>
-					</label>
-					<textarea class="form-control" rows="3" name="descripcioncomportamiento" id="descripcioncomportamiento">
-					</textarea>	
-				</div>
-			</div>
-		</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="Descripcion_Comportamiento">
+									<label class="comportamiento" for=""><h4 style="margin-top: -5px;">Descripción del comportamiento</h4>
+									</label>
+									<textarea class="form-control" rows="3" name="descripcioncomportamiento" id="descripcioncomportamiento">
+									</textarea>	
+								</div>
+							</div>
+						</div>
 
 	
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<div class="Ojos">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="Ojos">
+							
+								<label for="ojos"><h4 style="margin-top: -5px;">Ojos-Mirada&nbsp</h4>
+									
+								</label>
+								</br>
+								</div>
+							</div>
 			
-				<label for="ojos"><h4 style="margin-top: -5px;">Ojos-Mirada&nbsp</h4>
+							<div class="col-xs-12">
+
+								<label class="checkbox-inline">
+					  				<input type="checkbox" id="Mirada_midriaticos" name="Mirada_midriaticos" value="1"> Dilatación pupila
+								</label>
+								
+								<label class="checkbox-inline">
+					 				 <input type="checkbox" id="Mirada_mioticos" name="Mirada_mioticos" value="1"> Disminución pupila
+								</label>
+							
+								<label class="checkbox-inline">
+					 			 <input type="checkbox" id="Mirada_brillantes" name="Mirada_brillantes" value="1"> Brillantes
+								</label>
+
+								<label class="checkbox-inline">
+					 			 <input type="checkbox" id="Mirada_somnolienta" name="Mirada_somnolienta" value="1"> Somnolientos
+								</label>
+
+								<label class="checkbox-inline">
+					 			 <input type="checkbox" id="Mirada_perdida" name="Mirada_perdida" value="1"> Perdida
+								</label>
+							
+							</div>
+
+						</div>
+
+		
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="Descripcion del habla">
+
+									<label for="habla"><h4>Descripcion del habla</h4>
+									</label>
+								</div>
+							</div>
+			
+			
+							<div class="col-xs-12">
+
+								<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox">
+								<label for="pastosa">Pastosa
+								</label>
+								
+								<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
+								<label for="clara">Clara
+								</label>
+								
+								<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
+								<label for="vacilante">Vacilante
+								</label>		
+								
+							</div>
+						</div>
+
+
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="Manera de Expresarse">
+
+								<label for="expresarse"><h4>Manera de Expresarse</h4></label></br>
+
+								</div>
+							</div>
+
+							<div class="col-xs-12">	
+
+								<input id="Expresion_ininteligibles" name="Expresion_ininteligibles" maxlength="5" value="1" type="checkbox">
+								<label for="respuestas">Respuestas Ininteligibles</label>
+								
+								<input id="Expresion_incoherentes" name="Expresion_incoherentes" maxlength="5" value="1" type="checkbox">
+								<label for="incoherente">Respuestas Incoherentes</label>
+
+								<input id="Expresion_repetitivo" name="Expresion_repetitivo" maxlength="5" value="1" type="checkbox">
+								<label for="repetitivo">Repetitivo</label>
+
+								<input id="Expresion_fugaideas" name="Expresion_fugaideas" maxlength="5" value="1" type="checkbox">
+								<label for="Fuga de ideas">Fuga de ideas</label>
 					
-				</label>
-				</br>
-				</div>
-			</div>
-			
-			<div class="col-xs-12">
-
-				<label class="checkbox-inline">
-	  				<input type="checkbox" id="Mirada_midriaticos" name="Mirada_midriaticos" value="1"> Dilatación pupila
-				</label>
-				
-				<label class="checkbox-inline">
-	 				 <input type="checkbox" id="Mirada_mioticos" name="Mirada_mioticos" value="1"> Disminución pupila
-				</label>
-			
-				<label class="checkbox-inline">
-	 			 <input type="checkbox" id="Mirada_brillantes" name="Mirada_brillantes" value="1"> Brillantes
-				</label>
-
-				<label class="checkbox-inline">
-	 			 <input type="checkbox" id="Mirada_somnolienta" name="Mirada_somnolienta" value="1"> Somnolientos
-				</label>
-
-				<label class="checkbox-inline">
-	 			 <input type="checkbox" id="Mirada_perdida" name="Mirada_perdida" value="1"> Perdida
-				</label>
-			
-			</div>
-
-		</div>
-
-		
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<div class="Descripcion del habla">
-
-					<label for="habla"><h4>Descripcion del habla</h4>
-					</label>
-				</div>
-			</div>
-			
-			
-			<div class="col-xs-12">
-
-				<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox">
-				<label for="pastosa">Pastosa
-				</label>
-				
-				<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
-				<label for="clara">Clara
-				</label>
-				
-				<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
-				<label for="vacilante">Vacilante
-				</label>		
-				
-			</div>
-		</div>
-
-
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<div class="Manera de Expresarse">
-
-				<label for="expresarse"><h4>Manera de Expresarse</h4></label></br>
-
-				</div>
-			</div>
-
-			<div class="col-xs-12">	
-
-
-				<input id="Expresion_ininteligibles" name="Expresion_ininteligibles" maxlength="5" value="1" type="checkbox">
-				<label for="respuestas">Respuestas Ininteligibles</label>
-				
-				<input id="Expresion_incoherentes" name="Expresion_incoherentes" maxlength="5" value="1" type="checkbox">
-				<label for="incoherente">Respuestas Incoherentes</label>
-
-				<input id="Expresion_repetitivo" name="Expresion_repetitivo" maxlength="5" value="1" type="checkbox">
-				<label for="repetitivo">Repetitivo</label>
-
-				<input id="Expresion_fugaideas" name="Expresion_fugaideas" maxlength="5" value="1" type="checkbox">
-				<label for="Fuga de ideas">Fuga de ideas</label>
-		
-			</div>
-		</div>	
+							</div>
+						</div>	
 
 
 
@@ -545,17 +559,15 @@ $fecha= date ("d/m/Y");
 
 		</div>
 
-				
 			<div class="col-xs-12">
+				</br>	
 				<textarea class="form-control" rows="3" name="descripcionmotricidad" id="descripcionmotricidad">
 				</textarea>
 			</div>
 
-
-
 	</div>
 
-	</br></br></br>
+	</br></br></br></br>
 
 			 </p>
 					
@@ -904,15 +916,15 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 							</div>
 						</div>
 					
-					<div class="col-xs-12">
+						<div class="col-xs-12">
 						
-						<div class="col-xs-2">
-								<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" />
-						</div>
+							<div class="col-xs-2">
+									<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" />
+							</div>
 
-						<div class="col-xs-2">
-							<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
-						</div>
+							<div class="col-xs-2">
+								<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
+							</div>
 
 						<div class="col-xs-2">
 								<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" />
@@ -1008,7 +1020,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 							</div>
 						</div>
 
-						</br></br></br>
+						</br></br>
 
 						<div class="panel panel-success">
 							<div class="panel-heading">
@@ -1049,19 +1061,578 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 					</p>
 
+				</div>
+			</div>
+				
+				
+				<div class="tab-pane" id="vehiculo">
+					<p><div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="vehiculo">
+									<h4>Acta de immobilización de vehículo</h4>
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-3">
+							<input type="text" id="lugar" name="lugar" class="form-control" placeholder="Lugar"/>
+						</div>
+					
+						<div class="col-xs-2">
+							<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
+						</div>
+						
+						<div class="col-xs-1">
+							<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
+						</div>
+						
+						
+						<div class="col-xs-4">
+							<input type="text" id="immobilizacion" name="immobilizacion" class="form-control" placeholder="Motivo de la immobilizacion"/>
+						</div>
+
+						</br></br></br>
+
+						<div class="col-xs-4">
+							<input type="text" id="lugarinmob" name="lugar" class="form-control" placeholder="Lugar de la Immobilización"/>
+						</div>
+
+						<div class="col-xs-2">
+							<input type="text" id="denuncia" name="denuncia" class="form-control" placeholder="Denuncia número"/>
+						</div>
+
+						<div class="col-xs-5">
+
+							<label>
+							</br>
+							<input type="checkbox" name="municipal" id="municipal"value="municipal"> Municipal&nbsp
+							<input type="checkbox" name="transito" id="transitio"value="transito"> Servicio Catalan de Tránsito
+							</label>
+				
+						</div>
+
+												
+						
+
+						</br></br></br>
+						
+						<div class="col-xs-2">
+							<input type="text" id="sistema" name="sistema" class="form-control" placeholder="Sistema de la Immobilización"/>
+						</div>
+						
+						<div class="col-xs-2">
+							<input type="text" id="kilometros" name="kilometros" class="form-control" placeholder="Kms"/>
+						</div>
+
+						</br></br></br>
+
+						<div class="panel panel-success">
+							<div class="panel-heading">		
+								<div id="vehiculo">
+									<h3>Datos del vehículo</h3>
+									
+								</div>
+							</div>
+						</div>
+
+						</br>
+
+						<div class="col-xs-2">
+							<input type="text" id="matricula" name="matricula" class="form-control" placeholder="Matrícula/bastidor"/>
+						</div>	
+
+						<div class="col-xs-2">
+							<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca"/>
+						</div>
+
+						<div class="col-xs-2">
+							<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo"/>
+						</div>	
+
+													
+						<div class="col-xs-2">
+							<input type="text" id="tipo" name="tipo" class="form-control" placeholder="Tipo"/>
+						</div>	
+
+						<div class="col-xs-2">
+							<input type="text" id="color" name="color" class="form-control" placeholder="Color"/>
+						</div>	
+
+						</br></br></br>
+
+						<div class="col-xs-2">
+							<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular"/>
+						</div>	
+							
+						<div class="col-xs-2">
+							<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="1º Apellido titular"/>
+						</div>
+
+						<div class="col-xs-2">
+							<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="2º Apellido titular"/>
+						</div>	
+
+					
+						<div class="col-xs-4">
+							<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Direccion del titular"/>
+						</div>	
+
+					</br></br></br>
+
+						<div class="col-xs-2">
+							<input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono"/>
+						</div>	
+
+					</br></br></br>
+
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div id="disposicion">
+								<h3>Vehículo a disposición de:</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3">
+					<select class="form-control">
+					<option value="">Selecciona una opción</option>
+	  				<option value="">Juzgado de Guardia</option>
+	 				<option value="">Titular</option>
+	  				<option value="">Otro conductor habilitado</option>
+	  				<option value="">Otros</option>
+	 				</select>
+					</div>
+
+					</br></br></br>
+
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="Rotura">
+								<label for="firmas"><h3>Rotura de la immobilización:</h3></label>
+
+
+							</div>
+						</div>
+					</div>
+
+					<div class="">
+						<div class="col-xs-2">
+							<input type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+						</div>
+
+						<div class="col-xs-2">
+							<input type="text" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+						</div>
+						
+						<div class="col-xs-2">		
+							<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
+						</div>
+
+
+						<div class="col-xs-2">		
+							<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
+						</div>
+
+
+						<div class="col-xs-3">
+							<input type="text" id="atestado" name= "atestado" class="form-control" placeholder="atestado desobediencia grave nº" />
+							</br>
+						</div>	
+						
+							</br></br></br>
+					
+					</div>
+
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<div class="col-xs-12">
+									<label class="observaciones" for="observaciones">Observaciones</label>
+									</br>
+									<textarea class="form-control" rows="1">
+									</textarea>
+								</div>
+
+								</br></br></br></br>
+
+							</div>
+						</div>
+
+					<div class="panel panel-success">
+						<div class="panel-heading">		
+							<div id="Levantamiento">
+								<h3>Motivo del levantamiento de la inmobilitzación:</h3>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-xs-3">
+							<select class="form-control">
+							
+							<option value="">Selecciona una opción</option>
+							<option value="">Desaparecer las causas que lo motivaron</option>
+			  				<option value="">Hacerse cargo otro conductor habilitado</option>
+			 				<option value="">Ingreso al depósito por transcurrir más de 24 horas</option>
+			  				
+			 				</select>
+					</div>
+
+
+					<div id="Rotura1">
+						<div class="">
+							<div class="col-xs-2">
+								<input type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+							</div>
+
+							<div class="col-xs-2">
+								<input type="text" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+							</div>
+
+				    						
+							<div class="col-xs-2">		
+								<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
+							</div>
+
+
+							<div class="col-xs-2">		
+								<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
+							</div>
+
+
+						
+							<div class="col-xs-4">
+								<label><h4>Persona que se hace cargo del vehículo</h4>
+								</label>
+							</div>
+
+							</br></br></br></br>
+
+							<div class="col-xs-2">
+								<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre " />
+							</div>	
+					
+							<div class="col-xs-2">
+								<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Primer Apellido" />
+							</div>	
+							<div class="col-xs-2">
+								<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Segundo Apellido" />
+							</div>	
+
+													
+							<div class="col-xs-2">
+								<input type="text" id="permiso" name= "permiso" class="form-control" placeholder="Permiso de conducir Nº" />
+							</div>	
+
+							<div class="col-xs-1">
+								<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase " />
+							</div>	
+
+							<div class="col-xs-2">
+								<input type="text" id="pais" name= "pais" class="form-control" placeholder="Pais Expedición " />
+							</div>	
+
+						</div>
+					</div>
+	
+
+						</br></br></br></br>
 
 
 
-					<p>fdkfjdkfjdkfjdk</p>
+					</p>
 				</div>
 
-				<div class="tab-pane" id="settings">
-					<h2>Configuracion</h2>
-					<p>fdkfjdkfjdkfjdk</p>
-				</div>
+				
+				<div class="tab-pane" id="muni">
+					 	<p><div class="panel panel-success">
+								<div class="panel-heading">
+									<div id="muni">
+										<h3>Denuncia Municipal</h3>
+									</div>	
 
+								</div>	
+							</div>
+							
+							<div class="">
+								<div class="col-xs-2">
+									<label class="sr-only" for="Denuncia Número"></label>
+										<input type="text" id="denumero" name= "denumero" class="form-control" placeholder="denumero" value="<?php echo $_SESSION['']; ?>" readonly/>
+								</div>
+											
+								<div class="col-xs-2">
+									<input type="text" name= "diadenuncia" id="diadenuncia" class="form-control" placeholder="Dia" value="<?php echo $fecha; ?>" readonly/>
+								</div>
+
+								<div class="col-md-2">
+									<input type="text" name= "horadenuncia" id="horadenuncia" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
+								</div>
+
+								<div class="col-xs-3">
+									<input type="text" name= "lugar" class="form-control" placeholder="Lugar" value=""/>
+								</div>	
+
+								</br></br></br>
+
+								<div class="col-xs-2">		
+									<input type="text" name= "matricula" id="matricula" class="form-control" placeholder="Matricula" value="">
+								</div>
+
+								<div class="col-xs-2">
+									<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca"/>
+								</div>
+
+								<div class="col-xs-2">
+									<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo"/>
+								</div>	
+
+								<div class="col-xs-3">
+									<input type="text" id="tipo" name="tipo" class="form-control" placeholder="Tipo"/>
+								</div>			
+												
+								</br></br></br>
+
+								
+								<div class="col-xs-3">
+									<input type="text" id="color" name="color" class="form-control" placeholder="Color"/>
+								</div>	
+								
+								<div class="col-xs-2">
+									<input type="text" name= "articulo" class="form-control" placeholder="Artículo Infracción" value=""/>
+								</div>
+
+
+								<div class="col-xs-4">
+
+									<select class="form-control">
+										<option value="">Reglamento General de Circulación</option>
+									  	<option value="">Ordenanza Municipal de Civismo</option>
+									 	<option value="">Otras</option>
+									  				 
+									</select>
+
+								</div>
+
+							  	</br></br></br>
+
+							  	<div class="panel panel-success">
+									<div class="panel-heading">
+										<div class="explicacion">
+											<label><h3>Infracción</h3></label>
+											</br>
+											<textarea class="form-control" rows="2">
+											</textarea>
+										</div>
+
+										</br></br>
+
+
+									</div>
+								</div>
+
+								
+								<div class="panel panel-success">
+									<div class="panel-heading">
+										<div id="conductor">
+											<h3>Persona Denunciada</h3>
+										</div>	
+
+									</div>	
+								</div>
+
+								</br>		
+								
+								<div class="col-xs-3">
+									<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre"/>
+								</div>
+
+								<div class="col-xs-2">
+								<input type="text" id="apellido1" name="apellido1" class="form-control" placeholder="Primer Apellido"/>
+								</div>
+
+								<div class="col-xs-2">
+									<input type="text" id="apellido2" name="apellido2" class="form-control" placeholder="Segundo Apellido"/>
+								</div>
+								
+
+								<div class="col-xs-3">
+									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value=""/>
+								</div>
+
+							</br></br></br>
+					
+								<div class="col-xs-4">
+									<input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad"/>
+								</div>
+
+							
+								<div class="col-xs-2">
+									<input type="text" id="provincia" name="provincia" class="form-control" placeholder="Provincia"/>
+								</div>
+
+								
+								<div class="col-xs-2">
+									<input type="text" id="codiPostal" name="codiPostal" class="form-control" placeholder="C.Postal"/>
+								</div>
+								
+								<div class="col-xs-2">
+									<input type="text" id="fechanacimiento" name="fechanacimiento" class="form-control" placeholder="Fecha Nacimiento"/>
+								</div>
+
+								</br></br></br>
+							
+								<div class="col-xs-4">
+
+									<select class="form-control">
+										<option value="">Tipo de documento</option>
+							  			<option value="">DNI</option>
+							 			<option value="">NIE</option>
+							  			<option value="">PASAPORTE</option>
+							  			<option value="">CARNET DE CONDUCIR</option>
+							  		</select>
+
+			  					</div>
+
+			  					<div class="col-xs-3">
+									<input type="text" id="número" name="número" class="form-control" placeholder="Número"/>
+								</div>	
+
+								<div class="col-xs-2">
+									<input type="text" id="clase" name= "clase" class="form-control" placeholder="Tipo Carnet " />
+								</div>
+
+								</br></br></br>
+
+								<div class="panel panel-success">
+									<div class="panel-heading">
+										<div id="conductor">
+											<h3>Titular del vehículo</h3>
+										</div>	
+
+										</div>	
+									</div>
+
+								</br>
+
+								<div class="col-xs-3">
+									<input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre"/>
+								</div>
+
+								<div class="col-xs-2">
+									<input type="text" id="apellido1" name="apellido1" class="form-control" placeholder="Primer Apellido"/>
+								</div>
+
+								<div class="col-xs-2">
+									<input type="text" id="apellido2" name="apellido2" class="form-control" placeholder="Segundo Apellido"/>
+								</div>
+								
+								<div class="col-xs-3">
+									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value=""/>
+								</div>
+
+								</br></br></br>
+						
+								<div class="col-xs-4">
+									<input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad"/>
+								</div>
+
+								
+								<div class="col-xs-3">
+									<input type="text" id="provincia" name="provincia" class="form-control" placeholder="Provincia"/>
+								</div>
+
+								<div class="col-xs-3">
+									<input type="text" id="fechanacimiento" name="fechanacimiento" class="form-control" placeholder="Fecha Nacimiento"/>
+								</div>
+
+								</br></br></br>
+
+								<div class="col-xs-2">
+									<input type="text" id="codiPostal" name="codiPostal" class="form-control" placeholder="C.Postal"/>
+								</div>
+								
+			
+								<div class="col-xs-4">
+
+									<select class="form-control">
+										<option value="">Tipo de documento</option>
+						  				<option value="">DNI</option>
+						 				<option value="">NIE</option>
+						  				<option value="">PASAPORTE</option>
+						  				<option value="">CARNET DE CONDUCIR</option>
+						  			</select>
+
+						  		</div>
+
+						  		<div class="col-xs-2">
+									<input type="text" id="número" name="número" class="form-control" placeholder="Número"/>
+								</div>	
+
+															
+								<div class="col-xs-2">
+									<input type="text" id="clase" name= "clase" class="form-control" placeholder="Tipo Carnet" />
+								</div>
+
+
+								</br></br></br>
+
+						</p>		
+
+				</div>
 
 			</div>
+
+
+				<div class="tab-pane" id="firmas1">
+					 	<p><div class="panel panel-success">
+								<div class="panel-heading">
+									<div id="firmas1">
+										<h3>Firmas</h3>
+									</div>	
+
+								</div>	
+							</div>
+
+							<div class="">
+								<div class="col-xs-2">
+									<label class="sr-only" for=""></label>
+									<input type="text" id="agentes" name= "nombre" class="form-control" placeholder="Agente1"/>
+								</div>
+
+								<div class="col-xs-2"
+						
+									<label class="sr-only" for=""></label>
+									<input type="text" id="agente2" name= "nombre" class="form-control" placeholder="Agentes2"/>
+						
+								</div>
+
+								<div class="col-xs-3">
+									<input type="text" id="requerida" name= "requerida" class="form-control" placeholder="Persona requerida" />
+								</div>
+
+								<div class="col-xs-4">
+									<input type="text" id="número " name= "número" class="form-control" placeholder="Persona conductora sustituta" />
+								</div>
+
+								</br></br></br>
+
+
+							</div>
+
+								<div class="col-xs-12">
+									<a href="">
+										<button type="button" class="btn btn-danger" style="margin-left: 1100px; margin-top:-205px;">Enviar</button>
+		 							</a> 
+								</div>
+
+								</br></br></br>
+
+						</p>
+
+				</div>
+
+
+			</div>	
 		</div>
 	</div>
 					
