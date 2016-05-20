@@ -17,7 +17,7 @@ $fecha= date ("d/m/Y");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Pestaña</title>
+<title>Protocolo de alcoholemia</title>
 <meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -145,7 +145,9 @@ $fecha= date ("d/m/Y");
 									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Provincia" value=""/>
 								</div>
 
-								</br></br></br></br></br></br></br></br>
+								<div style="height:500px;">
+									
+								</div>
 						</div>
 
 							
@@ -298,9 +300,9 @@ $fecha= date ("d/m/Y");
 									</label>
 				
 								</div>
-							</div>
+							</div><div style="height:500px;"></div>
 
-
+			
 						</p>
 					</div>
 
@@ -903,7 +905,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 				 		</br></br></br>
 
- 						</div>
+ 						</div><div style="height:500px;"></div>
 
 					</p>
 					
@@ -1626,11 +1628,11 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 								<div class="col-xs-12">
 									<a href="">
-										<button type="button" class="btn btn-danger" style="margin-left: 1100px; margin-top:-205px;">Enviar</button>
+										<button type="button" class="btn btn-danger" style="margin-left: 1060px; margin-top:-205px;">Enviar</button>
 		 							</a> 
 								</div>
 
-								</br></br></br></br></br>
+								<div style="height:500px;"></div>
 
 						</p>
 
