@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2016 a las 10:41:38
+-- Tiempo de generación: 20-05-2016 a las 10:40:51
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `f_a21pl` (
   `Mirada_somnolienta` tinyint(1) NOT NULL,
   `Mirada_perdida` tinyint(1) NOT NULL,
   `Habla_pastosa` tinyint(1) NOT NULL,
-  `Habla_clara` varchar(1) COLLATE utf8_bin NOT NULL DEFAULT '0',
+  `Habla_clara` tinyint(1) NOT NULL,
   `Habla_vacilante` tinyint(1) NOT NULL,
   `Expresion_ininteligibles` tinyint(1) NOT NULL,
   `Expresion_incoherentes` tinyint(1) NOT NULL,
@@ -159,16 +159,8 @@ CREATE TABLE IF NOT EXISTS `f_a21pl` (
   `Psicomotricidad_imprecision` tinyint(1) NOT NULL,
   `Psicomotricidad_disminucionreflejos` tinyint(1) NOT NULL,
   `Psicomotricidad_apreciacionfalsa` tinyint(1) NOT NULL,
-  `Psicomotricidad_movimientooscilante` tinyint(1) NOT NULL,
   `Descripcionmotricidad` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `f_a21pl`
---
-
-INSERT INTO `f_a21pl` (`DNI`, `Numdiligencias`, `TIP1`, `Dia`, `Hora`, `Lugar`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Permiso`, `Sexo`, `Altura`, `Peso`, `Descripcionconduccion`, `Halitosi`, `Constitucion`, `Comportamiento_agresivo`, `Comportamiento_insultante`, `Comportamiento_irrespetuoso`, `Comportamiento_euforico`, `Comportamiento_muyloquaz`, `Comportamiento_excitado`, `Comportamiento_variaciones`, `Descripcioncomportamiento`, `Mirada_midriaticos`, `Mirada_mioticos`, `Mirada_brillantes`, `Mirada_somnolienta`, `Mirada_perdida`, `Habla_pastosa`, `Habla_clara`, `Habla_vacilante`, `Expresion_ininteligibles`, `Expresion_incoherentes`, `Expresion_repetitivo`, `Expresion_fugaideas`, `Psicomotricidad_vacilante`, `Psicomotricidad_imprecision`, `Psicomotricidad_disminucionreflejos`, `Psicomotricidad_apreciacionfalsa`, `Psicomotricidad_movimientooscilante`, `Descripcionmotricidad`) VALUES
-('46997126F', '65', 666, '17/05/2016', '09:35:40', 'Barcelona', 'Oscar', 'Ortiz', 'Fernandez', '46997126F', 'Hombre', 245, 150, 'awadawd', 1, 'Mediana', 0, 0, 1, 0, 0, 1, 0, 'adawd', 0, 1, 0, 1, 0, 0, '0', 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 'awdawda');
 
 -- --------------------------------------------------------
 
@@ -192,13 +184,6 @@ CREATE TABLE IF NOT EXISTS `f_n08pl` (
   `Causapenal_fecha` date NOT NULL,
   `Causapenal_hora` time(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `f_n08pl`
---
-
-INSERT INTO `f_n08pl` (`DNI`, `Numdiligencias`, `TIP1`, `Municipio`, `Cuerpoagente`, `Motivoimputacion`, `Abogado`, `Abogadooficio`, `Renuncialetrada`, `Idiomainterprete`, `Observaciones`, `Causapenal_fecha`, `Causapenal_hora`) VALUES
-('46997126F', '65', 666, '', '', '						', '', 0, 0, '', '', '0000-00-00', '00:00:00.0000');
 
 -- --------------------------------------------------------
 
@@ -249,13 +234,6 @@ CREATE TABLE IF NOT EXISTS `f_t27pl` (
   `Clasesubstituto` varchar(5) COLLATE utf8_bin DEFAULT NULL,
   `Lugar` char(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `f_t27pl`
---
-
-INSERT INTO `f_t27pl` (`DNI`, `Numdiligencias`, `TIP1`, `Dia`, `Hora`, `Actuacion`, `negacion`, `Horanegativa`, `autorizacion`, `Conductorsubstituto`, `Permisosubstituto`, `Clasesubstituto`, `Lugar`) VALUES
-('46997126F', '65', 666, '17/05/2016', '09:36:29', 'Control preventivo', 1, '04:08:00', 1, 'Pepe', '65896589', 'B', 'Barcelona');
 
 -- --------------------------------------------------------
 
