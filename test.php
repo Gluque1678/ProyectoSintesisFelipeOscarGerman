@@ -17,7 +17,7 @@ $fecha= date ("d/m/Y");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Protocolo de alcoholemia</title>
+<title>Pestaña</title>
 <meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -107,7 +107,7 @@ $fecha= date ("d/m/Y");
 							<div class="col-xs-2">
 				
 								<label class="sr-only" for="NºDiligencias"></label>
-								<input type="text" id="Numdiligencias" name= "diligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $_SESSION['diligencias']; ?>" readonly/>
+								<input type="text" id="Numdiligencias" name= "Numdiligencias" class="form-control" placeholder="Número de Diligencias" value="" />
 						
 							</div>
 					
@@ -115,9 +115,9 @@ $fecha= date ("d/m/Y");
 									<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 								</div>
 
-								<div class="col-xs-1">		
+<!-- 								<div class="col-xs-1">		
 								<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
-								</div>
+								</div> -->
 		
 								<div class="col-xs-2">
 								<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
@@ -142,12 +142,10 @@ $fecha= date ("d/m/Y");
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Provincia" value=""/>
+									<input type="text" id="provincia" name= "provincia" class="form-control" placeholder="Provincia" value=""/>
 								</div>
 
-								<div style="height:500px;">
-									
-								</div>
+								</br></br></br></br></br></br></br></br>
 						</div>
 
 							
@@ -182,79 +180,79 @@ $fecha= date ("d/m/Y");
 					
 								<div class="col-xs-2">
 									<label class="sr-only" for="apellidos"></label>
-									<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Sedundo Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
+									<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Segundo Apellido" value="<?php echo $dni['Segundoapellido']; ?>" readonly/>
 								</div>
 					
 								<div class="col-xs-3">
 
-								<select class="form-control">
+							<!-- 	<select class="form-control">
 									<option value="">Tipo de documento</option>
 			  						<option value="">DNI</option>
 			 						<option value="">NIE</option>
 			  						<option value="">PASAPORTE</option>
 			  						<option value="">Carnet de Conducir</option>
-			  					</select>
+			  					</select> -->
 
 	  							</div>
 					
 	  							<div class="col-xs-3">
-									<input type="text" id="imputadodonumero" name= "imputadodonumero" class="form-control" placeholder="Número" />
+									<input type="text" id="imputadodonumero" name= "imputadodonumero" class="form-control" placeholder="Número" value="<?php echo $dni['Num']; ?>" readonly/>
 								</div>
 							
 
 								</br></br></br>
 
 								<div class="col-xs-3">
-								<input type="text" id="nacionalidad" name= "imputadodopais" class="form-control" placeholder="Nacionalidad" />
+								<input type="text" id="nacionalidad" name= "imputadodopais" class="form-control" placeholder="Nacionalidad" value="<?php echo $dni['Nacionalidad']; ?>" readonly/>
 								</div>
 								
 
 								<div class="col-xs-3">
-									<input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad Nacimiento"/>
+									<input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad Nacimiento" value="<?php echo $dni['Lugarnacimiento']; ?>" readonly/>
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="comarca" name="comarca" class="form-control" placeholder="Comarca"/>
+									<input type="text" id="comarca" name="comarca" class="form-control" placeholder="Comarca" value="<?php echo $dni['Provincia']; ?>" readonly/>
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais"/>
+									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais" value="<?php echo $dni['Nacionalidad']; ?>" readonly/>
 								</div>
 
 							</br></br></br>
 
 								<div class="col-xs-2">
-									<input type="text" id="fechanacimiento" name="fechanacimiento" class="form-control" placeholder="Fecha Nacimiento"/>
+									<input type="text" id="fechanacimiento" name="fechanacimiento" class="form-control" placeholder="Fecha Nacimiento" value="<?php echo $dni['Fechanacimiento']; ?>" readonly/>
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="Nombrepadre" name="Nombrepadre" class="form-control" placeholder="Nombre del padre"/>
+									<input type="text" id="Nombrepadres" name="Nombrepadres" class="form-control" placeholder="Nombre del padre" value="<?php echo $dni['Hijode']; ?>" readonly/>
 								</div>
 
-								<div class="col-xs-3">
+<!-- 								<div class="col-xs-3">
 									<input type="text" id="Nombremadre" name="Nombremadre" class="form-control" placeholder="Nombre de la madre"/>
-								</div>
+								</div> -->
 
 								
 								<div class="col-xs-4">
-									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value=""/>
+									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value="<?php echo $dni['Lugardomicilio']; ?>" readonly/>
 								</div>
 
 								</br></br></br>
 
 								<div class="col-xs-4">
-									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value=""/>
+									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value="<?php echo $dni['Domicilio']; ?>" readonly/>
 								</div>
 
 							
-								<div class="col-xs-3">
+<!-- 								<div class="col-xs-3">
 									<input type="text" id="comarca" name="comarca" class="form-control" placeholder="Comarca"/>
 								</div>
 
 								
 								<div class="col-xs-3">
 									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais"/>
-								</div>
+								</div> -->
 
 								
 								<div class="col-xs-2">
@@ -266,19 +264,19 @@ $fecha= date ("d/m/Y");
 								</br></br></br>
 
 								<div class="col-xs-2">
-									<input type="text" id="clase" name="clase" class="form-control" placeholder="Clase de Permiso"/>
+									<input type="text" id="clase" name="clase" class="form-control" placeholder="Clase de Permiso" value="<?php echo $datos_permiso['Tipopermiso']; ?>" readonly/>
 								</div>
 
 								<div class="col-xs-2">
-									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición"/>
+									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición" value="<?php echo $datos_permiso['Pais']; ?>" readonly/>
 								</div>	
 
 								<div class="col-xs-2">
-									<input type="text" name= "altura" id="altura" class="form-control" placeholder="Altura" value=""/>
+									<input type="text" name="altura" id="altura" class="form-control" placeholder="Altura" value=""/>
 								</div>
 
 								<div class="col-xs-2">
-									<input type="text" name= "peso" id="peso" class="form-control" placeholder="Peso" value=""/>
+									<input type="text" name="peso" id="peso" class="form-control" placeholder="Peso" value=""/>
 								</div>
 				
 								<div class="radio">
@@ -300,9 +298,9 @@ $fecha= date ("d/m/Y");
 									</label>
 				
 								</div>
-							</div><div style="height:500px;"></div>
+							</div>
 
-			
+
 						</p>
 					</div>
 
@@ -313,7 +311,7 @@ $fecha= date ("d/m/Y");
 					<div class="panel-heading">
 						 <div class="Descripcion_conduccion">
 							<label><h3>Descripcion de la conduccion</h3></label>
-							<textarea class="form-control" rows="3" id="descripcion" name= "descripcion">
+							<textarea class="form-control" rows="3" id="descripcion" name="descripcion">
 							</textarea>	
 						</div>
 					</div>
@@ -634,11 +632,11 @@ $fecha= date ("d/m/Y");
 					</br></br>
 
 					<div class="col-md-2">
-						<input type="text" id="hora" name= "hora" class="form-control" placeholder="Hora" value=""/></br>
+						<input type="text" id="hora1" name= "hora1" class="form-control" placeholder="Hora" value=""/></br>
 					</div>
 
 					<div class="col-xs-2">
-						<input type="text" id="resultado" name= "mg" class="form-control" placeholder="mg/l aire expirado" value=""/>
+						<input type="text" id="mg1" name="mg1" class="form-control" placeholder="mg/l aire expirado" value=""/>
 					</div>
 					
 					<div class="col-xs-2">
@@ -646,7 +644,7 @@ $fecha= date ("d/m/Y");
 					</div>
 
 					<div class="col-xs-2">
-					<input type="text" id="resultado2" name= "resultado2" class="form-control" placeholder="mg/l aire expirado" value=""/>
+					<input type="text" id="mg2" name= "mg2" class="form-control" placeholder="mg/l aire expirado" value=""/>
 					</div>
 
 				</br></br></br>
@@ -725,19 +723,19 @@ $fecha= date ("d/m/Y");
 						</label>
 
 						<label>
-							<input type="radio" name="opactuacion" id="opactuacion" value="1">Control preventivo
+							<input type="radio" name="opactuacion" id="opactuacion" value="Control preventivo">Control preventivo
 						</label>
 
 						<label>
-							<input type="radio" name="opactuacion" id="opactuacion" value="2">Accidente de tránsito
+							<input type="radio" name="opactuacion" id="opactuacion" value="Accidente de tránsito">Accidente de tránsito
 						</label>
 						
 						<label>
-							<input type="radio" name="opactuacion" id="opactuacion" value="3">Infracción del Reglamento
+							<input type="radio" name="opactuacion" id="opactuacion" value="Infracción del Reglamento">Infracción del Reglamento
 						</label>
 
 						<label>
-							<input type="radio" name="opactuacion" id="opactuacion" value="4">Síntomas
+							<input type="radio" name="opactuacion" id="opactuacion" value="Síntomas">Síntomas
 						</label>
 
 					</div>
@@ -845,67 +843,67 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 						<div class="col-md-12">
 							
 							<label class="checkbox-inline">
-				  				<input type="checkbox" id="seguridadviaria" name="Comportamiento_agresivo" value="1"> Contra la seguridad viaria
+				  				<input type="checkbox" id="seguridadviaria" name="seguridadviaria" value="1"> Contra la seguridad viaria
 							</label>
 							
 							</br>
 							
 							<label class="checkbox-inline">
-				 				 <input type="checkbox" id="taxa" name="Comportamiento_insultante" value="1"> Por conducir con una taxa de alcohol
+				 				 <input type="checkbox" id="taxa" name="taxa" value="1"> Por conducir con una taxa de alcohol
 				 				 superior a 0,60 mg.
 							</label>
 
 							</br>
 							
 							<label class="checkbox-inline">
-				 			<input type="checkbox" id="estupefacientes" name="Comportamiento_irrespetuoso" value="1"> Por conducir bajo la influencia
+				 			<input type="checkbox" id="estupefacientes" name="estupefacientes" value="1"> Por conducir bajo la influencia
 				 			 de bebidas alcoholicas o drogas tóxicas, estupefacientes o substancias psicotrópicas.
 				 			</label>
 
 				 			</br>
 
 							<label class="checkbox-inline">
-				 			 <input type="checkbox" id="negativa" name="Comportamiento_euforico" value="1"> Por negarse a someterse a las pruevas de detección
+				 			 <input type="checkbox" id="negativa" name="negativa" value="1"> Por negarse a someterse a las pruevas de detección
 				 			 de alcoholemia, drogas tóxicas, estupefacientes o substancias psicotrópicas.
 							</label>
 
 							</br>
 
 							<label class="checkbox-inline">
-				 			 <input type="checkbox" id="perdida" name="Comportamiento_muyloquaz" value="1"> Por perdida de vigencia del permiso o licencia de conducir
+				 			 <input type="checkbox" id="perdida" name="perdida" value="1"> Por perdida de vigencia del permiso o licencia de conducir
 				 			 por perdida de puntos.
 							</label>
 
 							</br>
 
 							<label class="checkbox-inline">
-				 			 <input type="checkbox" id="privado" name="Comportamiento_excitado" value="1"> Por conducir estando privado cautelarmente/definitiva del permiso
+				 			 <input type="checkbox" id="privado" name="privado" value="1"> Por conducir estando privado cautelarmente/definitiva del permiso
 				 			o licencia por decisión judicial.
 							</label>
 
 							</br>
 
 							<label class="checkbox-inline">
-				 			 <input type="checkbox" id="sinpermiso" name="checkboxEnLinea" value="1"> Por conducir un vehículo a motor/ciclomotor sin obtener nunca
+				 			 <input type="checkbox" id="sinpermiso" name="sinpermiso" value="1"> Por conducir un vehículo a motor/ciclomotor sin obtener nunca
 				 			 el permiso o licencia de conducir.
 							</label>
 
 							</br>
 
 							<label class="checkbox-inline">
-				 			 <input type="checkbox" id="velocidad" name="checkboxEnLinea" value="1"> Por conducir a velocidad superior a la reglamentaria
+				 			 <input type="checkbox" id="velocidad" name="velocidad" value="1"> Por conducir a velocidad superior a la reglamentaria
 				 			 en 60 Km/h en via urbana o en 80 Km/h en via interurbana.
 				 			</label>
 
 				 			</br>
 
 							<label class="checkbox-inline">
-				 			 <input type="checkbox" id="desobediencia" name="checkboxEnLinea" value="1"> Por desobediencia grave por rotura de immobilización
+				 			 <input type="checkbox" id="desobediencia" name="desobediencia" value="1"> Por desobediencia grave por rotura de immobilización
 				 			</label>
 
 				 		</br></br></br>
 
- 						</div><div style="height:500px;"></div>
+ 						</div>
 
 					</p>
 					
@@ -996,8 +994,8 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 						
 						<div class="col-xs-12">
-							<input type="radio" name="oficio" id="oficio"value="oficio"> Quiero un abogado de oficio&nbsp&nbsp
-							<input type="radio" name="renuncio" id="renuncio"value="renuncio"> Renuncio a la asistencia letrada
+							<input type="radio" name="oficio" id="oficio" value="oficio"> Quiero un abogado de oficio&nbsp&nbsp
+							<input type="radio" name="renuncio" id="renuncio" value="renuncio"> Renuncio a la asistencia letrada
 						</div>	
 
 						</br></br>
@@ -1628,11 +1626,11 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 								<div class="col-xs-12">
 									<a href="">
-										<button type="button" class="btn btn-danger" style="margin-left: 1060px; margin-top:-205px;">Enviar</button>
+										<button type="button" class="btn btn-danger" style="margin-left: 1100px; margin-top:-205px;">Enviar</button>
 		 							</a> 
 								</div>
 
-								<div style="height:500px;"></div>
+								</br></br></br></br></br>
 
 						</p>
 
