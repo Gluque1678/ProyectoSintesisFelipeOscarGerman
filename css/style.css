@@ -9,7 +9,39 @@ display: block;
 }
 
 
+.padding-top-6em{
+	padding-top: 6em;
+}
 
+.padding-top-3em{
+	padding-top: 3em;
+}
+
+.padding-top-2em{
+	padding-top: 2em;
+}
+
+.padding-top-1em{
+	padding-top: 1em;
+}
+
+.font-size-2em{
+	font-size: 2em !important;
+}
+
+.font-size-1em{
+	font-size: 1em !important;
+}
+
+.text-centro{
+	text-align: center;
+}
+
+.error{
+	color:red;
+	font-weight: bolder;
+
+}
 
 /* esto es el header la parte de arriba*/
 #cabecera {
