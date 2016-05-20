@@ -10,7 +10,6 @@ session_start();
 include("../conexion.proc.php");
 include('fpdf.php');
 include('fpdi.php');
-include('../phpmailer/class.phpmailer.php');
 
 $pdf = new FPDI();
 
@@ -28,12 +27,12 @@ include 'pdfa13.php';*/
 
 $pdf->Output('../diligencias/'.$a21["Numdiligencias"].'.pdf','F',true);
 
-
+/*
 $to = "iglesias.pipe@gmail.com";
 $subject = "Diligencia: ".;
 $txt = "Diligencia nº".$a21['Numdiligencias']." realizada por el agente".$a21['TIP1'];
 $headers = "From: felipe_iglesias@hotmail.com";
 
-mail($to,$subject,$txt,$headers);
+mail($to,$subject,$txt,$headers);*/
 
 ?>
