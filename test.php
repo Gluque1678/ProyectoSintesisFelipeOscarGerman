@@ -145,7 +145,9 @@ $fecha= date ("d/m/Y");
 									<input type="text" id="provincia" name= "provincia" class="form-control" placeholder="Provincia" value=""/>
 								</div>
 
-								</br></br></br></br></br></br></br></br>
+								<div style="height:500px;">
+									
+								</div>
 						</div>
 
 							
@@ -901,7 +903,9 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 				 			 <input type="checkbox" id="desobediencia" name="desobediencia" value="1"> Por desobediencia grave por rotura de immobilización
 				 			</label>
 
-				 		</br></br></br>
+				 		<div style="height:500px;">
+									
+								</div>
 
  						</div>
 
@@ -1100,7 +1104,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 						</br></br></br>
 
 						<div class="col-xs-4">
-							<input type="text" id="lugarinmob" name="lugar" class="form-control" placeholder="Lugar de la Immobilización"/>
+							<input type="text" id="lugarinmob" name="lugarinmob" class="form-control" placeholder="Lugar de la Immobilización"/>
 						</div>
 
 						<div class="col-xs-2">
@@ -1111,8 +1115,8 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 							<label>
 							</br>
-							<input type="checkbox" name="municipal" id="municipal"value="municipal"> Municipal&nbsp
-							<input type="checkbox" name="transito" id="transitio"value="transito"> Servicio Catalan de Tránsito
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia"value="municipal"> Municipal&nbsp
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia"value="transito"> Servicio Catalan de Tránsito
 							</label>
 				
 						</div>
@@ -1626,11 +1630,13 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 
 								<div class="col-xs-12">
 									<a href="">
-										<button type="button" class="btn btn-danger" style="margin-left: 1100px; margin-top:-205px;">Enviar</button>
+										<button type="button" class="btn btn-danger" style="margin-left: 1060px; margin-top:-205px;">Enviar</button>
 		 							</a> 
 								</div>
 
-								</br></br></br></br></br>
+								<div style="height:500px;">
+									
+								</div>
 
 						</p>
 
