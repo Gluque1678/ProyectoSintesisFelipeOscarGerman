@@ -23,7 +23,7 @@
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="cuerpo" name= "cuerpo" class="form-control" placeholder="Agente Cuerpo" value=""/>
+									<input type="text" id="cuerpo" name= "cuerpo" class="form-control" placeholder="Agente Cuerpo" value="Guardia Urbana" readonly />
 								</div>
 
 								</br></br></br>
@@ -33,11 +33,11 @@
 								</div>
 
 								<div class="col-xs-4">
-									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value=""/>
+									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value="L'Hospitalet de Llobregat" readonly/>
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="provincia" name= "provincia" class="form-control" placeholder="Provincia" value=""/>
+									<input type="text" id="provincia" name= "provincia" class="form-control" placeholder="Provincia" value="Barcelona" readonly />
 								</div>
 
 								<div style="height:500px;">

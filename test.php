@@ -2,11 +2,13 @@
 
 session_start();
 $dni=$_SESSION['dni_datos'];
-// var_dump($dni);
 $tip=$_SESSION['TIP'];
-// var_dump($tip);
-include("conexion.proc.php");
+$vehiculo = $_SESSION['matricula_datos'];
+$permiso  = $_SESSION['permisoconducir_datos'];
+$titular  = $_SESSION['titular_datos'];
 
+
+include("conexion.proc.php");
 
 $hora= date ("h:i:s");
 $fecha= date ("d/m/Y");
@@ -17,7 +19,7 @@ $fecha= date ("d/m/Y");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Pestaña</title>
+<title>Protocolo de alcoholemia</title>
 <meta name="vewport" content="device-width, user-scalable=no, initial-scale=1.0, minium-scale=1.0, minium-scale=1.0">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">

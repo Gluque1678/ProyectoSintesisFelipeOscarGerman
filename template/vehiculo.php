@@ -1,6 +1,6 @@
 
 						<div class="col-xs-3">
-							<input type="text" id="lugar" name="lugar" class="form-control" placeholder="Lugar"/>
+							<input type="text" id="vehiculolugar" name="lugar" class="form-control" placeholder="Lugar" readonly />
 						</div>
 					
 						<div class="col-xs-2">
@@ -30,8 +30,8 @@
 
 							<label>
 							</br>
-							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia"value="municipal"> Municipal&nbsp
-							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia"value="transito"> Servicio Catalan de Tránsito
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="municipal"> Municipal&nbsp
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="transito"> Servicio Catalán de Tránsito
 							</label>
 				
 						</div>
@@ -63,49 +63,38 @@
 						</br>
 
 						<div class="col-xs-2">
-							<input type="text" id="matricula" name="matricula" class="form-control" placeholder="Matrícula/bastidor"/>
+							<input type="text" id="matricula" name="matricula" class="form-control" placeholder="Matrícula/bastidor" value="<?php echo $vehiculo['Matricula']; ?>" readonly/>
 						</div>	
 
 						<div class="col-xs-2">
-							<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca"/>
+							<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca" value="<?php echo $vehiculo['Marca']; ?>" readonly/>
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo"/>
-						</div>	
-
-													
-						<div class="col-xs-2">
-							<input type="text" id="tipo" name="tipo" class="form-control" placeholder="Tipo"/>
+							<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo" value="<?php echo $vehiculo['Modelo']; ?>" readonly/>
 						</div>	
 
 						<div class="col-xs-2">
-							<input type="text" id="color" name="color" class="form-control" placeholder="Color"/>
+							<input type="text" id="color" name="color" class="form-control" placeholder="Color" value="<?php echo $vehiculo['Color']; ?>" readonly/>
 						</div>	
 
 						</br></br></br>
 
 						<div class="col-xs-2">
-							<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular"/>
+							<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular" value="<?php echo $titular['Nombre']; ?>" readonly />
 						</div>	
 							
 						<div class="col-xs-2">
-							<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="1º Apellido titular"/>
+							<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="1º Apellido titular" value="<?php echo $titular['Primerapellido']; ?>" readonly />
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="2º Apellido titular"/>
+							<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="2º Apellido titular" value="<?php echo $titular['Segundoapellido']; ?>" readonly />
 						</div>	
 
 					
 						<div class="col-xs-4">
-							<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Direccion del titular"/>
-						</div>	
-
-					</br></br></br>
-
-						<div class="col-xs-2">
-							<input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono"/>
+							<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Dirección del titular" value="<?php echo $titular['Domicilio']; ?>" readonly />
 						</div>	
 
 					</br></br></br>
@@ -233,7 +222,7 @@
 							</br></br></br></br>
 
 							<div class="col-xs-2">
-								<input type="text" id="nombre" name= "nombre" class="form-control" placeholder="Nombre " />
+								<input type="text" id="vehiculonombre" name= "nombre" class="form-control" placeholder="Nombre " />
 							</div>	
 					
 							<div class="col-xs-2">

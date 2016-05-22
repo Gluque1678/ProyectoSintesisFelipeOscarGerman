@@ -1,20 +1,20 @@
 						<div class="col-xs-12">
 						
 							<div class="col-xs-2">
-									<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" />
+									<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly />
 							</div>
 
 							<div class="col-xs-2">
-								<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido"/>
+								<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly />
 							</div>
 
 						<div class="col-xs-2">
-								<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" />
+								<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" value="<?php echo $dni['Segundoapellido']; ?>" readonly  />
 						</div>
 
 						
 						<div class="col-xs-3">
-								<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" />
+								<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" value="<?php echo $dni['Nacionalidad']; ?>" readonly  />
 						</div>
 
 						</br></br></br>
@@ -23,7 +23,7 @@
 						
 							<select class="form-control">
 								<option value="">Tipo de documento</option>
-				  				<option value="">DNI</option>
+				  				<option value="" selected>DNI</option>
 				 				<option value="">NIE</option>
 				  				<option value="">PASAPORTE</option>
 				  				<option value="">CARNET DE CONDUCIR</option>
@@ -31,15 +31,15 @@
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="imputadonumero" name= "imputadonumero" class="form-control" placeholder="Número" />
+							<input type="text" id="imputadonumero" name= "imputadonumero" class="form-control" placeholder="Número" value="<?php echo $dni['Num']; ?>" readonly />
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="imputadodopais" name= "imputadodopais" class="form-control" placeholder="Pais" />
+							<input type="text" id="imputadodopais" name= "imputadodopais" class="form-control" placeholder="Pais" value="España" readonly  />
 						</div>
 							
 						<div class="col-xs-2">
-							<input type="text" id="imputadofecha" name= "fecha" class="form-control" placeholder="Fecha Nacimiento" />
+							<input type="text" id="imputadofecha" name= "fecha" class="form-control" placeholder="Fecha Nacimiento" value="<?php echo $dni['Fechanacimiento']; ?>" readonly  />
 						</div>
 
 					</div>

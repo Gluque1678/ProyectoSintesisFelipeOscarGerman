@@ -1,10 +1,5 @@
 $(document).ready(function(){	
 
-  //numero diligencia
- 
-
-
-////////////////////////////////////////////////////////////////////////////////
 
   //login
   $("#login").click(function(){
@@ -51,7 +46,7 @@ $(document).ready(function(){
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-  //validación DNI al salir del input dni
+  //validación DNI al presionar BUSCAR
   $("#iddni").blur(function(){
       //se recoje el valor del input con id iddni en mayúsculas
       var campo = $("#iddni").val().toUpperCase();
@@ -65,7 +60,14 @@ $(document).ready(function(){
       //se separa la letra de la variable anterior que coincide con numero
       letra=letra.substring(numero,numero+1);
       //si las letras son diferentes, el dni es erróneo
-      if (letra!=let) alert('DNI incorrecto');
+      if (letra!=let) {
+        $('#errorDni').html("DNI introducido incorrectamente").prop("style","color: #FFC107; font-weight: bolder;");
+        return false; //para que no se realice la consulta
+      }else{
+        $('#errorDni').prop("visible",false);
+        return true;
+      }
+     
   });
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -88,7 +90,31 @@ $(document).ready(function(){
 
   });
 
+/////////////////////////////////////////////////////////////////////////////////////////////
 
+  //rellenar campo permiso en FIRMA
+  $('#permiso').blur(function(){
+    $('#permisoConductor2').val($('#permiso').val());
+
+  });
+
+  //rellenar campo denumero en DENUNCIA
+  $('#Numdiligencias').blur(function(){
+    $('#denumero').val($('#Numdiligencias').val());
+
+  });
+
+  //rellenar campo permiso en DENUNCIA
+  $('#lugar').blur(function(){
+    $('#denunciaLugar').val($('#lugar').val());
+
+  });
+
+  //rellenar campo permiso en VEHICULO
+  $('#lugar').blur(function(){
+    $('#vehiculolugar').val($('#lugar').val());
+
+  });
 
 
 });

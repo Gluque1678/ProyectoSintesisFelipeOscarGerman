@@ -3,7 +3,10 @@
 session_start();
 include("conexion.proc.php");
 
-$qry = "SELECT * FROM agente WHERE TIP='$_REQUEST[TIP]' AND Password='$_REQUEST[Password]'";
+$tip  = trim($_REQUEST['TIP']);
+$pass = trim($_REQUEST['Password']);
+
+$qry = "SELECT * FROM agente WHERE TIP='$tip' AND Password='$pass'";
 
 $res = mysqli_query($congu,$qry);
 

@@ -94,11 +94,11 @@
 								</br></br></br>
 
 								<div class="col-xs-2">
-									<input type="text" id="clase" name="clase" class="form-control" placeholder="Clase de Permiso" value="<?php echo $datos_permiso['Tipopermiso']; ?>" readonly/>
+									<input type="text" id="clase" name="clase" class="form-control" placeholder="Clase de Permiso" value="<?php echo $permiso['Tipopermiso']; ?>" readonly/>
 								</div>
 
 								<div class="col-xs-2">
-									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición" value="<?php echo $datos_permiso['Pais']; ?>" readonly/>
+									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición" value="<?php echo $permiso['Pais']; ?>" readonly/>
 								</div>	
 
 								<div class="col-xs-2">
