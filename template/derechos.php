@@ -6,7 +6,7 @@
 						</label>
 
 						<label>
-							<input type="radio" name="opactuacion" id="opactuacion" value="Control preventivo">Control preventivo
+							<input type="radio" name="opactuacion" id="opactuacion" value="Control preventivo" checked>Control preventivo
 						</label>
 
 						<label>
@@ -83,7 +83,7 @@ S’ha d’informar a la persona requerida que la negativa a sotmetre’s a les 
 				<label for="si">&nbsp;Si   
 				</label>
 
-				<input type="radio" style="margin-left: 10px;" name="negacion" id="negacion" value="0" checked>
+				<input type="radio" style="margin-left: 10px;" name="negacion" id="negacion" value="0">
 				<label for="si">&nbsp;No quiere hacer la prueva de contraste
 				</label>
 			</div>

@@ -33,7 +33,7 @@
 								</br></br></br>
 
 								<div class="col-xs-3">
-								<input type="text" id="nacionalidad" name= "imputadodopais" class="form-control" placeholder="Nacionalidad" value="<?php echo utf8_decode($dni['Nacionalidad']); ?>" readonly/>
+								<input type="text" id="nacionalidad" name= "imputadodopais" class="form-control" placeholder="Nacionalidad" value="<?php echo $dni['Nacionalidad']; ?>" readonly/>
 								</div>
 								
 

@@ -55,7 +55,7 @@
 						</div>		
 						
 						<div class="col-xs-12">
-							<textarea  class="form-control" rows="1">
+							<textarea  class="form-control" rows="1" id="Motivoimputacion" name="Motivoimputacion">
 							</textarea>
 						</div>
 									
@@ -93,7 +93,7 @@
 								<div class="col-xs-12">
 									<label><h3>Observaciones</h3></label>
 									</br></br>
-									<textarea class="form-control" rows="1">
+									<textarea class="form-control" rows="1" name="observaciones">
 									</textarea>
 								</div>
 						
@@ -115,11 +115,11 @@
 						<div class="col-xs-12">
 							<div class="citacion">
 								<div class="col-xs-2">
-									<input type="text" id="diacomparecer" name= "fecha" class="form-control" placeholder="Fecha"/>
+									<input type="date" id="diacomparecer" name= "diacomparecer" class="form-control" placeholder="Fecha"/>
 								</div>
 
 								<div class="col-xs-1">
-									<input type="text" id="horacomparecer" name= "hora" class="form-control" placeholder="Hora" />
+									<input type="time" id="horacomparecer" name= "horacomparecer" class="form-control" placeholder="Hora" />
 								</div>
 										
 							</div>
@@ -127,7 +127,7 @@
 							<div class="col-xs-3">
 								<select class="form-control">
 								<option value="">Selecciona una opción</option>
-				  				<option value="">Juzgado de Instrucción 1</option>
+				  				<option value="" selected>Juzgado de Instrucción 1</option>
 				 				<option value="">Juzgado de Instrucción 2</option>
 				  				<option value="">Juzgado de Instrucción 3</option>
 				  				<option value="">Juzgado de Instrucción 4</option>

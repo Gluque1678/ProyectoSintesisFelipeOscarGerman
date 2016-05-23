@@ -30,7 +30,7 @@
 
 							<label>
 							</br>
-							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="municipal"> Municipal&nbsp
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="municipal" checked> Municipal&nbsp
 							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="transito"> Servicio Catalán de Tránsito
 							</label>
 				
@@ -108,12 +108,11 @@
 					</div>
 
 					<div class="col-xs-3">
-					<select class="form-control">
-					<option value="">Selecciona una opción</option>
-	  				<option value="">Juzgado de Guardia</option>
-	 				<option value="">Titular</option>
-	  				<option value="">Otro conductor habilitado</option>
-	  				<option value="">Otros</option>
+					<select class="form-control" name="Vehiculodisposicion">
+	  				<option value="Juzgado de Guardia" name="Vehiculodisposicion" selected>Juzgado de Guardia</option>
+	 				<option value="Titular" name="Vehiculodisposicion" >Titular</option>
+	  				<option value="Otro conductor habilitado" name="Vehiculodisposicion" >Otro conductor habilitado</option>
+	  				<option value="Otros" name="Vehiculodisposicion" >Otros</option>
 	 				</select>
 					</div>
 
@@ -131,11 +130,11 @@
 
 					<div class="">
 						<div class="col-xs-2">
-							<input type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+							<input type="date" id="fecharot" name="fecharot" class="form-control" placeholder="Fecha"/>
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+							<input type="time" id="horarot" name="horarot" class="form-control" placeholder="Hora"/>
 						</div>
 						
 						<div class="col-xs-2">		
@@ -149,7 +148,7 @@
 
 
 						<div class="col-xs-3">
-							<input type="text" id="atestado" name= "atestado" class="form-control" placeholder="atestado desobediencia grave nº" />
+							<input type="text" id="atestadorot" name="atestadorot" class="form-control" placeholder="atestado desobediencia grave nº" />
 							</br>
 						</div>	
 						
@@ -181,12 +180,12 @@
 
 
 					<div class="col-xs-3">
-							<select class="form-control">
+							<select class="form-control" name="Motivolevantamiento">
 							
 							<option value="">Selecciona una opción</option>
-							<option value="">Desaparecer las causas que lo motivaron</option>
-			  				<option value="">Hacerse cargo otro conductor habilitado</option>
-			 				<option value="">Ingreso al depósito por transcurrir más de 24 horas</option>
+							<option value="Desaparecer las causas que lo motivaron" name="Motivolevantamiento" selected>Desaparecer las causas que lo motivaron</option>
+			  				<option value="Hacerse cargo otro conductor habilitado" name="Motivolevantamiento">Hacerse cargo otro conductor habilitado</option>
+			 				<option value="Ingreso al depósito por transcurrir más de 24 horas" name="Motivolevantamiento">Ingreso al depósito por transcurrir más de 24 horas</option>
 			  				
 			 				</select>
 					</div>
@@ -195,11 +194,11 @@
 					<div id="Rotura1">
 						<div class="">
 							<div class="col-xs-2">
-								<input type="text" id="fecha" name="fecha" class="form-control" placeholder="Fecha"/>
+								<input type="date" id="fechalevantamiento " name="fechalevantamiento" class="form-control" placeholder="Fecha"/>
 							</div>
 
 							<div class="col-xs-2">
-								<input type="text" id="hora" name="hora" class="form-control" placeholder="Hora"/>
+								<input type="time" id="horalevantamiento" name="horalevantamiento" class="form-control" placeholder="Hora"/>
 							</div>
 
 				    						
@@ -222,23 +221,23 @@
 							</br></br></br></br>
 
 							<div class="col-xs-2">
-								<input type="text" id="vehiculonombre" name= "nombresustituto" class="form-control" placeholder="Nombre " />
+								<input type="text" id="nombresustituto" name= "nombresustituto" class="form-control" placeholder="Nombre " />
 							</div>	
 					
 							<div class="col-xs-2">
 								<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Primer Apellido" />
 							</div>	
 							<div class="col-xs-2">
-								<input type="text" id="apellido2" name= "apellido2" class="form-control" placeholder="Segundo Apellido" />
+								<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Segundo Apellido" />
 							</div>	
 
 													
 							<div class="col-xs-2">
-								<input type="text" id="permiso" name= "numerosustituto" class="form-control" placeholder="Permiso de conducir Nº" />
+								<input type="text" id="numerosustituto" name="numerosustituto" class="form-control" placeholder="Permiso de conducir Nº" />
 							</div>	
 
 							<div class="col-xs-1">
-								<input type="text" id="clase" name= "clasesustituto" class="form-control" placeholder="Clase " />
+								<input type="text" id="clasesustituto" name= "clasesustituto" class="form-control" placeholder="Clase " />
 							</div>	
 
 							<div class="col-xs-2">
