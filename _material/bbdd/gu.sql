@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2016 a las 10:40:51
--- Versión del servidor: 5.6.26
--- Versión de PHP: 5.6.12
+-- Tiempo de generación: 23-05-2016 a las 09:23:44
+-- Versión del servidor: 10.1.10-MariaDB
+-- Versión de PHP: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,8 +28,7 @@ USE `gu`;
 -- Estructura de tabla para la tabla `agente`
 --
 
-DROP TABLE IF EXISTS `agente`;
-CREATE TABLE IF NOT EXISTS `agente` (
+CREATE TABLE `agente` (
   `TIP` int(4) NOT NULL,
   `Nombre` varchar(75) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
@@ -50,8 +49,7 @@ INSERT INTO `agente` (`TIP`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Pas
 -- Estructura de tabla para la tabla `dni`
 --
 
-DROP TABLE IF EXISTS `dni`;
-CREATE TABLE IF NOT EXISTS `dni` (
+CREATE TABLE `dni` (
   `Num` varchar(9) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
   `Segundoapellido` varchar(75) COLLATE utf8_bin NOT NULL,
@@ -83,8 +81,7 @@ INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`,
 -- Estructura de tabla para la tabla `f_a13pl`
 --
 
-DROP TABLE IF EXISTS `f_a13pl`;
-CREATE TABLE IF NOT EXISTS `f_a13pl` (
+CREATE TABLE `f_a13pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -117,8 +114,7 @@ CREATE TABLE IF NOT EXISTS `f_a13pl` (
 -- Estructura de tabla para la tabla `f_a21pl`
 --
 
-DROP TABLE IF EXISTS `f_a21pl`;
-CREATE TABLE IF NOT EXISTS `f_a21pl` (
+CREATE TABLE `f_a21pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -168,8 +164,7 @@ CREATE TABLE IF NOT EXISTS `f_a21pl` (
 -- Estructura de tabla para la tabla `f_n08pl`
 --
 
-DROP TABLE IF EXISTS `f_n08pl`;
-CREATE TABLE IF NOT EXISTS `f_n08pl` (
+CREATE TABLE `f_n08pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -191,8 +186,7 @@ CREATE TABLE IF NOT EXISTS `f_n08pl` (
 -- Estructura de tabla para la tabla `f_t15pl`
 --
 
-DROP TABLE IF EXISTS `f_t15pl`;
-CREATE TABLE IF NOT EXISTS `f_t15pl` (
+CREATE TABLE `f_t15pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP` int(4) NOT NULL,
@@ -218,8 +212,7 @@ INSERT INTO `f_t15pl` (`DNI`, `Numdiligencias`, `TIP`, `Dia`, `Hora`, `Ticket1`,
 -- Estructura de tabla para la tabla `f_t27pl`
 --
 
-DROP TABLE IF EXISTS `f_t27pl`;
-CREATE TABLE IF NOT EXISTS `f_t27pl` (
+CREATE TABLE `f_t27pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -241,8 +234,7 @@ CREATE TABLE IF NOT EXISTS `f_t27pl` (
 -- Estructura de tabla para la tabla `f_t32pl`
 --
 
-DROP TABLE IF EXISTS `f_t32pl`;
-CREATE TABLE IF NOT EXISTS `f_t32pl` (
+CREATE TABLE `f_t32pl` (
   `dni` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `tip1` int(4) NOT NULL,

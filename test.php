@@ -281,7 +281,7 @@ $fecha= date ("d/m/Y");
 							</div>
 
 								<div class="col-xs-12">
-									<a href="">
+									<a href="fpdf/actas.php">
 										<button type="button" class="btn btn-danger" style="margin-left: 1060px; margin-top:-205px;">Enviar</button>
 		 							</a> 
 								</div>

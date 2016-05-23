@@ -1,6 +1,5 @@
 <?php
 
-
 $sqla21 = "SELECT * FROM f_a21pl";
 
 $qry = mysqli_query($congu,$sqla21);

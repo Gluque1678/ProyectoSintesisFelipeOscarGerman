@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-05-2016 a las 08:52:38
--- Versión del servidor: 5.6.26
--- Versión de PHP: 5.6.12
+-- Tiempo de generación: 23-05-2016 a las 09:25:19
+-- Versión del servidor: 10.1.10-MariaDB
+-- Versión de PHP: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,8 +28,7 @@ USE `mossos`;
 -- Estructura de tabla para la tabla `dni`
 --
 
-DROP TABLE IF EXISTS `dni`;
-CREATE TABLE IF NOT EXISTS `dni` (
+CREATE TABLE `dni` (
   `Num` varchar(9) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
   `Segundoapellido` varchar(75) COLLATE utf8_bin NOT NULL,
@@ -51,6 +50,7 @@ CREATE TABLE IF NOT EXISTS `dni` (
 --
 
 INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`, `Nacionalidad`, `Fechanacimiento`, `Validez`, `Lugarnacimiento`, `Provincia`, `Hijode`, `Domicilio`, `Lugardomicilio`, `Equipo`) VALUES
+('46452322G', 'iglesias', 'macarro', 'felipe', 'Hombre', 'Española', '1980-01-08', '2024-01-08', 'L''Hospitalet de Llobregat', 'barcelona', 'Antonio y Luisa', 'Rambla Marina 200, 11-2', 'L''Hospitalet de Llobregat', '56486468D'),
 ('46997126F', 'Ortiz', 'Fernandez', 'Oscar', 'Hombre', 'ESP', '1995-12-19', '2018-02-02', 'Barcelona', 'Barcelona', 'Alberto/Cristina', 'C.Mineria 9 PO5 7', 'Barcelona', '08055L6D1');
 
 -- --------------------------------------------------------
@@ -59,8 +59,7 @@ INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`,
 -- Estructura de tabla para la tabla `itv`
 --
 
-DROP TABLE IF EXISTS `itv`;
-CREATE TABLE IF NOT EXISTS `itv` (
+CREATE TABLE `itv` (
   `Matricula` varchar(8) COLLATE utf8_bin NOT NULL,
   `Numeroidentificacion` varchar(17) COLLATE utf8_bin NOT NULL,
   `Marca` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -73,8 +72,7 @@ CREATE TABLE IF NOT EXISTS `itv` (
 -- Estructura de tabla para la tabla `permisoconducir`
 --
 
-DROP TABLE IF EXISTS `permisoconducir`;
-CREATE TABLE IF NOT EXISTS `permisoconducir` (
+CREATE TABLE `permisoconducir` (
   `Apellidos` varchar(150) COLLATE utf8_bin NOT NULL,
   `Nombre` varchar(75) COLLATE utf8_bin NOT NULL,
   `Pais` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -82,10 +80,17 @@ CREATE TABLE IF NOT EXISTS `permisoconducir` (
   `Fechaexpedicion` date NOT NULL,
   `Fechaexpiracion` date NOT NULL,
   `Expedidopor` int(4) NOT NULL,
-  `Numeropermiso` int(9) NOT NULL,
+  `Numeropermiso` char(9) COLLATE utf8_bin NOT NULL,
   `Codigos` varchar(15) COLLATE utf8_bin NOT NULL,
   `Tipopermiso` varchar(3) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `permisoconducir`
+--
+
+INSERT INTO `permisoconducir` (`Apellidos`, `Nombre`, `Pais`, `Fechanacimiento`, `Fechaexpedicion`, `Fechaexpiracion`, `Expedidopor`, `Numeropermiso`, `Codigos`, `Tipopermiso`) VALUES
+('Iglesias Macarro', 'Felipe', 'España', '1980-01-08', '1999-05-03', '2024-05-03', 800, '46452322G', '', 'B');
 
 -- --------------------------------------------------------
 
@@ -93,8 +98,7 @@ CREATE TABLE IF NOT EXISTS `permisoconducir` (
 -- Estructura de tabla para la tabla `seguro`
 --
 
-DROP TABLE IF EXISTS `seguro`;
-CREATE TABLE IF NOT EXISTS `seguro` (
+CREATE TABLE `seguro` (
   `Matricula` varchar(8) COLLATE utf8_bin NOT NULL,
   `Fechavalidez` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -102,45 +106,10 @@ CREATE TABLE IF NOT EXISTS `seguro` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipopermiso`
---
-
-DROP TABLE IF EXISTS `tipopermiso`;
-CREATE TABLE IF NOT EXISTS `tipopermiso` (
-  `id` int(11) NOT NULL,
-  `tipopermiso` varchar(3) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `tipopermiso`
---
-
-INSERT INTO `tipopermiso` (`id`, `tipopermiso`) VALUES
-(1, 'AM'),
-(2, 'A1'),
-(3, 'A2'),
-(4, 'A'),
-(5, 'B1'),
-(6, 'B'),
-(7, 'C1'),
-(8, 'C'),
-(9, 'D1'),
-(10, 'D'),
-(11, 'BE'),
-(12, 'C1E'),
-(13, 'CE'),
-(14, 'D1E'),
-(15, 'DE'),
-(16, 'BTP');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `vehiculo`
 --
 
-DROP TABLE IF EXISTS `vehiculo`;
-CREATE TABLE IF NOT EXISTS `vehiculo` (
+CREATE TABLE `vehiculo` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Matricula` varchar(8) COLLATE utf8_bin NOT NULL,
   `Marca` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -159,7 +128,8 @@ CREATE TABLE IF NOT EXISTS `vehiculo` (
 --
 
 INSERT INTO `vehiculo` (`DNI`, `Matricula`, `Marca`, `Modelo`, `Color`, `Titular`, `Direccion`, `Municipio`, `Segurovigente`, `Estadorobo`, `Itvvigente`) VALUES
-('46997126F', '6666KLS', 'Audi', 'TT Sport', 'Blanco', 46997126, 'Calle Mineria 9', 'Barcelona', 0, 0, 0);
+('46997126F', '6666KLS', 'Audi', 'TT Sport', 'Blanco', 46997126, 'Calle Mineria 9', 'Barcelona', 0, 0, 0),
+('46452322G', '6699BHT', 'VOLKSWAGEN', 'GOLF', 'NEGRO', 46452322, 'Rambla Marina 200, 11-2', 'Barcelona', 1, 0, 0);
 
 --
 -- Índices para tablas volcadas
@@ -191,26 +161,11 @@ ALTER TABLE `seguro`
   ADD PRIMARY KEY (`Matricula`);
 
 --
--- Indices de la tabla `tipopermiso`
---
-ALTER TABLE `tipopermiso`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `vehiculo`
 --
 ALTER TABLE `vehiculo`
   ADD PRIMARY KEY (`Matricula`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `tipopermiso`
---
-ALTER TABLE `tipopermiso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
