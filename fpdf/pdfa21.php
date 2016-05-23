@@ -1,6 +1,6 @@
 <?php
 
-$sqla21 = "SELECT * FROM f_a21pl";
+$sqla21 = "SELECT * FROM f_a21pl WHERE Numdiligencias = '$_REQUEST[ndiligencia]'";
 
 $qry = mysqli_query($congu,$sqla21);
 
@@ -212,13 +212,6 @@ if ($a21['Psicomotricidad_apreciacionfalsa']) {
 	$pdf->Write(1, "X");
 }
 
-if ($a21['Psicomotricidad_movimientooscilante']) {
-	$pdf->SetXY(81, 228.6);
-	$pdf->Write(1, "X");
-}
-
-$pdf->SetXY(27, 237);
-$pdf->Write(1, $a21['Descripcionmotricidad']);
 
 $pdf->SetXY(27, 265);
 $pdf->Write(1, $a21['TIP1']);

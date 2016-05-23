@@ -1,16 +1,16 @@
 								<div class="col-xs-12">
 								</br>
 								<div class="col-xs-2">		
-									<input type="text" name= "nombre" id="nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly/>
+									<input type="text" name= "nombre" id="nombre" class="form-control" placeholder="Nombre" value="<?php echo utf8_encode(ucfirst($dni['Nombre'])); ?>" readonly/>
 								</div>
 								
 								<div class="col-xs-2">
-									<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Primer Apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly/>
+									<input type="text" id="apellidos" name= "apellidos" class="form-control" placeholder="Primer Apellido" value="<?php echo utf8_encode(ucfirst($dni['Primerapellido'])); ?>" readonly/>
 								</div>
 					
 								<div class="col-xs-2">
 									<label class="sr-only" for="apellidos"></label>
-									<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Segundo Apellido" value="<?php echo $dni['Segundoapellido']; ?>" readonly/>
+									<input type="text" id="apellidos2" name= "apellidos" class="form-control" placeholder="Segundo Apellido" value="<?php echo utf8_encode(ucfirst($dni['Segundoapellido'])); ?>" readonly/>
 								</div>
 					
 								<div class="col-xs-3">
@@ -33,20 +33,20 @@
 								</br></br></br>
 
 								<div class="col-xs-3">
-								<input type="text" id="nacionalidad" name= "imputadodopais" class="form-control" placeholder="Nacionalidad" value="<?php echo $dni['Nacionalidad']; ?>" readonly/>
+								<input type="text" id="nacionalidad" name= "imputadodopais" class="form-control" placeholder="Nacionalidad" value="<?php echo utf8_encode(ucfirst($dni['Nacionalidad'])); ?>" readonly/>
 								</div>
 								
 
 								<div class="col-xs-3">
-									<input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad Nacimiento" value="<?php echo $dni['Lugarnacimiento']; ?>" readonly/>
+									<input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad Nacimiento" value="<?php echo utf8_encode(ucfirst($dni['Lugarnacimiento'])); ?>" readonly/>
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="comarca" name="comarca" class="form-control" placeholder="Comarca" value="<?php echo $dni['Provincia']; ?>" readonly/>
+									<input type="text" id="comarca" name="comarca" class="form-control" placeholder="Comarca" value="<?php echo utf8_encode(ucfirst($dni['Provincia'])); ?>" readonly/>
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais" value="<?php echo $dni['Nacionalidad']; ?>" readonly/>
+									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais" value="<?php echo utf8_encode(ucfirst($dni['Nacionalidad'])); ?>" readonly/>
 								</div>
 
 							</br></br></br>
@@ -56,7 +56,7 @@
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" id="Nombrepadres" name="Nombrepadres" class="form-control" placeholder="Nombre del padre" value="<?php echo $dni['Hijode']; ?>" readonly/>
+									<input type="text" id="Nombrepadres" name="Nombrepadres" class="form-control" placeholder="Nombre del padre" value="<?php echo utf8_encode(ucfirst($dni['Hijode'])); ?>" readonly/>
 								</div>
 
 <!-- 								<div class="col-xs-3">
@@ -65,13 +65,13 @@
 
 								
 								<div class="col-xs-4">
-									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value="<?php echo $dni['Lugardomicilio']; ?>" readonly/>
+									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion" value="<?php echo utf8_encode(ucfirst($dni['Lugardomicilio'])); ?>" readonly/>
 								</div>
 
 								</br></br></br>
 
 								<div class="col-xs-4">
-									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value="<?php echo $dni['Domicilio']; ?>" readonly/>
+									<input type="text" id="municipio" name= "municipio" class="form-control" placeholder="Municipio" value="<?php echo utf8_encode(ucfirst($dni['Domicilio'])); ?>" readonly/>
 								</div>
 
 							
@@ -86,7 +86,7 @@
 
 								
 								<div class="col-xs-2">
-										<input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono"/>
+										<input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Teléfono" pattern="[0-9]{9}" maxlength="9"/>
 								</div>		
 
 				
@@ -98,15 +98,15 @@
 								</div>
 
 								<div class="col-xs-2">
-									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición" value="<?php echo $permiso['Pais']; ?>" readonly/>
+									<input type="text" id="pais" name="pais" class="form-control" placeholder="Pais de Expedición" value="<?php echo utf8_encode(ucfirst($permiso['Pais'])); ?>" readonly/>
 								</div>	
 
 								<div class="col-xs-2">
-									<input type="text" name="altura" id="altura" class="form-control" placeholder="Altura" value=""/>
+									<input type="number" name="altura" id="altura" class="form-control" placeholder="Altura" maxlength="3"/>
 								</div>
 
 								<div class="col-xs-2">
-									<input type="text" name="peso" id="peso" class="form-control" placeholder="Peso" value=""/>
+									<input type="number" name="peso" id="peso" class="form-control" placeholder="Peso" maxlength="3"/>
 								</div>
 				
 								<div class="radio">
@@ -117,13 +117,13 @@
 
 									<label>
 								
-									<input type="radio" name="sexo" id="sexo" value="Hombre" checked>
+									<input type="radio" name="sexo" id="sexo" value="Hombre" checked/>
 										Hombre &nbsp
 									</label>
 
 									<label>
 								
-									<input type="radio" name="sexo" id="sexo" value="Mujer" checked>
+									<input type="radio" name="sexo" id="sexo" value="Mujer"/>
 										Mujer
 									</label>
 				

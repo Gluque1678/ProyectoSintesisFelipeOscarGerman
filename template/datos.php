@@ -2,7 +2,7 @@
 							<div class="col-xs-2">
 				
 								<label class="sr-only" for="NºDiligencias"></label>
-								<input type="text" id="Numdiligencias" name= "Numdiligencias" class="form-control" placeholder="Número de Diligencias" value="" />
+								<input type="text" id="Numdiligencias" name= "Numdiligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $diligencia; ?>" readonly />
 						
 							</div>
 					

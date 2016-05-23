@@ -16,7 +16,6 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
   <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Login Form Template</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -54,11 +53,11 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                             <div class="form-bottom">
                           <form role="form" action="" method="busqueda.php" method="post" class="login-form">
                             <div class="form-group">
-                                <input type="text" id="iddni" name="Num" value="" placeholder="DNI" required class="form-username form-control font-size-2em text-centro" autofocus/>
+                                <input type="search" id="iddni" name="Num" value="" placeholder="DNI" required class="form-username form-control font-size-2em text-centro" autofocus/>
                                 <div id="errorDni"></div>
                               </div>
                               <div class="form-group">
-                                <input type="text" id="idmatricula" name="Matricula" value="" placeholder="Matrícula" required class="form-password form-control font-size-2em text-centro"/>
+                                <input type="search" id="idmatricula" name="Matricula" value="" placeholder="Matrícula" required class="form-password form-control font-size-2em text-centro"/>
                               </div>
                               <input type="submit" id="buscar" name="buscador" value="Buscar" class="btn btn-success font-size-2em"/><br/>
                           </form><br/>
@@ -69,7 +68,6 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
             </div>
             
         </div>
-        /
 <?php 
 	//se comprueba que si se ha introducido un dni
 	if (isset($_REQUEST['Num'])) { ?>		
@@ -132,24 +130,27 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 
 							$qry2 = "SELECT * FROM vehiculo WHERE Matricula='$numMatricula'";
 
-							$qry2titular ="SELECT *, vehiculo.DNI FROM dni, vehiculo WHERE dni.Num = vehiculo.DNI";
-
 							$res2 = mysqli_query($conmossos,$qry2);
-							$res2titular = mysqli_query($conmossos,$qry2titular);
-
-
+							
 							if(mysqli_num_rows($res2)==1) {
 								$datos_matricula=mysqli_fetch_array($res2);
-								$datos_titular= mysqli_fetch_array($res2titular);
 
 								$_SESSION['matricula_datos']=$datos_matricula;
-								$_SESSION['titular_datos']=$datos_titular;
 								
 								echo $datos_matricula["Matricula"].'<br>';
 								echo ucfirst(strtolower($datos_matricula["Marca"])).'&nbsp';
 								echo ucfirst(strtolower($datos_matricula["Modelo"])).'&nbsp';
 								echo ucfirst(strtolower($datos_matricula["Color"])).'<br/>';
-								echo ucfirst(strtolower($datos_matricula["Titular"])).'&nbsp/&nbsp';
+								echo ucfirst(strtoupper($datos_matricula["DNI"])).'&nbsp/&nbsp';
+
+								$titularcoche = strtoupper($datos_matricula["DNI"]);
+
+								$qry2titular ="SELECT * from dni inner join vehiculo on dni.Num = vehiculo.DNI WHERE vehiculo.DNI = '$titularcoche'";
+
+								$res2titular = mysqli_query($conmossos,$qry2titular);
+								$datos_titular= mysqli_fetch_array($res2titular);
+								$_SESSION['titular_datos']=$datos_titular;
+
 								echo ucfirst(strtolower($datos_titular["Nombre"])).'&nbsp';
 								echo ucfirst(strtolower($datos_titular["Primerapellido"])).'&nbsp';
 								echo ucfirst(strtolower($datos_titular["Segundoapellido"])).'<br/>';

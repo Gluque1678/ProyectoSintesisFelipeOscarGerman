@@ -162,15 +162,14 @@
 			
 			
 							<div class="col-xs-12">
-
-								<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox"/>
-								<label for="pastosa">Pastosa</label>
+                                <label class="checkbox-inline">
+								     <input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox"/>Pastosa</label>
 								
-								<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
-								<label for="clara">Clara</label>
+								<label class="checkbox-inline">
+								<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">Clara</label>
 								
-								<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
-								<label for="vacilante">Vacilante</label>		
+								<label class="checkbox-inline">
+								<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">Vacilante</label>		
 								
 							</div>
 						</div>
@@ -186,18 +185,17 @@
 							</div>
 
 							<div class="col-xs-12">	
+                                <label class="checkbox-inline">
+								     <input id="Expresion_ininteligibles" name="Expresion_ininteligibles" maxlength="5" value="1" type="checkbox">Respuestas Ininteligibles</label>
 
-								<input id="Expresion_ininteligibles" name="Expresion_ininteligibles" maxlength="5" value="1" type="checkbox">
-								<label for="respuestas">Respuestas Ininteligibles</label>
-								
-								<input id="Expresion_incoherentes" name="Expresion_incoherentes" maxlength="5" value="1" type="checkbox">
-								<label for="incoherente">Respuestas Incoherentes</label>
-
-								<input id="Expresion_repetitivo" name="Expresion_repetitivo" maxlength="5" value="1" type="checkbox">
-								<label for="repetitivo">Repetitivo</label>
-
-								<input id="Expresion_fugaideas" name="Expresion_fugaideas" maxlength="5" value="1" type="checkbox">
-								<label for="Fuga de ideas">Fuga de ideas</label>
+								<label class="checkbox-inline">
+								     <input id="Expresion_incoherentes" name="Expresion_incoherentes" maxlength="5" value="1" type="checkbox">Respuestas Incoherentes</label>
+                                
+                                <label class="checkbox-inline">
+								     <input id="Expresion_repetitivo" name="Expresion_repetitivo" maxlength="5" value="1" type="checkbox">Repetitivo</label>
+                                
+                                <label class="checkbox-inline">
+								     <input id="Expresion_fugaideas" name="Expresion_fugaideas" maxlength="5" value="1" type="checkbox">Fuga de ideas</label>
 					
 							</div>
 						</div>	
@@ -213,18 +211,17 @@
 		</div>
 
 			<div class="col-xs-12">
-
-				<input id="Psicomotricidad_vacilante" name="Psicomotricidad_vacilante" maxlength="5" value="1" type="checkbox">
-				<label for="vacilante">Vacilante</label>
-				
-				<input id="Psicomotricidad_imprecision" name="Psicomotricidad_imprecision" maxlength="5" value="1" type="checkbox">
-				<label for="distancias">Imprecision en los movimientos</label>
-
-				<input id="Psicomotricidad_disminucionreflejos" name="Psicomotricidad_disminucionreflejos" maxlength="5" value="1" type="checkbox">
-				<label for="movimientos">Disminución de los reflejos</label>
-
-				<input id="Psicomotricidad_apreciacionfalsa" name="Psicomotricidad_apreciacionfalsa" maxlength="5" value="1" type="checkbox">
-				<label for="reflejos">Falsa apreciación de las distancias</label>
+                <label class="checkbox-inline">
+				<input id="Psicomotricidad_vacilante" name="Psicomotricidad_vacilante" maxlength="5" value="1" type="checkbox">Vacilante</label>
+                
+                <label class="checkbox-inline">				
+				<input id="Psicomotricidad_imprecision" name="Psicomotricidad_imprecision" maxlength="5" value="1" type="checkbox">Imprecision en los movimientos</label>
+                
+                <label class="checkbox-inline">
+				<input id="Psicomotricidad_disminucionreflejos" name="Psicomotricidad_disminucionreflejos" maxlength="5" value="1" type="checkbox">Disminución de los reflejos</label>
+                
+                <label class="checkbox-inline">
+				<input id="Psicomotricidad_apreciacionfalsa" name="Psicomotricidad_apreciacionfalsa" maxlength="5" value="1" type="checkbox">Falsa apreciación de las distancias</label>
 
 			</div>
 			
@@ -243,8 +240,7 @@
 
 			<div class="col-xs-12">
 				</br>	
-				<textarea class="form-control" rows="3" name="descripcionmotricidad" id="descripcionmotricidad">
-				</textarea>
+				<textarea class="form-control" rows="3" name="descripcionmotricidad" id="descripcionmotricidad"></textarea>
 			</div>
 
 	</div>

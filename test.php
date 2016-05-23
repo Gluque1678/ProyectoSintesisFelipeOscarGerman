@@ -10,8 +10,9 @@ $titular  = $_SESSION['titular_datos'];
 
 include("conexion.proc.php");
 
-$hora= date ("h:i:s");
-$fecha= date ("d/m/Y");
+$diligencia = time();
+$hora       = date ("H:i:s",$diligencia);
+$fecha      = date ("d/m/Y",$diligencia);
 
 ?>
 
