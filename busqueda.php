@@ -132,7 +132,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 
 							$qry2 = "SELECT * FROM vehiculo WHERE Matricula='$numMatricula'";
 
-							$qry2titular ="SELECT *, vehiculo.DNI FROM dni, vehiculo WHERE Num = vehiculo.DNI";
+							$qry2titular ="SELECT *, vehiculo.DNI FROM dni, vehiculo WHERE dni.Num = vehiculo.DNI";
 
 							$res2 = mysqli_query($conmossos,$qry2);
 							$res2titular = mysqli_query($conmossos,$qry2titular);
