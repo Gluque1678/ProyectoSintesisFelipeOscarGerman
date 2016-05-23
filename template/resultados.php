@@ -5,19 +5,19 @@
 					</br></br>
 
 					<div class="col-xs-2">
-						<input type="text" id="marcaetilometro" name= "marcaetilometro" class="form-control" placeholder="Marca Etilómetro"/>
+						<input type="text" id="marcaetilometro" name= "marcaetilometro" class="form-control" value="Drager Alcotest" readonly/>
 					</div>
 
 					<div class="col-xs-2">
-						<input type="text" id="modelo" name= "modelo" class="form-control" placeholder="Modelo" />
+						<input type="text" id="modelo" name= "modelo" class="form-control" value="E7110 MK-III" readonly />
 					</div>
 
 					<div class="col-xs-2">
-						<input type="text" id="numeroserie" name= "numeroserie" class="form-control" placeholder="Numero de Serie" /></br>
+						<input type="text" id="numeroserie" name= "numeroserie" class="form-control" value="ARJA-0055" readonly/></br>
 					</div>
 
 					<div class="col-xs-2">
-						<input type="text" id="calibrado" name= "calibrado" class="form-control" placeholder="Calibrado hasta" value=""/>
+						<input type="text" id="calibrado" name= "calibrado" class="form-control" value="2017" readonly/>
 					</div>
 
 					</br></br></br>
@@ -41,7 +41,7 @@
 					</br></br>
 
 					<div class="col-md-2">
-						<input type="text" id="hora1" name= "hora1" class="form-control" placeholder="Hora" value=""/></br>
+						<input type="time" id="hora1" name= "hora1" class="form-control" placeholder="Hora" value=""/></br>
 					</div>
 
 					<div class="col-xs-2">
@@ -49,7 +49,7 @@
 					</div>
 					
 					<div class="col-xs-2">
-						<input type="text" id="hora2" name= "hora2" class="form-control" placeholder="Hora" value=""/>
+						<input type="time" id="hora2" name= "hora2" class="form-control" placeholder="Hora" value=""/>
 					</div>
 
 					<div class="col-xs-2">
@@ -97,7 +97,7 @@
 					</br>			
 					
 					<div class="col-xs-2">
-						<input type="text" id="horatraslado" name= "horatraslado" class="form-control" placeholder="Hora de traslado" value=""/></br>
+						<input type="time" id="horatraslado" name= "horatraslado" class="form-control" placeholder="Hora de traslado" value=""/></br>
 					</div>
 				
 					<div class="col-xs-2">

@@ -19,7 +19,7 @@
 						</br></br></br>
 
 						<div class="col-xs-4">
-							<input type="text" id="lugarinmob" name="lugarinmob" class="form-control" placeholder="Lugar de la Immobilización"/>
+							<input type="text" id="lugarinmob" name="lugarinmob" class="form-control" placeholder="Lugar de la Immobilización" readonly/>
 						</div>
 
 						<div class="col-xs-2">
@@ -142,9 +142,9 @@
 						</div>
 
 
-						<div class="col-xs-2">		
+						<!-- <div class="col-xs-2">		
 							<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
-						</div>
+						</div> -->
 
 
 						<div class="col-xs-3">
@@ -207,9 +207,9 @@
 							</div>
 
 
-							<div class="col-xs-2">		
+							<!-- <div class="col-xs-2">		
 								<input type="text" name= "agente2" id="agentes" class="form-control" placeholder="Agente2" value="<?php echo $tip; ?>" readonly/>
-							</div>
+							</div> -->
 
 
 						

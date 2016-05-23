@@ -33,11 +33,10 @@ $fecha= date ("d/m/Y");
 
 </head>
 
-<span class="ir-arriba icon-arrow-up"></span>
-<section class="contenido">
-
 <body id="main_body" style="background-color:#F5F6CE";>
 
+<span class="ir-arriba icon-arrow-up"></span>
+<section class="contenido">
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 		<div class="panel-heading">
 			<img id="logo" src="img/logoUrbanaActas.png" alt="">
@@ -135,8 +134,7 @@ $fecha= date ("d/m/Y");
 					<div class="panel-heading">
 						 <div class="Descripcion_conduccion">
 							<label><h3>Descripción de la conducción</h3></label>
-							<textarea class="form-control" rows="3" id="descripcion" name="descripcion">
-							</textarea>	
+							<textarea class="form-control" rows="3" id="descripcion" name="descripcion"></textarea>	
 						</div>
 					</div>
 				</div>
@@ -281,9 +279,9 @@ $fecha= date ("d/m/Y");
 							</div>
 
 								<div class="col-xs-12">
-									<a href="">
-										<input type="submit" class="btn btn-danger" style="margin-left: 1060px; margin-top:-205px;"></input>
-		 							</a> 
+									
+										<input type="submit" class="btn btn-danger" style="margin-left: 1060px; margin-top:-205px;"/>
+		 							
 								</div>
 
 								<div style="height:500px;"></div>
@@ -293,7 +291,7 @@ $fecha= date ("d/m/Y");
 				</div>
 
 				
-				</section>
+				</form>
 
 
 			</div>	
@@ -308,7 +306,8 @@ $fecha= date ("d/m/Y");
 		<script src="../libs/jquery/jquery-2.1.4.min.js"></script>
 		<script src="../libs/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 		<script src="js/script.js"></script>
-		
+
+		</section>
 	
 	</body>
 

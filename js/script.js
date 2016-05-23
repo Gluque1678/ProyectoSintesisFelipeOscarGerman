@@ -107,12 +107,7 @@ $(document).ready(function(){
   //rellenar campo permiso en DENUNCIA
   $('#lugar').blur(function(){
     $('#denunciaLugar').val($('#lugar').val());
-
-  });
-
-  //rellenar campo permiso en VEHICULO
-  $('#lugar').blur(function(){
-    $('#vehiculolugar').val($('#lugar').val());
+    $('#lugarinmob').val($('#lugar').val());
 
   });
 

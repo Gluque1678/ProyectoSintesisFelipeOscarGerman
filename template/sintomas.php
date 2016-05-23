@@ -34,19 +34,19 @@
 		
 					<div class="col-xs-12">		
 						<label>
-							<input type="radio" name="constitucion" id="constitucion" value="Corpulenta" checked>
+							<input type="radio" name="constitucion" id="constitucion" value="Corpulenta"/>
 							Corpulenta
 						</label>
 
 						<label>
 							
-							<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked>
+							<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked/>
 							Mediana
 						</label>
 						
 						<label>
 							
-							<input type="radio" name="constitucion" id="constitucion" value="Pequeña" checked>
+							<input type="radio" name="constitucion" id="constitucion" value="Pequeña"/>
 							Pequeña
 						</label>
 					</div>
@@ -70,31 +70,31 @@
 
 						
 							<label class="checkbox-inline">
-			  				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"> Agresivo
+			  				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"/> Agresivo
 							</label>
 						
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"> Insultante
+			 				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"/> Insultante
 							</label>
 						
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"> Irrespetuoso
+			 				 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"/> Irrespetuoso
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"> Eufórico
+			 				 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"/> Eufórico
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"> Locuaz
+			 				 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"/> Locuaz
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"> Excitado
+			 				 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"/> Excitado
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"> Variaciones obtadas de comportamiento o estado de ánimo
+			 				 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"/> Variaciones obtadas de comportamiento o estado de ánimo
 							</label>
 							</div>
 
@@ -107,8 +107,7 @@
 								<div class="Descripcion_Comportamiento">
 									<label class="comportamiento" for=""><h4 style="margin-top: -5px;">Descripción del comportamiento</h4>
 									</label>
-									<textarea class="form-control" rows="3" name="descripcioncomportamiento" id="descripcioncomportamiento">
-									</textarea>	
+									<textarea class="form-control" rows="3" name="descripcioncomportamiento" id="descripcioncomportamiento"></textarea>	
 								</div>
 							</div>
 						</div>
@@ -128,23 +127,23 @@
 							<div class="col-xs-12">
 
 								<label class="checkbox-inline">
-					  				<input type="checkbox" id="Mirada_midriaticos" name="Mirada_midriaticos" value="1"> Dilatación pupila
+					  				<input type="checkbox" id="Mirada_midriaticos" name="Mirada_midriaticos" value="1"/> Dilatación pupila
 								</label>
 								
 								<label class="checkbox-inline">
-					 				 <input type="checkbox" id="Mirada_mioticos" name="Mirada_mioticos" value="1"> Disminución pupila
+					 				 <input type="checkbox" id="Mirada_mioticos" name="Mirada_mioticos" value="1"/> Disminución pupila
 								</label>
 							
 								<label class="checkbox-inline">
-					 			 <input type="checkbox" id="Mirada_brillantes" name="Mirada_brillantes" value="1"> Brillantes
+					 			 <input type="checkbox" id="Mirada_brillantes" name="Mirada_brillantes" value="1"/> Brillantes
 								</label>
 
 								<label class="checkbox-inline">
-					 			 <input type="checkbox" id="Mirada_somnolienta" name="Mirada_somnolienta" value="1"> Somnolientos
+					 			 <input type="checkbox" id="Mirada_somnolienta" name="Mirada_somnolienta" value="1"/> Somnolientos
 								</label>
 
 								<label class="checkbox-inline">
-					 			 <input type="checkbox" id="Mirada_perdida" name="Mirada_perdida" value="1"> Perdida
+					 			 <input type="checkbox" id="Mirada_perdida" name="Mirada_perdida" value="1"/> Perdida
 								</label>
 							
 							</div>
@@ -164,17 +163,14 @@
 			
 							<div class="col-xs-12">
 
-								<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox">
-								<label for="pastosa">Pastosa
-								</label>
+								<input id="Habla_pastosa" name="Habla_pastosa" maxlength="5" value="1" type="checkbox"/>
+								<label for="pastosa">Pastosa</label>
 								
 								<input id="Habla_clara" name="Habla_clara" maxlength="5" value="1" type="checkbox">
-								<label for="clara">Clara
-								</label>
+								<label for="clara">Clara</label>
 								
 								<input id="Habla_vacilante" name="Habla_vacilante" maxlength="5" value="1" type="checkbox">
-								<label for="vacilante">Vacilante
-								</label>		
+								<label for="vacilante">Vacilante</label>		
 								
 							</div>
 						</div>

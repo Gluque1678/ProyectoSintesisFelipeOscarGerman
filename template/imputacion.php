@@ -55,8 +55,7 @@
 						</div>		
 						
 						<div class="col-xs-12">
-							<textarea  class="form-control" rows="1" id="Motivoimputacion" name="Motivoimputacion">
-							</textarea>
+							<textarea  class="form-control" rows="1" id="Motivoimputacion" name="Motivoimputacion"></textarea>
 						</div>
 									
 						</br></br>
@@ -71,8 +70,8 @@
 
 						
 						<div class="col-xs-12">
-							<input type="radio" name="oficio" id="oficio" value="oficio"> Quiero un abogado de oficio&nbsp&nbsp
-							<input type="radio" name="renuncio" id="renuncio" value="renuncio"> Renuncio a la asistencia letrada
+							<input type="radio" name="oficio" id="oficio" value="oficio" checked/> Quiero un abogado de oficio&nbsp&nbsp
+							<input type="radio" name="renuncio" id="renuncio" value="renuncio"/> Renuncio a la asistencia letrada
 						</div>	
 
 						</br></br>
@@ -93,8 +92,7 @@
 								<div class="col-xs-12">
 									<label><h3>Observaciones</h3></label>
 									</br></br>
-									<textarea class="form-control" rows="1" name="observaciones">
-									</textarea>
+									<textarea class="form-control" rows="1" name="observaciones"></textarea>
 								</div>
 						
 						</br></br></br>
@@ -118,7 +116,7 @@
 									<input type="date" id="diacomparecer" name= "diacomparecer" class="form-control" placeholder="Fecha"/>
 								</div>
 
-								<div class="col-xs-1">
+								<div class="col-xs-2">
 									<input type="time" id="horacomparecer" name= "horacomparecer" class="form-control" placeholder="Hora" />
 								</div>
 										
