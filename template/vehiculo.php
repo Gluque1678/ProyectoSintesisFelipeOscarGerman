@@ -222,23 +222,23 @@
 							</br></br></br></br>
 
 							<div class="col-xs-2">
-								<input type="text" id="vehiculonombre" name= "nombre" class="form-control" placeholder="Nombre " />
+								<input type="text" id="vehiculonombre" name= "nombresustituto" class="form-control" placeholder="Nombre " />
 							</div>	
 					
 							<div class="col-xs-2">
 								<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Primer Apellido" />
 							</div>	
 							<div class="col-xs-2">
-								<input type="text" id="apellido1" name= "apellido1" class="form-control" placeholder="Segundo Apellido" />
+								<input type="text" id="apellido2" name= "apellido2" class="form-control" placeholder="Segundo Apellido" />
 							</div>	
 
 													
 							<div class="col-xs-2">
-								<input type="text" id="permiso" name= "permiso" class="form-control" placeholder="Permiso de conducir Nº" />
+								<input type="text" id="permiso" name= "numerosustituto" class="form-control" placeholder="Permiso de conducir Nº" />
 							</div>	
 
 							<div class="col-xs-1">
-								<input type="text" id="clase" name= "clase" class="form-control" placeholder="Clase " />
+								<input type="text" id="clase" name= "clasesustituto" class="form-control" placeholder="Clase " />
 							</div>	
 
 							<div class="col-xs-2">

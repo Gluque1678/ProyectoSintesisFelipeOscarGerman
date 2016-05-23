@@ -107,7 +107,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 							//tipo de carnet de conducir						
 							echo "Carnet de conducir: ".$datos_permisoconducir["Tipopermiso"].'<br>';
 							//comprobación de carnet vigente
-							if ($datos_permisoconducir["Fechaexpedicion"] < date("Y-m-d")) {
+							if ($datos_permisoconducir["Fechaexpiracion"] < date("Y-m-d")) {
 								echo $imgAlerta."Carnet caducado el día ".$datos_permisoconducir["Fechaexpiracion"];
 								}
 						}else{
