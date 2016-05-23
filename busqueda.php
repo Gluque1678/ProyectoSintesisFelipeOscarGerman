@@ -53,7 +53,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                             <div class="form-bottom">
                           <form role="form" action="" method="busqueda.php" method="post" class="login-form">
                             <div class="form-group">
-                                <input type="search" id="iddni" name="Num" value="" placeholder="DNI" required class="form-username form-control font-size-2em text-centro" autofocus/>
+                                <input type="text" id="iddni" name="Num" value="" placeholder="DNI" required class="form-username form-control font-size-2em text-centro" autofocus />
                                 <div id="errorDni"></div>
                               </div>
                               <div class="form-group">

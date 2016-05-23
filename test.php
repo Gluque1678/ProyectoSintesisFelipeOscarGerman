@@ -41,7 +41,7 @@ $fecha      = date ("d/m/Y",$diligencia);
 	<div class="panel panel-primary" style="border: 8px solid transparent; border-color: #337ab7; background-color:#F5F6CE";>
 		<div class="panel-heading">
 			<img id="logo" src="img/logoUrbanaActas.png" alt="">
-				<form class="form-incline" class="Denuncia Municipal" method="POST" action="test.proc.php" onsubmit="return validaFormulario();">
+				<form class="form-incline" class="Denuncia Municipal" method="POST" action="test.proc.php">
 		
 				<div class="form-group">
 					<div id="fuente" style="font-size:60px; margin-top: -80px; text-align: center;">

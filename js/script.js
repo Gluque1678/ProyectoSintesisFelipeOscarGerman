@@ -98,11 +98,9 @@ $(document).ready(function(){
 
   });
 
-  //rellenar campo denumero en DENUNCIA
-  $('#Numdiligencias').blur(function(){
-    $('#denumero').val($('#Numdiligencias').val());
-
-  });
+  //rellenar campo denumero en DENUNCIA 
+  $('#denumero').val($('#Numdiligencias').val());
+  $('#denuncia').val($('#Numdiligencias').val());
 
   //rellenar campo permiso en DENUNCIA
   $('#lugar').blur(function(){
