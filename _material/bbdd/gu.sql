@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2016 a las 09:23:44
--- Versión del servidor: 10.1.10-MariaDB
--- Versión de PHP: 5.6.19
+-- Tiempo de generación: 23-05-2016 a las 12:20:50
+-- Versión del servidor: 5.6.26
+-- Versión de PHP: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -28,7 +28,8 @@ USE `gu`;
 -- Estructura de tabla para la tabla `agente`
 --
 
-CREATE TABLE `agente` (
+DROP TABLE IF EXISTS `agente`;
+CREATE TABLE IF NOT EXISTS `agente` (
   `TIP` int(4) NOT NULL,
   `Nombre` varchar(75) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
@@ -49,7 +50,8 @@ INSERT INTO `agente` (`TIP`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Pas
 -- Estructura de tabla para la tabla `dni`
 --
 
-CREATE TABLE `dni` (
+DROP TABLE IF EXISTS `dni`;
+CREATE TABLE IF NOT EXISTS `dni` (
   `Num` varchar(9) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
   `Segundoapellido` varchar(75) COLLATE utf8_bin NOT NULL,
@@ -81,31 +83,31 @@ INSERT INTO `dni` (`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`,
 -- Estructura de tabla para la tabla `f_a13pl`
 --
 
-CREATE TABLE `f_a13pl` (
+DROP TABLE IF EXISTS `f_a13pl`;
+CREATE TABLE IF NOT EXISTS `f_a13pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
   `Lugar` varchar(255) COLLATE utf8_bin NOT NULL,
-  `Dia` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Dia` varchar(15) COLLATE utf8_bin NOT NULL,
   `Hora` varchar(10) COLLATE utf8_bin NOT NULL,
   `Motivoinmobilizacion` varchar(100) COLLATE utf8_bin NOT NULL,
   `Numerodenuncia` int(6) NOT NULL,
-  `Tipodenuncia` enum('Municipal','Servicio catalán de transito') COLLATE utf8_bin NOT NULL,
+  `Tipodenuncia` varchar(255) COLLATE utf8_bin NOT NULL,
   `Sistemainmobilizacion` varchar(50) COLLATE utf8_bin NOT NULL,
-  `Quilometrosactuales` int(6) DEFAULT NULL,
-  `Vehiculodisposicion` enum('Juzgado de guardia','Titular','Otro conductor habilitado') COLLATE utf8_bin NOT NULL,
-  `Fecharoturainmobilizacion` date DEFAULT NULL,
-  `Horaroturainmobilizacion` time DEFAULT NULL,
-  `Atestadodesobedienciagrave` int(11) DEFAULT NULL,
+  `Quilometrosactuales` int(6) NOT NULL,
+  `Vehiculodisposicion` varchar(255) COLLATE utf8_bin NOT NULL,
+  `Fecharoturainmobilizacion` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Horaroturainmobilizacion` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Atestadodesobedienciagrave` int(11) NOT NULL,
   `Observaciones` varchar(255) COLLATE utf8_bin NOT NULL,
   `Motivolevantamiento` varchar(255) COLLATE utf8_bin NOT NULL,
   `Dialevantamiento` varchar(25) COLLATE utf8_bin NOT NULL,
   `Horalevantamiento` varchar(25) COLLATE utf8_bin NOT NULL,
-  `Nombresustituto` varchar(150) COLLATE utf8_bin DEFAULT NULL,
-  `Permisosustituto` varchar(9) COLLATE utf8_bin DEFAULT NULL,
-  `Clasesustituto` varchar(5) COLLATE utf8_bin DEFAULT NULL,
-  `Paisexpedicionsustituto` varchar(40) COLLATE utf8_bin DEFAULT NULL,
-  `Retiradaingresodeposito` enum('Victor-0, carrer de la Glòria s/n','Victor-30, parc de la Serp','Victor-10') COLLATE utf8_bin DEFAULT NULL
+  `Nombresustituto` varchar(150) COLLATE utf8_bin NOT NULL,
+  `Permisosustituto` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Clasesustituto` varchar(5) COLLATE utf8_bin NOT NULL,
+  `Paisexpedicionsustituto` varchar(40) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -114,7 +116,8 @@ CREATE TABLE `f_a13pl` (
 -- Estructura de tabla para la tabla `f_a21pl`
 --
 
-CREATE TABLE `f_a21pl` (
+DROP TABLE IF EXISTS `f_a21pl`;
+CREATE TABLE IF NOT EXISTS `f_a21pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -164,7 +167,8 @@ CREATE TABLE `f_a21pl` (
 -- Estructura de tabla para la tabla `f_n08pl`
 --
 
-CREATE TABLE `f_n08pl` (
+DROP TABLE IF EXISTS `f_n08pl`;
+CREATE TABLE IF NOT EXISTS `f_n08pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -176,8 +180,8 @@ CREATE TABLE `f_n08pl` (
   `Renuncialetrada` tinyint(1) NOT NULL,
   `Idiomainterprete` varchar(50) COLLATE utf8_bin NOT NULL,
   `Observaciones` varchar(255) COLLATE utf8_bin NOT NULL,
-  `Causapenal_fecha` date NOT NULL,
-  `Causapenal_hora` time(4) NOT NULL
+  `Causapenal_fecha` varchar(10) COLLATE utf8_bin NOT NULL,
+  `Causapenal_hora` varchar(10) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -186,7 +190,8 @@ CREATE TABLE `f_n08pl` (
 -- Estructura de tabla para la tabla `f_t15pl`
 --
 
-CREATE TABLE `f_t15pl` (
+DROP TABLE IF EXISTS `f_t15pl`;
+CREATE TABLE IF NOT EXISTS `f_t15pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP` int(4) NOT NULL,
@@ -196,23 +201,14 @@ CREATE TABLE `f_t15pl` (
   `Ticket2` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Volcado de datos para la tabla `f_t15pl`
---
-
-INSERT INTO `f_t15pl` (`DNI`, `Numdiligencias`, `TIP`, `Dia`, `Hora`, `Ticket1`, `Ticket2`) VALUES
-('46997126F', '65', 0, '17/05/2016', '09:47:48', '', ''),
-('46997126F', '65', 0, '17/05/2016', '09:47:48', '', ''),
-('46997126F', '65', 0, '17/05/2016', '10:26:32', '', ''),
-('46997126F', '65', 666, '17/05/2016', '10:29:10', '', '');
-
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `f_t27pl`
 --
 
-CREATE TABLE `f_t27pl` (
+DROP TABLE IF EXISTS `f_t27pl`;
+CREATE TABLE IF NOT EXISTS `f_t27pl` (
   `DNI` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `TIP1` int(4) NOT NULL,
@@ -220,11 +216,11 @@ CREATE TABLE `f_t27pl` (
   `Hora` varchar(10) COLLATE utf8_bin NOT NULL,
   `Actuacion` enum('Control preventivo','Accidente tráfico','Infracción del reglamento','Síntomas') COLLATE utf8_bin NOT NULL,
   `negacion` tinyint(1) NOT NULL,
-  `Horanegativa` time DEFAULT NULL,
-  `autorizacion` tinyint(1) DEFAULT NULL,
-  `Conductorsubstituto` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `Permisosubstituto` varchar(9) COLLATE utf8_bin DEFAULT NULL,
-  `Clasesubstituto` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `Horanegativa` time NOT NULL,
+  `autorizacion` tinyint(1) NOT NULL,
+  `Conductorsubstituto` varchar(255) COLLATE utf8_bin NOT NULL,
+  `Permisosubstituto` varchar(9) COLLATE utf8_bin NOT NULL,
+  `Clasesubstituto` varchar(5) COLLATE utf8_bin NOT NULL,
   `Lugar` char(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -234,7 +230,8 @@ CREATE TABLE `f_t27pl` (
 -- Estructura de tabla para la tabla `f_t32pl`
 --
 
-CREATE TABLE `f_t32pl` (
+DROP TABLE IF EXISTS `f_t32pl`;
+CREATE TABLE IF NOT EXISTS `f_t32pl` (
   `dni` varchar(9) COLLATE utf8_bin NOT NULL,
   `Numdiligencias` varchar(255) COLLATE utf8_bin NOT NULL,
   `tip1` int(4) NOT NULL,
