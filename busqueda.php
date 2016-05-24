@@ -167,7 +167,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 		    </div>
 		 </div>
 	<div>
-		<a href="test.php"><button id="alcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Proceder Control de Alcoholemia</button></a><br/>
+		<a href="test.php"><button id="alcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Proceder Alcoholemia</button></a><br/>
 	</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/jquery-1.11.1.js"></script>
