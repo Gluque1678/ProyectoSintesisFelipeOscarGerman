@@ -26,8 +26,9 @@ include 'pdfn08.php';
 include 'pdfa13.php';*/
 
 //$pdf->Output($a21["Numdiligencias"].'.pdf','I',true);
-$pdf->Output('../diligencias/'.$a21["Numdiligencias"].'.pdf','F',true);
+$pdf->Output('../diligencias/'.$a21["Numdiligencias"].'.pdf','I',true);
 
+header("location: ../busqueda.php");
 
 
 /*

@@ -238,7 +238,7 @@ $fecha      = date ("d/m/Y",$diligencia);
 
 					<?php include 'template/vehiculo.php' ?>
 
-
+					<div style="height:200px;"></div>
 					</p>
 				</div>
 

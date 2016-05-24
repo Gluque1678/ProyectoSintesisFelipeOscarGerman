@@ -67,34 +67,34 @@
 						</div>	
 
 						<div class="col-xs-2">
-							<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca" value="<?php echo $vehiculo['Marca']; ?>" readonly/>
+							<input type="text" id="marca" name="marca" class="form-control" placeholder="Marca" value="<?php echo utf8_encode(ucfirst($vehiculo['Marca'])); ?>" readonly/>
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo" value="<?php echo $vehiculo['Modelo']; ?>" readonly/>
+							<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo" value="<?php echo utf8_encode(ucfirst($vehiculo['Modelo'])); ?>" readonly/>
 						</div>	
 
 						<div class="col-xs-2">
-							<input type="text" id="color" name="color" class="form-control" placeholder="Color" value="<?php echo $vehiculo['Color']; ?>" readonly/>
+							<input type="text" id="color" name="color" class="form-control" placeholder="Color" value="<?php echo utf8_encode(ucfirst($vehiculo['Color'])); ?>" readonly/>
 						</div>	
 
 						</br></br></br>
 
 						<div class="col-xs-2">
-							<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular" value="<?php echo $titular['Nombre']; ?>" readonly />
+							<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular" value="<?php echo utf8_encode(ucfirst($titular['Nombre'])); ?>" readonly />
 						</div>	
 							
 						<div class="col-xs-2">
-							<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="1º Apellido titular" value="<?php echo $titular['Primerapellido']; ?>" readonly />
+							<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="1º Apellido titular" value="<?php echo utf8_encode(ucfirst($titular['Primerapellido'])); ?>" readonly />
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="2º Apellido titular" value="<?php echo $titular['Segundoapellido']; ?>" readonly />
+							<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="2º Apellido titular" value="<?php echo utf8_encode(ucfirst($titular['Segundoapellido'])); ?>" readonly />
 						</div>	
 
 					
 						<div class="col-xs-4">
-							<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Dirección del titular" value="<?php echo $titular['Domicilio']; ?>" readonly />
+							<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Dirección del titular" value="<?php echo utf8_encode(ucfirst($titular['Domicilio'])); ?>" readonly />
 						</div>	
 
 					</br></br></br>
@@ -180,12 +180,11 @@
 
 
 					<div class="col-xs-3">
-							<select class="form-control" name="Motivolevantamiento">
+							<select id="motivolevantamiento" class="form-control" name="Motivolevantamiento">
 							
-							<option value="">Selecciona una opción</option>
-							<option value="Desaparecer las causas que lo motivaron" name="Motivolevantamiento" selected>Desaparecer las causas que lo motivaron</option>
-			  				<option value="Hacerse cargo otro conductor habilitado" name="Motivolevantamiento">Hacerse cargo otro conductor habilitado</option>
-			 				<option value="Ingreso al depósito por transcurrir más de 24 horas" name="Motivolevantamiento">Ingreso al depósito por transcurrir más de 24 horas</option>
+								<option value="0" name="Motivolevantamiento" selected>Desaparecer las causas que lo motivaron</option>
+				  				<option value="1" name="Motivolevantamiento">Hacerse cargo otro conductor habilitado</option>
+				 				<option value="2" name="Motivolevantamiento">Ingreso al depósito por transcurrir más de 24 horas</option>
 			  				
 			 				</select>
 					</div>
@@ -212,10 +211,9 @@
 							</div> -->
 
 
-						
+						<div id="segundoconductor">
 							<div class="col-xs-4">
-								<label><h4>Persona que se hace cargo del vehículo</h4>
-								</label>
+								<label><h4>Persona que se hace cargo del vehículo</h4></label>
 							</div>
 
 							</br></br></br></br>
@@ -243,9 +241,9 @@
 							<div class="col-xs-2">
 								<input type="text" id="pais" name= "pais" class="form-control" placeholder="Pais Expedición " />
 							</div>	
-
 						</div>
 					</div>
+				</div>
 	
 
 						</br></br></br></br>

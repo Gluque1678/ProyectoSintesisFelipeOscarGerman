@@ -86,7 +86,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 				$res1   = mysqli_query($conmossos,$qry1);
 				$res1pc = mysqli_query($conmossos,$qry1pc);
 			
-					//si existen datos
+					//si existe el dni
 					if(mysqli_num_rows($res1)==1) {
 
 						$datos_dni=mysqli_fetch_array($res1);
@@ -97,6 +97,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 						echo ucfirst($datos_dni["Primerapellido"]).'&nbsp';
 						echo ucfirst($datos_dni["Segundoapellido"]).'<br>';
 						echo ucfirst($datos_dni["Domicilio"]).'<br>';
+
 						//comprobación para saber si tiene carnet de conducir
 						if(mysqli_num_rows($res1pc)==1) {
 
@@ -111,6 +112,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 						}else{
 							//en caso de no tener permiso de conducir
 							echo $imgAlerta."Sin permiso de conducir";
+							$_SESSION['permisoconducir_datos']=null;
 						}
 						//carnet falso
 					}else echo "No hay datos de la persona";

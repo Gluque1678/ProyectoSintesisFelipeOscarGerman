@@ -1,5 +1,6 @@
 $(document).ready(function(){	
 
+$('#segundoconductor').hide();
 
   //login
   $("#login").click(function(){
@@ -47,7 +48,7 @@ $(document).ready(function(){
 //////////////////////////////////////////////////////////////////////////////////////
 
   //validación DNI al presionar BUSCAR
-  $("#iddni").blur(function(){
+  $("#buscar").click(function(){
       //se recoje el valor del input con id iddni en mayúsculas
       var campo = $("#iddni").val().toUpperCase();
       //se separa el número de la letra y se guarda
@@ -109,6 +110,13 @@ $(document).ready(function(){
 
   });
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+  
+  $('#motivolevantamiento').change(function(){
+    var opcion =  $('#motivolevantamiento').val();
+    if (opcion === '1') $('#segundoconductor').show();
+    else $('#segundoconductor').hide();
+  });
 
 });
 
