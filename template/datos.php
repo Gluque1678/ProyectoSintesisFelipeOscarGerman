@@ -6,7 +6,7 @@
 						
 							</div>
 					
-								<div class="col-xs-1">		
+								<div class="col-xs-2">		
 									<input type="text" name= "agentes" id="agentes" class="form-control" placeholder="Agente1" value="<?php echo $tip; ?>" readonly/>
 								</div>
 

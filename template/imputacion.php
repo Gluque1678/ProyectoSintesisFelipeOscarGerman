@@ -112,7 +112,7 @@
 							
 						<div class="col-xs-12">
 							<div class="citacion">
-								<div class="col-xs-2">
+								<div class="col-xs-3">
 									<input type="date" id="diacomparecer" name= "diacomparecer" class="form-control" placeholder="Fecha"/>
 								</div>
 
@@ -121,6 +121,8 @@
 								</div>
 										
 							</div>
+
+
 
 							<div class="col-xs-3">
 								<select class="form-control">
@@ -133,6 +135,7 @@
 								</select>
 							</div>
 
+							<br /><br /><br />
 			
 							<label><h4>Dirección: Av.Carrilet,número 2(edificio H) </br> Hospitalet de LLobregat Teléfono 935548145</h4></label>		
 					

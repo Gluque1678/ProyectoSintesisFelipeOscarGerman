@@ -1,21 +1,16 @@
 
-						<div class="col-xs-3">
+						<div class="col-xs-4">
 							<input type="text" id="vehiculolugar" name="lugar" class="form-control" placeholder="Lugar" readonly />
 						</div>
 					
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 							<input type="text" name= "dia" id="dia" class="form-control" placeholder="Fecha" value="<?php echo $fecha; ?>" readonly/>
 						</div>
 						
-						<div class="col-xs-1">
+						<div class="col-xs-2">
 							<input type="text" name= "hora" id="hora" class="form-control" placeholder="Hora" value="<?php echo $hora; ?>" readonly/>
 						</div>
 						
-						
-						<div class="col-xs-4">
-							<input type="text" id="immobilizacion" name="immobilizacion" class="form-control" placeholder="Motivo de la immobilizacion"/>
-						</div>
-
 						</br></br></br>
 
 						<div class="col-xs-4">
@@ -26,30 +21,31 @@
 							<input type="text" id="denuncia" name="denuncia" class="form-control" placeholder="Denuncia número"/>
 						</div>
 
-						<div class="col-xs-5">
-
-							<label>
-							</br>
-							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="municipal" checked> Municipal&nbsp
-							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="transito"> Servicio Catalán de Tránsito
-							</label>
-				
+						<div class="col-xs-3">
+							<input type="text" id="immobilizacion" name="immobilizacion" class="form-control" placeholder="Motivo de la immobilizacion"/>
 						</div>
 
-												
+						</br></br><br>
 						
-
-						</br></br></br>
-						
-						<div class="col-xs-2">
-							<input type="text" id="sistema" name="sistema" class="form-control" placeholder="Sistema de la Immobilización"/>
+						<div class="col-xs-3">
+							<input type="text" id="sistema" name="sistema" class="form-control" placeholder="Sistema de la Immobilización" />
 						</div>
 						
 						<div class="col-xs-2">
 							<input type="text" id="kilometros" name="kilometros" class="form-control" placeholder="Kms"/>
 						</div>
 
-						</br></br></br>
+						<div class="col-xs-4">
+
+							<label>
+							</br></br></br>
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="municipal" checked style="margin-left: -480px"> Municipal&nbsp
+							<input type="checkbox" name="Tipodenuncia" id="Tipodenuncia" value="transito"> Servicio Catalán de Tránsito
+							</label>
+				
+						</div>
+
+						</br></br></br></br></br>
 
 						<div class="panel panel-success">
 							<div class="panel-heading">		
@@ -74,25 +70,26 @@
 							<input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo" value="<?php echo utf8_encode(ucfirst($vehiculo['Modelo'])); ?>" readonly/>
 						</div>	
 
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 							<input type="text" id="color" name="color" class="form-control" placeholder="Color" value="<?php echo utf8_encode(ucfirst($vehiculo['Color'])); ?>" readonly/>
 						</div>	
 
 						</br></br></br>
 
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 							<input type="text" id="nomtitular" name="nomtitular" class="form-control" placeholder="Nombre titular" value="<?php echo utf8_encode(ucfirst($titular['Nombre'])); ?>" readonly />
 						</div>	
 							
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 							<input type="text" id="1apelltitular" name="1apelltitular" class="form-control" placeholder="1º Apellido titular" value="<?php echo utf8_encode(ucfirst($titular['Primerapellido'])); ?>" readonly />
 						</div>
 
-						<div class="col-xs-2">
+						<div class="col-xs-3">
 							<input type="text" id="2apelltitular" name="2apelltitular" class="form-control" placeholder="2º Apellido titular" value="<?php echo utf8_encode(ucfirst($titular['Segundoapellido'])); ?>" readonly />
 						</div>	
 
-					
+						</br></br></br>
+
 						<div class="col-xs-4">
 							<input type="text" id="diretitu" name="diretitu" class="form-control" placeholder="Dirección del titular" value="<?php echo utf8_encode(ucfirst($titular['Domicilio'])); ?>" readonly />
 						</div>	
@@ -147,7 +144,7 @@
 						</div> -->
 
 
-						<div class="col-xs-3">
+						<div class="col-xs-4">
 							<input type="text" id="atestadorot" name="atestadorot" class="form-control" placeholder="atestado desobediencia grave nº" />
 							</br>
 						</div>	
@@ -179,7 +176,7 @@
 					</div>
 
 
-					<div class="col-xs-3">
+					<div class="col-xs-4">
 							<select id="motivolevantamiento" class="form-control" name="Motivolevantamiento">
 							
 								<option value="0" name="Motivolevantamiento" selected>Desaparecer las causas que lo motivaron</option>
