@@ -6,6 +6,11 @@ include 'conexion.proc.php';
 
 $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 
+$btnAlcoholemia = 0; //oculto
+
+$dni = " ";
+$matricula = " ";
+
 ?>
 
 <!DOCTYPE html>
@@ -53,11 +58,11 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                             <div class="form-bottom">
                           <form role="form" action="" method="busqueda.php" method="post" class="login-form">
                             <div class="form-group">
-                                <input type="text" id="iddni" name="Num" value="" placeholder="DNI" required class="form-username form-control font-size-2em text-centro" autofocus />
+                                <input type="text" id="iddni" name="Num" placeholder="DNI" required class="form-username form-control font-size-2em text-centro" autofocus/>
                                 <div id="errorDni"></div>
                               </div>
                               <div class="form-group">
-                                <input type="search" id="idmatricula" name="Matricula" value="" placeholder="Matrícula" required class="form-password form-control font-size-2em text-centro"/>
+                                <input type="search" id="idmatricula" name="Matricula" placeholder="Matrícula" required class="form-password form-control font-size-2em text-centro"/>
                               </div>
                               <input type="submit" id="buscar" name="buscador" value="Buscar" class="btn btn-success font-size-2em"/><br/>
                           </form><br/>
@@ -97,6 +102,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 						echo ucfirst($datos_dni["Primerapellido"]).'&nbsp';
 						echo ucfirst($datos_dni["Segundoapellido"]).'<br>';
 						echo ucfirst($datos_dni["Domicilio"]).'<br>';
+						$btnAlcoholemia = 1; //visible
 
 						//comprobación para saber si tiene carnet de conducir
 						if(mysqli_num_rows($res1pc)==1) {
@@ -118,8 +124,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 					}else echo "No hay datos de la persona";
 									
 	}
-?>
-		      </div>
+?>		      </div>
 		</div>
 
 <?php if (isset($_REQUEST['Matricula'])) { ?>
@@ -158,21 +163,31 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 								echo ucfirst(strtolower($datos_titular["Segundoapellido"])).'<br/>';
 								if (!$datos_matricula["Segurovigente"]) echo $imgAlerta."Atención! Sin seguro vigente".'<br/>';
 								if ($datos_matricula["Estadorobo"])     echo $imgAlerta."Atención! Coche robado".'<br/>';
-								if (!$datos_matricula["Itvvigente"])    echo $imgAlerta."Atención! Itv caducada".'<br/>';
-									
+								if (!$datos_matricula["Itvvigente"])    echo $imgAlerta."Atención! Itv caducada".'<br/>';									
 							} else echo "No hay datos del vehículo";
 						}
 					?>
 		      </div>
+				
 		    </div>
 		 </div>
 	<div>
-		<a href="test.php"><button id="alcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Proceder Alcoholemia</button></a><br/>
+        <?php if ($btnAlcoholemia == 1)
+					echo '<a href="test.php"><button id="btnAlcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Proceder Alcoholemia</button><br/></a>';
+					echo '<div style="height:30px;"></div>';
+				?>
+		
 	</div>
+	<?php
+		if(isset($_SESSION['nivel']) && $_SESSION['nivel']==1){
+			echo "<br/><a href='administrar.php'><button id='administrar' name='administrar' class='btn btn-danger font-size-2em'>Administrar</button></a>";
+		}
+	?>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/jquery-1.11.1.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
         <script src="js/jquery.backstretch.js"></script>
         <script src="js/script.js"></script>
+
 	</body>
 </html>

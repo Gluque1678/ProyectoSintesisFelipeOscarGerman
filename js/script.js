@@ -47,9 +47,14 @@ $('#segundoconductor').hide();
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-  //validación DNI al presionar BUSCAR
+  //cuando se hace focus en el input dni, desaparece el mensaje de dni erróneo
+  $('#iddni').focus(function(){
+    $('#errorDni').hide();
+  })
+
+   //validación DNI al presionar BUSCAR o salir de el
   $("#buscar").click(function(){
-      //se recoje el valor del input con id iddni en mayúsculas
+    //se recoje el valor del input con id iddni en mayúsculas
       var campo = $("#iddni").val().toUpperCase();
       //se separa el número de la letra y se guarda
       var numero = campo.substr(0,campo.length-1);
@@ -62,13 +67,12 @@ $('#segundoconductor').hide();
       letra=letra.substring(numero,numero+1);
       //si las letras son diferentes, el dni es erróneo
       if (letra!=let) {
-        $('#errorDni').html("DNI introducido incorrectamente").prop("style","color: #FFC107; font-weight: bolder;");
+        $('#errorDni').html("DNI introducido incorrectamente").prop("style","color: #FFC107; font-weight: bolder;").show();
         return false; //para que no se realice la consulta
       }else{
-        $('#errorDni').prop("visible",false);
+        $('#errorDni').hide();
         return true;
       }
-     
   });
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -119,4 +123,5 @@ $('#segundoconductor').hide();
   });
 
 });
+
 
