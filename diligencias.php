@@ -4,7 +4,6 @@ session_start();
 
 include 'conexion.proc.php';
 
-$imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 
 ?>
 
@@ -12,7 +11,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 <html>
 	<head>
   <meta charset="UTF-8">
-  <title>Diligencias</title>
+  <title><?php $_REQUEST['ndiligencia']; ?></title>
   <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,14 +44,12 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                 <div class="container padding-top-1em">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1>Diligencias</h1>
+                            <h1>Diligencia nº: <?php $_REQUEST['ndiligencia']; ?></h1>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                            <div class="form-bottom">
-                        </div>
-                        </div>
+                        <p><button id="mostrar-diligencia" type="button" class="btn btn-danger btn-lg">MOSTRAR DILIGENCIA</button></p><br/><br/>
+                        <p><button id="finalizar-diligencia" type="button" class="btn btn-success btn-lg">FINALIZAR</button></p>
                     </div>
                 </div>
             </div>

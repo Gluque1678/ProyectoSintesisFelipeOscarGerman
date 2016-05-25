@@ -279,6 +279,5 @@ VALUES
 	echo $sqla13;
 // 	mysqli_close($congu);
 
-// header("Location: fpdf/actas.php?ndiligencia=".$_REQUEST['Numdiligencias']);
-	header("Location: fpdf/actas.php?ndiligencia=".$_REQUEST['Numdiligencias']);
+	header("Location: diligencias.php?ndiligencia=".$_REQUEST['Numdiligencias']);
 ?>

@@ -1,7 +1,7 @@
 <?php
 	//conectamos con la base de datos
-	$congu = mysqli_connect("localhost", "root", "root", "gu");
-	$conmossos = mysqli_connect("localhost", "root", "root", "mossos");
+	$congu = mysqli_connect("localhost", "root", "", "gu");
+	$conmossos = mysqli_connect("localhost", "root", "", "mossos");
 
 	//si no se puede realizar la conexión, mostramos error
 	if (!$congu) {

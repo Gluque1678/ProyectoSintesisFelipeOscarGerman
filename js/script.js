@@ -1,5 +1,12 @@
 $(document).ready(function(){	
 
+$('mostrar-diligencia').click(function{
+
+});
+
+
+// attr('href','fpdf/actas.php?ndiligencia=$_REQUEST["ndiligencia"]');
+
 $('#segundoconductor').hide();
 
   //login
