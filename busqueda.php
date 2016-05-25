@@ -176,13 +176,14 @@ $matricula = " ";
 					echo '<a href="test.php"><button id="btnAlcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Proceder Alcoholemia</button><br/></a>';
 					echo '<div style="height:30px;"></div>';
 				?>
+		<?php
+		if(isset($_SESSION['nivel']) && $_SESSION['nivel']==1){
+			echo "<br/><a href='administrar.php'><button id='administrar' name='administrar' class='btn btn-warning font-size-2em'>Administrar</button></a>";
+		}
+		?>
 		
 	</div>
-	<?php
-		if(isset($_SESSION['nivel']) && $_SESSION['nivel']==1){
-			echo "<br/><a href='administrar.php'><button id='administrar' name='administrar' class='btn btn-danger font-size-2em'>Administrar</button></a>";
-		}
-	?>
+	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/jquery-1.11.1.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
