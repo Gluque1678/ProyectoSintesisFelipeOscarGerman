@@ -12,7 +12,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 <html>
 	<head>
   <meta charset="UTF-8">
-  <title>Administrar</title>
+  <title>Diligencias</title>
   <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +45,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                 <div class="container padding-top-1em">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1>Administrar</h1>
+                            <h1>Diligencias</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -58,57 +58,7 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
             </div>
             
         </div>		
-		<div class="panel-group">
-		    <div class="panel panel-default">
-		    <div class="panel-heading">
-		    	<table border="0">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Diligencias</th>
-                            <th>Agente</th>
-                            <th>DNI</th>
-                        </tr>
-                    </thead>
-		    </div>
-		    <div class="panel-body">
-                <tbody>
-                    <?php
-                        $sqladmin= "SELECT * FROM `f_a21pl`";
-                        $sqladmin2 = mysqli_query($congu,$sqladmin);
-                    
-                        if(mysqli_num_rows($sqladmin2)>0) {
-                            
-                            // $datos_admin=mysqli_fetch_array($sqladmin2);
-                            // $_SESSION['admin_datos']=$datos_admin;
-                            //var_dump($datos_admin);
-
-                            // foreach ($datos_admin as $mostrardiligencias) {
-                            //     echo "<tr><td>$mostrardiligencias[Dia]&nbsp</td>";
-                            //     echo "<td>$mostrardiligencias[Numdiligencias]&nbsp</td>";
-                            //     echo "<td>$mostrardiligencias[TIP1]&nbsp</td>";
-                            //     echo "<td>$mostrardiligencias[DNI]&nbsp</td>";
-                            //     echo "<td><a href='fpdf/actas.php?ndiligencia=$mostrardiligencias[Numdiligencias]'>generaracta</a></td></tr>";
-                            // }
-
-                            while ($datos_admin = mysqli_fetch_array($sqladmin2)) {
-                                echo "<tr><td>$datos_admin[Dia]&nbsp</td>";
-                                echo "<td>$datos_admin[Hora]&nbsp</td>";
-                                echo "<td>$datos_admin[Numdiligencias]&nbsp</td>";
-                                echo "<td>$datos_admin[TIP1]&nbsp</td>";
-                                echo "<td>$datos_admin[DNI]&nbsp</td>";
-                                echo "<td><a target='_blank' href='fpdf/actas.php?ndiligencia=$datos_admin[Numdiligencias]'>generaracta</a></td></tr>";
-                            }
-
-                        }
-
-                    ?>
-
-
-                </tbody>
-		      </div>
-		</div>
+		
 
 	<div>
 		
