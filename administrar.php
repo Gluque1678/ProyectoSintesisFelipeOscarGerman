@@ -74,7 +74,6 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 		    </div>
 		    <div class="panel-body">
                 <tbody>
-                    <center>
                     <?php
                         $sqladmin= "SELECT * FROM `f_a21pl`";
                         $sqladmin2 = mysqli_query($congu,$sqladmin);
@@ -100,18 +99,21 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                                 echo "<td>$datos_admin[TIP1]&nbsp</td>";
                                 echo "<td>$datos_admin[DNI]&nbsp</td>";
                                 echo "<td><a target='_blank' href='fpdf/actas.php?ndiligencia=$datos_admin[Numdiligencias]'><img src='img/pdf-logo.png'></a></td></tr>";
+
                             }
 
                         }
 
                     ?>
-
-                    </center>
                 </tbody>
 		      </div>
 		</div>
 
 	<div>
+        <?php
+        echo '<a href="busqueda.php"><button id="btnAlcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Volver</button></a>';
+        echo '<div style="bottom: 0;"></div>';
+        ?>
 	</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -120,6 +122,5 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
         <script src="js/jquery.backstretch.js"></script>
         <script src="js/script.js"></script>
 	</body>
-
 
 </html>
