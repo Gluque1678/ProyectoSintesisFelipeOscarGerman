@@ -105,8 +105,7 @@
 						<div class="panel panel-success">
 							<div class="panel-heading">
 								<div class="Descripcion_Comportamiento">
-									<label class="comportamiento" for=""><h4 style="margin-top: -5px;">Descripción del comportamiento</h4>
-									</label>
+									<label class="comportamiento" for=""><h4 style="margin-top: -5px;">Descripción del comportamiento</h4></label>
 									<textarea class="form-control" rows="3" name="descripcioncomportamiento" id="descripcioncomportamiento"></textarea>	
 								</div>
 							</div>

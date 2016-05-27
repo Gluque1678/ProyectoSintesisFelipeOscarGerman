@@ -18,17 +18,15 @@ include 'pdfa21.php';
 include 'pdft27.php';
 
 include 'pdft15.php';
-
-/*include 'pdft32.php';
+/*
+include 'pdft32.php';
 
 include 'pdfn08.php';
 
 include 'pdfa13.php';*/
 
 //$pdf->Output($a21["Numdiligencias"].'.pdf','I',true);
-$pdf->Output('../diligencias/'.$a21["Numdiligencias"].'.pdf','I',true);
-
-header("location: ../busqueda.php");
+$pdf->Output('../diligencias/'.$_SESSION['diligencia'].'.pdf','I',true);
 
 
 /*

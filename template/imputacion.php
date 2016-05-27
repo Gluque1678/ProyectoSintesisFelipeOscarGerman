@@ -1,20 +1,20 @@
 						<div class="col-xs-12">
 						
 							<div class="col-xs-2">
-									<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo $dni['Nombre']; ?>" readonly />
+									<input type="text" id="imputadonombre" name= "nombre" class="form-control" placeholder="Nombre" value="<?php echo utf8_encode(ucfirst($dni['Nombre'])); ?>" readonly />
 							</div>
 
 							<div class="col-xs-2">
-								<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido" value="<?php echo $dni['Primerapellido']; ?>" readonly />
+								<input type="text" id="imputado1" name= "apellido1" class="form-control" placeholder="Primer apellido" value="<?php echo utf8_encode(ucfirst($dni['Primerapellido'])); ?>" readonly />
 							</div>
 
 						<div class="col-xs-2">
-								<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" value="<?php echo $dni['Segundoapellido']; ?>" readonly  />
+								<input type="text" id="imputado2" name= "apellido2" class="form-control" placeholder="Segundo apellido" value="<?php echo utf8_encode(ucfirst($dni['Segundoapellido'])); ?>" readonly  />
 						</div>
 
 						
 						<div class="col-xs-3">
-								<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" value="<?php echo $dni['Nacionalidad']; ?>" readonly  />
+								<input type="text" id="imputadonacionalidad" name= "nacionalidad" class="form-control" placeholder="Nacionalidad" value="<?php echo utf8_encode(ucfirst($dni['Nacionalidad'])); ?>" readonly  />
 						</div>
 
 						</br></br></br>
@@ -22,11 +22,10 @@
 						<div class="col-xs-3">
 						
 							<select class="form-control">
-								<option value="">Tipo de documento</option>
 				  				<option value="" selected>DNI</option>
-				 				<option value="">NIE</option>
+				 				<!-- <option value="">NIE</option>
 				  				<option value="">PASAPORTE</option>
-				  				<option value="">CARNET DE CONDUCIR</option>
+				  				<option value="">CARNET DE CONDUCIR</option> -->
 			  				</select>
 						</div>
 
@@ -81,7 +80,7 @@
 						</div>
 							
 						<div class="col-xs-5">
-							<input type="text" id="intérprete" name= "intérprete" class="form-control" placeholder="Quiero que me asista un intérprete de"value="" />
+							<input type="text" id="intérprete" name= "intérprete" class="form-control" placeholder="Quiero que me asista un intérprete de" value="" />
 						</div>
 		
 						

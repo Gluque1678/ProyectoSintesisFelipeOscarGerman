@@ -1,11 +1,43 @@
 <?php
 	session_start();
 	$dni=$_SESSION['dni_datos'];
-	// $_SESSION['diligencias']=$_REQUEST['Numdiligencias'];
+
 	$_SESSION['lugar']=$_REQUEST['lugar'];
+
 	$tip=$_SESSION['TIP'];
 	
 	include("conexion.proc.php");
+
+	$sqlExisteDni = "SELECT Num FROM dni where Num ='$dni[Num]'";
+
+	$qryExisteDni = mysqli_query($congu,$sqlExisteDni);
+
+	//Corregimos los posibles carácteres, como el apóstrofe, para que no haya problemas en la sentencia SQL
+	$Lugarnacimiento = mysqli_real_escape_string($congu,$_REQUEST['localidad']);
+	$Lugardomicilio  = mysqli_real_escape_string($congu,$_REQUEST['lugar']);
+
+	if (mysqli_num_rows($qryExisteDni)==0) {
+		$sqlInsertarDni = "INSERT INTO `dni`(`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`, `Nacionalidad`, `Fechanacimiento`, `Validez`, `Lugarnacimiento`, `Provincia`, `Hijode`, `Domicilio`, `Lugardomicilio`, `Equipo`) 
+						  VALUES (
+							  '$dni[Num]',
+							  '$dni[Primerapellido]',
+							  '$dni[Segundoapellido]',
+							  '$dni[Nombre]',
+							  '$dni[Sexo]',
+							  '$dni[Nacionalidad]',
+							  '$dni[Fechanacimiento]',
+							  '$dni[Validez]',
+							  '$Lugarnacimiento',
+							  '$dni[Provincia]',
+							  '$dni[Hijode]',
+							  '$dni[Domicilio]',
+							  '$Lugardomicilio',
+							  '$dni[Equipo]')";
+
+		//echo $sqlInsertarDni;
+		mysqli_query($congu,$sqlInsertarDni);
+
+	}
 
 if (empty($_REQUEST['halitosis'])) {
 		$_REQUEST['halitosis']=0;
@@ -91,7 +123,7 @@ if (empty($_REQUEST['Psicomotricidad_disminucionreflejos'])) {
 			'$_REQUEST[agentes]',
 			'$_REQUEST[dia]',
 			'$_REQUEST[hora]',
-			'$_REQUEST[lugar]',
+			'$_REQUEST[datoslugar]',
 			'$dni[Nombre]',
 			'$dni[Primerapellido]',
 			'$dni[Segundoapellido]',
@@ -128,7 +160,7 @@ if (empty($_REQUEST['Psicomotricidad_disminucionreflejos'])) {
 			'$_REQUEST[Psicomotricidad_apreciacionfalsa]',
 			'$_REQUEST[descripcionmotricidad]')";
 	$resultado1=mysqli_query($congu, $sqla21);
-	echo $sqla21;
+	//echo $sqla21;
 
 	if (empty($_REQUEST['autorizacion'])) {
 		$_REQUEST['autorizacion']=0;
@@ -148,9 +180,9 @@ if (empty($_REQUEST['Psicomotricidad_disminucionreflejos'])) {
 	   	'$_REQUEST[nombresustituto]',
 		'$_REQUEST[numerosustituto]',
 		'$_REQUEST[clasesustituto]',
-		'$_REQUEST[lugar]')";
+		'$_REQUEST[datoslugar]')";
 	$resultado2=mysqli_query($congu, $sqlt27);
-	echo $sqlt27;
+	//echo $sqlt27;
 
 	if (empty($_REQUEST['seguridadviaria'])) {
 		$_REQUEST['seguridadviaria']=0;
@@ -208,9 +240,9 @@ if (empty($_REQUEST['Psicomotricidad_disminucionreflejos'])) {
 	   	'$_REQUEST[centromedico]')";
 
 	$resultado3=mysqli_query($congu, $sqlt32);
-	echo $sqlt32;
+	//echo $sqlt32;
 
-// 	// // header("location: T27.php");
+
 
 	if (empty($_REQUEST['oficio'])) {
 		$_REQUEST['oficio']=0;
@@ -221,63 +253,62 @@ if (empty($_REQUEST['Psicomotricidad_disminucionreflejos'])) {
 
 	$sqln08 ="INSERT INTO `f_n08pl`(`DNI`, `Numdiligencias`, `TIP1`, `Municipio`, `Cuerpoagente`, `Motivoimputacion`, `Abogado`, `Abogadooficio`, `Renuncialetrada`, `Idiomainterprete`, `Observaciones`, `Causapenal_fecha`, `Causapenal_hora`)
 	   VALUES 
-	   ('$dni[Num]',
-	   	'$_REQUEST[Numdiligencias]',
-	   	'$_REQUEST[agentes]',
-	   	'$_REQUEST[municipio]',
-	   	'$_REQUEST[cuerpo]',
-	   	'$_REQUEST[Motivoimputacion]',
-	   	'$_REQUEST[privado]',
-	   	'$_REQUEST[oficio]',
-	   	'$_REQUEST[renuncio]',
-	   	'$_REQUEST[intérprete]',
-	   	'$_REQUEST[observaciones]',
-	   	'$_REQUEST[diacomparecer]',
-	   	'$_REQUEST[horacomparecer]')";
+		   ('$dni[Num]',
+		   	'$_REQUEST[Numdiligencias]',
+		   	'$_REQUEST[agentes]',
+		   	'$_REQUEST[municipio]',
+		   	'$_REQUEST[cuerpo]',
+		   	'$_REQUEST[Motivoimputacion]',
+		   	'$_REQUEST[privado]',
+		   	'$_REQUEST[oficio]',
+		   	'$_REQUEST[renuncio]',
+		   	'$_REQUEST[intérprete]',
+		   	'$_REQUEST[observaciones]',
+		   	'$_REQUEST[diacomparecer]',
+		   	'$_REQUEST[horacomparecer]')";
 	$resultado5=mysqli_query($congu, $sqln08);
-	echo $sqln08;
-// 	mysqli_close($congu);
+	//echo $sqln08;
 
 	$sqlt15 ="INSERT INTO `f_t15pl`(`DNI`, `Numdiligencias`, `TIP`,`Hora`,`Dia`) 
 	   VALUES 
-	   ('$dni[Num]',
-	   	'$_REQUEST[Numdiligencias]',
-	   	'$_REQUEST[agentes]',
-	   	'$_REQUEST[hora]',
+		   ('$dni[Num]',
+		   	'$_REQUEST[Numdiligencias]',
+		   	'$_REQUEST[agentes]',
+		   	'$_REQUEST[hora]',
 			'$_REQUEST[dia]')";
 	$resultado6=mysqli_query($congu, $sqlt15);
-	echo $sqlt15;
-// 	mysqli_close($congu);
+	//echo $sqlt15;
 
 	$sqla13 ="INSERT INTO `f_a13pl`(`DNI`, `Numdiligencias`, `TIP1`, `Lugar`, `Dia`, `Hora`, `Motivoinmobilizacion`, `Numerodenuncia`, `Tipodenuncia`, `Sistemainmobilizacion`, `Quilometrosactuales`, `Vehiculodisposicion`, `Fecharoturainmobilizacion`, `Horaroturainmobilizacion`, `Atestadodesobedienciagrave`, `Observaciones`, `Motivolevantamiento`, `Dialevantamiento`, `Horalevantamiento`, `Nombresustituto`, `Permisosustituto`, `Clasesustituto`, `Paisexpedicionsustituto`)
-VALUES 
-	   ('$dni[Num]',
-	   	'$_REQUEST[Numdiligencias]',
-	   	'$_REQUEST[agentes]',
-	   	'$_REQUEST[lugarinmob]',
-	   	'$_REQUEST[fecha]',
-	   	'$_REQUEST[hora]',
-	   	'$_REQUEST[immobilizacion]',
-	   	'$_REQUEST[denuncia]',
-	   	'$_REQUEST[Tipodenuncia]',
-	   	'$_REQUEST[sistema]',
-	   	'$_REQUEST[kilometros]',
-	   	'$_REQUEST[Vehiculodisposicion]',
-	   	'$_REQUEST[fecharot]',
-	   	'$_REQUEST[horarot]',
-	   	'$_REQUEST[atestadorot]',
-	   	'$_REQUEST[observaciones]',
-	   	'$_REQUEST[Motivolevantamiento]',
-	   	'$_REQUEST[fechalevantamiento]',
-	   	'$_REQUEST[horalevantamiento]',
-	   	'$_REQUEST[nombresustituto]',
-	   	'$_REQUEST[numerosustituto]',
-	   	'$_REQUEST[clasesustituto]',
-	   	'$_REQUEST[pais]')";
+		VALUES 
+		   ('$dni[Num]',
+		   	'$_REQUEST[Numdiligencias]',
+		   	'$_REQUEST[agentes]',
+		   	'$_REQUEST[lugarinmob]',
+		   	'$_REQUEST[fecha]',
+		   	'$_REQUEST[hora]',
+		   	'$_REQUEST[immobilizacion]',
+		   	'$_REQUEST[denuncia]',
+		   	'$_REQUEST[Tipodenuncia]',
+		   	'$_REQUEST[sistema]',
+		   	'$_REQUEST[kilometros]',
+		   	'$_REQUEST[Vehiculodisposicion]',
+		   	'$_REQUEST[fecharot]',
+		   	'$_REQUEST[horarot]',
+		   	'$_REQUEST[atestadorot]',
+		   	'$_REQUEST[observaciones]',
+		   	'$_REQUEST[Motivolevantamiento]',
+		   	'$_REQUEST[fechalevantamiento]',
+		   	'$_REQUEST[horalevantamiento]',
+		   	'$_REQUEST[nombresustituto]',
+		   	'$_REQUEST[numerosustituto]',
+		   	'$_REQUEST[clasesustituto]',
+		   	'$_REQUEST[pais]')";
 
 	$resultado=mysqli_query($congu, $sqla13);
-	echo $sqla13;
-// 	mysqli_close($congu);
+	//echo $sqla13;
+    mysqli_close($congu);
 
-	header("Location: diligencias.php?ndiligencia=".$_REQUEST['Numdiligencias']);
+
+	header("Location: diligencias.php");
 ?>

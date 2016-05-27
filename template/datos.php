@@ -2,7 +2,7 @@
 							<div class="col-xs-2">
 				
 								<label class="sr-only" for="NºDiligencias"></label>
-								<input type="text" id="Numdiligencias" name= "Numdiligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $diligencia; ?>" readonly />
+								<input type="text" id="Numdiligencias" name= "Numdiligencias" class="form-control" placeholder="Número de Diligencias" value="<?php echo $diligencia; $_SESSION['diligencia']=$diligencia; ?>" readonly />
 						
 							</div>
 					
@@ -29,7 +29,7 @@
 								</br></br></br>
 
 								<div class="col-xs-4">
-									<input type="text" id="lugar" name= "lugar" class="form-control" placeholder="Direccion(Tipo de via,nombre y número)" value=""/>
+									<input type="text" id="datoslugar" name= "datoslugar" class="form-control" placeholder="Direccion(Tipo de via,nombre y número)" value=""/>
 								</div>
 
 								<div class="col-xs-4">

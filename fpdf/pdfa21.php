@@ -1,6 +1,6 @@
 <?php
 
-$sqla21 = "SELECT * FROM f_a21pl WHERE Numdiligencias = '$_REQUEST[ndiligencia]'";
+$sqla21 = "SELECT * FROM f_a21pl WHERE Numdiligencias = '$_SESSION[diligencia]'";
 
 $qry = mysqli_query($congu,$sqla21);
 
@@ -39,7 +39,7 @@ $pdf->Write(1, $a21['Lugar']);
 
 //dades de la persona requerida
 $pdf->SetXY(27, 62);
-$pdf->Write(1, $a21['Primerapellido'].", ".$a21['Nombre']);
+$pdf->Write(1, $a21['Primerapellido']." ".$a21['Segundoapellido'].", ".$a21['Nombre']);
 
 $pdf->SetXY(157, 62);
 $pdf->Write(1, $a21['Permiso']);
@@ -211,6 +211,10 @@ if ($a21['Psicomotricidad_apreciacionfalsa']) {
 	$pdf->SetXY(27.1, 228.6);
 	$pdf->Write(1, "X");
 }
+
+//Descripción motricidad
+$pdf->SetXY(27, 237);
+$pdf->Write(1, $a21['Descripcionmotricidad']);
 
 
 $pdf->SetXY(27, 265);

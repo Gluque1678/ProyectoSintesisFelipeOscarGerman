@@ -1,11 +1,9 @@
 $(document).ready(function(){	
 
-$('mostrar-diligencia').click(function{
-
+$('#diacomparecer').blur(function(){
+  var fecha = $('#diacomparecer').val();
+  alert(fecha);
 });
-
-
-// attr('href','fpdf/actas.php?ndiligencia=$_REQUEST["ndiligencia"]');
 
 $('#segundoconductor').hide();
 
@@ -84,7 +82,7 @@ $('#segundoconductor').hide();
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-  //botón arriba
+  //botón arriba al hacer click hará el método metro hacia arriba
   $('.ir-arriba').click(function(){
       $('body, html').animate({
         scrollTop: '0px'
@@ -92,6 +90,7 @@ $('#segundoconductor').hide();
 
   });
 
+  //según la posición del scroll, se esconderá o mostrará
   $(window).scroll(function(){
     if ( $(this).scrollTop() > 0){
        $('.ir-arriba').slideDown(300);
@@ -115,19 +114,22 @@ $('#segundoconductor').hide();
   $('#denuncia').val($('#Numdiligencias').val());
 
   //rellenar campo permiso en DENUNCIA
-  $('#lugar').blur(function(){
-    $('#denunciaLugar').val($('#lugar').val());
-    $('#lugarinmob').val($('#lugar').val());
+  $('#datoslugar').blur(function(){
+    $('#denunciaLugar').val($('#datoslugar').val());
+    $('#lugarinmob').val($('#datoslugar').val());
 
   });
 
 //////////////////////////////////////////////////////////////////////////////////////////////
   
+  //mostrar o esconder el submenú del segundo conductor
   $('#motivolevantamiento').change(function(){
     var opcion =  $('#motivolevantamiento').val();
     if (opcion === '1') $('#segundoconductor').show();
     else $('#segundoconductor').hide();
   });
+
+
 
 });
 

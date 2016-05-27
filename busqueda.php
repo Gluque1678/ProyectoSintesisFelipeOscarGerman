@@ -95,13 +95,14 @@ $matricula = " ";
 					if(mysqli_num_rows($res1)==1) {
 
 						$datos_dni=mysqli_fetch_array($res1);
+						
 						$_SESSION['dni_datos']=$datos_dni;
 
 						echo $datos_dni["Num"].'<br>';
-						echo ucfirst($datos_dni["Nombre"]).'&nbsp';
-						echo ucfirst($datos_dni["Primerapellido"]).'&nbsp';
-						echo ucfirst($datos_dni["Segundoapellido"]).'<br>';
-						echo ucfirst($datos_dni["Domicilio"]).'<br>';
+						echo utf8_encode(ucfirst($datos_dni["Nombre"])).'&nbsp';
+						echo utf8_encode(ucfirst($datos_dni["Primerapellido"])).'&nbsp';
+						echo utf8_encode(ucfirst($datos_dni["Segundoapellido"])).'<br>';
+						echo utf8_encode(ucfirst($datos_dni["Domicilio"])).'<br>';
 						$btnAlcoholemia = 1; //visible
 
 						//comprobación para saber si tiene carnet de conducir
@@ -145,9 +146,9 @@ $matricula = " ";
 								$_SESSION['matricula_datos']=$datos_matricula;
 								
 								echo $datos_matricula["Matricula"].'<br>';
-								echo ucfirst(strtolower($datos_matricula["Marca"])).'&nbsp';
-								echo ucfirst(strtolower($datos_matricula["Modelo"])).'&nbsp';
-								echo ucfirst(strtolower($datos_matricula["Color"])).'<br/>';
+								echo ucfirst(ucfirst(strtolower($datos_matricula["Marca"]))).'&nbsp';
+								echo ucfirst(ucfirst(strtolower($datos_matricula["Modelo"]))).'&nbsp';
+								echo ucfirst(ucfirst(strtolower($datos_matricula["Color"]))).'<br/>';
 								echo ucfirst(strtoupper($datos_matricula["DNI"])).'&nbsp/&nbsp';
 
 								$titularcoche = strtoupper($datos_matricula["DNI"]);
@@ -158,9 +159,9 @@ $matricula = " ";
 								$datos_titular= mysqli_fetch_array($res2titular);
 								$_SESSION['titular_datos']=$datos_titular;
 
-								echo ucfirst(strtolower($datos_titular["Nombre"])).'&nbsp';
-								echo ucfirst(strtolower($datos_titular["Primerapellido"])).'&nbsp';
-								echo ucfirst(strtolower($datos_titular["Segundoapellido"])).'<br/>';
+								echo utf8_encode(ucfirst(strtolower($datos_titular["Nombre"]))).'&nbsp';
+								echo utf8_encode(ucfirst(strtolower($datos_titular["Primerapellido"]))).'&nbsp';
+								echo utf8_encode(ucfirst(strtolower($datos_titular["Segundoapellido"]))).'<br/>';
 								if (!$datos_matricula["Segurovigente"]) echo $imgAlerta."Atención! Sin seguro vigente".'<br/>';
 								if ($datos_matricula["Estadorobo"])     echo $imgAlerta."Atención! Coche robado".'<br/>';
 								if (!$datos_matricula["Itvvigente"])    echo $imgAlerta."Atención! Itv caducada".'<br/>';									

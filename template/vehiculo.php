@@ -18,7 +18,7 @@
 						</div>
 
 						<div class="col-xs-2">
-							<input type="text" id="denuncia" name="denuncia" class="form-control" placeholder="Denuncia número"/>
+							<input type="text" id="denuncia" name="denuncia" class="form-control" placeholder="Denuncia número" readonly/>
 						</div>
 
 						<div class="col-xs-3">
@@ -158,8 +158,7 @@
 								<div class="col-xs-12">
 									<label class="observaciones" for="observaciones">Observaciones</label>
 									</br>
-									<textarea class="form-control" rows="1">
-									</textarea>
+									<textarea class="form-control" rows="1"></textarea>
 								</div>
 
 								</br></br></br></br>
@@ -240,7 +239,4 @@
 							</div>	
 						</div>
 					</div>
-				</div>
-	
-
-						</br></br></br></br>
+				</div><br/><br/><br/><br/>

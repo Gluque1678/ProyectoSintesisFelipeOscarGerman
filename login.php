@@ -2,7 +2,7 @@
 
 session_start();
 include("conexion.proc.php");
-
+//se quitan espacios en blanco
 $tip  = trim($_REQUEST['TIP']);
 $pass = trim($_REQUEST['Password']);
 

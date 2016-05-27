@@ -1,11 +1,13 @@
 <?php
 
-$sqlt27 = "SELECT * FROM f_t27pl";
+$sqlt27 = "SELECT * FROM f_t27pl WHERE Numdiligencias = '$_SESSION[diligencia]'";
+$sqla13 = "SELECT * FROM f_a13pl WHERE Numdiligencias = '$_SESSION[diligencia]'";
 
-$qry = mysqli_query($congu,$sqlt27);
+$qry    = mysqli_query($congu,$sqlt27);
+$qrya13 = mysqli_query($congu,$sqla13);
 
+$a13 = mysqli_fetch_assoc($qrya13);
 $a27 = mysqli_fetch_assoc($qry);
-
 
 //var_dump($a21);
 
@@ -79,7 +81,7 @@ $pdf->SetXY(52.7, 214.7);
 $pdf->Write(1, $a27['Horanegativa']);
 
 $pdf->SetFontSize(10);
-if ($a27['autorizacion']) {
+if ($a13['Motivolevantamiento']) {
 	$pdf->SetXY(26.7, 239.5);
 	$pdf->Write(1, 'X');
 	$pdf->SetXY(26.7, 247.5);
