@@ -112,7 +112,7 @@
 						<div class="col-xs-12">
 							<div class="citacion">
 								<div class="col-xs-3">
-									<input type="date" id="diacomparecer" name= "diacomparecer" class="form-control" placeholder="Fecha"/>
+									<input type="date" id="diacomparecer" name= "diacomparecer" class="form-control" placeholder="Fecha" min="<?php echo $fechamysql ?>" />
 								</div>
 
 								<div class="col-xs-2">

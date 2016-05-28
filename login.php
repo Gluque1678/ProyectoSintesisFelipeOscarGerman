@@ -4,7 +4,11 @@ session_start();
 include("conexion.proc.php");
 //se quitan espacios en blanco
 $tip  = trim($_REQUEST['TIP']);
-$pass = trim($_REQUEST['Password']);
+$password = trim($_REQUEST['Password']);
+
+$salt = 'Daw$2';
+
+$pass = sha1(md5($salt.$password));
 
 $qry = "SELECT * FROM agente WHERE TIP='$tip' AND Password='$pass'";
 

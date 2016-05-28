@@ -20,7 +20,7 @@
 		$sqlInsertarDni = "INSERT INTO `dni`(`Num`, `Primerapellido`, `Segundoapellido`, `Nombre`, `Sexo`, `Nacionalidad`, `Fechanacimiento`, `Validez`, `Lugarnacimiento`, `Provincia`, `Hijode`, `Domicilio`, `Lugardomicilio`, `Equipo`) 
 						  VALUES (
 							  '$dni[Num]',
-							  '$dni[Primerapellido]',
+							  '$dni[Primerapellido])',
 							  '$dni[Segundoapellido]',
 							  '$dni[Nombre]',
 							  '$dni[Sexo]',

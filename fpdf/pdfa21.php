@@ -32,14 +32,18 @@ $pdf->Write(1, $a21['Dia']);
 $pdf->SetXY(177, 29);
 $pdf->Write(1, $a21['Hora']);
 
+$Lugar = utf8_encode(ucfirst($a21['Lugar']));
 $pdf->SetXY(118, 37);
-$pdf->Write(1, $a21['Lugar']);
+$pdf->Write(1, $Lugar);
 
 //acta de simptomatologia
+$Primerapellido  = utf8_encode(ucfirst($a21['Primerapellido']));
+$Segundoapellido = utf8_encode(ucfirst($a21['Segundoapellido']));
+$Nombre          = utf8_encode(ucfirst($a21['Nombre']));
 
 //dades de la persona requerida
 $pdf->SetXY(27, 62);
-$pdf->Write(1, $a21['Primerapellido']." ".$a21['Segundoapellido'].", ".$a21['Nombre']);
+$pdf->Write(1, $Primerapellido." ".$Segundoapellido.", ".$Nombre);
 
 $pdf->SetXY(157, 62);
 $pdf->Write(1, $a21['Permiso']);
@@ -58,9 +62,10 @@ $pdf->Write(1, $a21['Altura']." cm");
 $pdf->SetXY(157, 70);
 $pdf->Write(1, $a21['Peso']." kg");
 
+$Descripcionconduccion = utf8_encode(ucfirst($a21['Descripcionconduccion']));
 //Descripció de la conducció
 $pdf->SetXY(27, 82);
-$pdf->Write(1, $a21['Descripcionconduccion']);
+$pdf->Write(1, $Descripcionconduccion);
 
 
 //Simptomatologia
@@ -125,8 +130,9 @@ if ($a21['Comportamiento_variaciones']) {
 }
 
 //Descripció del comportament
+$Descripcioncomportamiento = utf8_encode(ucfirst($a21['Descripcioncomportamiento']));
 $pdf->SetXY(27, 169);
-$pdf->Write(1, $a21['Descripcioncomportamiento']);
+$pdf->Write(1, $Descripcioncomportamiento);
 
 //ulls mirada
 if ($a21['Mirada_midriaticos']) {
@@ -213,8 +219,10 @@ if ($a21['Psicomotricidad_apreciacionfalsa']) {
 }
 
 //Descripción motricidad
+$Descripcionmotricidad = utf8_encode(ucfirst($a21['Descripcionmotricidad']));
+
 $pdf->SetXY(27, 237);
-$pdf->Write(1, $a21['Descripcionmotricidad']);
+$pdf->Write(1, $Descripcionmotricidad);
 
 
 $pdf->SetXY(27, 265);

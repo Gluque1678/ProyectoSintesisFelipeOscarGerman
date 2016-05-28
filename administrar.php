@@ -51,9 +51,11 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                             <div class="form-bottom">
-                        </div>
+                                <a href="busqueda.php"><button id="volver" name="volver" class="btn btn-danger font-size-2em">Volver</button></a>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             
@@ -107,15 +109,11 @@ $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
                     ?>
                 </tbody>
 		      </div>
+
 		</div>
 
-	<div>
-        <?php
-        echo '<a href="busqueda.php"><button id="btnAlcoholemia" name="Alcoholemia" class="btn btn-danger font-size-2em">Volver</button></a>';
-        echo '<div style="bottom: 0;"></div>';
-        ?>
-	</div>
-
+    </div>
+        
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/jquery-1.11.1.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>

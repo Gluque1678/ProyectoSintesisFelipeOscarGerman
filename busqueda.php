@@ -6,7 +6,7 @@ include 'conexion.proc.php';
 
 $imgAlerta = "<img src='img/alerta.gif' alt='alerta'/>";
 
-$btnAlcoholemia = 0; //oculto
+$btnAlcoholemia = 0; // botón oculto
 
 $dni = " ";
 $matricula = " ";
@@ -63,6 +63,7 @@ $matricula = " ";
                               </div>
                               <div class="form-group">
                                 <input type="search" id="idmatricula" name="Matricula" placeholder="Matrícula" required class="form-password form-control font-size-2em text-centro"/>
+                                <div id="errorMatricula"></div>
                               </div>
                               <input type="submit" id="buscar" name="buscador" value="Buscar" class="btn btn-success font-size-2em"/><br/>
                           </form><br/>
@@ -165,7 +166,8 @@ $matricula = " ";
 								if (!$datos_matricula["Segurovigente"]) echo $imgAlerta."Atención! Sin seguro vigente".'<br/>';
 								if ($datos_matricula["Estadorobo"])     echo $imgAlerta."Atención! Coche robado".'<br/>';
 								if (!$datos_matricula["Itvvigente"])    echo $imgAlerta."Atención! Itv caducada".'<br/>';									
-							} else echo "No hay datos del vehículo";
+							} else echo $imgAlerta."No hay datos del vehículo"; 
+							        $btnAlcoholemia == 0;
 						}
 					?>
 		      </div>
@@ -184,7 +186,6 @@ $matricula = " ";
 		?>
 		
 	</div>
-	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="js/jquery-1.11.1.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>

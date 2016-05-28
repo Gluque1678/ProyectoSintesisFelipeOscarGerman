@@ -1,7 +1,7 @@
 <div class="panel panel-info">
 					<div class="panel-heading">
 						<div class="simptoma">
-							<h3>Simptomatologia: Se hace constar que la persona requerida presentava la simptomatologia siguiente</h3>
+							<h3>Simptomatologia: Se hace constar que la persona requerida presentaba la simptomatologia siguiente</h3>
 						</div>
 					</div>
 				</div>             
@@ -34,20 +34,17 @@
 		
 					<div class="col-xs-12">		
 						<label>
-							<input type="radio" name="constitucion" id="constitucion" value="Corpulenta"/>
-							Corpulenta
+							<input type="radio" name="constitucion" id="constitucion" value="Corpulenta"/>Corpulenta
 						</label>
 
 						<label>
 							
-							<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked/>
-							Mediana
+							<input type="radio" name="constitucion" id="constitucion" value="Mediana" checked/>Mediana
 						</label>
 						
 						<label>
 							
-							<input type="radio" name="constitucion" id="constitucion" value="Pequeña"/>
-							Pequeña
+							<input type="radio" name="constitucion" id="constitucion" value="Pequeña"/>Pequeña
 						</label>
 					</div>
 				
@@ -59,8 +56,7 @@
 
 							<div class="Comportamiento">
 								
-								<label for="fisica"><h4 style="margin-top: -5px;">Comportamiento</h4>
-								
+								<label for="fisica"><h4 style="margin-top: -5px;">Comportamiento</h4>				
 								</label>
 								</br>
 							</div>
@@ -70,36 +66,36 @@
 
 						
 							<label class="checkbox-inline">
-			  				<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"/> Agresivo
+			  					<input type="checkbox" id="Comportamiento_agresivo" name="Comportamiento_agresivo" value="1"/> Agresivo
 							</label>
 						
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"/> Insultante
+			 				 	<input type="checkbox" id="Comportamiento_insultante" name="Comportamiento_insultante" value="1"/> Insultante
 							</label>
 						
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"/> Irrespetuoso
+			 				 	<input type="checkbox" id="Comportamiento_irrespetuoso" name="Comportamiento_irrespetuoso" value="1"/> Irrespetuoso
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"/> Eufórico
+			 				 	<input type="checkbox" id="Comportamiento_euforico" name="Comportamiento_euforico" value="1"/> Eufórico
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"/> Locuaz
+			 				 	<input type="checkbox" id="Comportamiento_muyloquaz" name="Comportamiento_muyloquaz" value="1"/> Locuaz
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"/> Excitado
+			 				 	<input type="checkbox" id="Comportamiento_excitado" name="Comportamiento_excitado" value="1"/> Excitado
 							</label>
 
 							<label class="checkbox-inline">
-			 				 <input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"/> Variaciones obtadas de comportamiento o estado de ánimo
+			 				 	<input type="checkbox" id="Comportamiento_variaciones" name="checkboxEnLinea" value="1"/> Variaciones obtadas de comportamiento o estado de ánimo
 							</label>
-							</div>
+						</div>
 
 							
-						</div>
+					</div>
 
 
 						<div class="panel panel-success">

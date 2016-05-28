@@ -36,7 +36,7 @@ $pdf->SetXY(175, 29);
 $pdf->Write(1, $a27['Hora']);
 
 $pdf->SetXY(131, 38);
-$pdf->Write(1, $a27['Lugar']);
+$pdf->Write(1, $Lugar);
 
 switch (utf8_encode($a27['Actuacion'])) {
 	case 'Control preventivo':
@@ -58,8 +58,11 @@ switch (utf8_encode($a27['Actuacion'])) {
 		break;
 }
 
+$pdf->SetXY(27, 69);
+$pdf->Write(1, $Primerapellido." ".$Segundoapellido.", ".$Nombre);
+
 $pdf->SetXY(144, 69);
-$pdf->Write(1, $a27['Horanegativa']);
+$pdf->Write(1, $a21['Permiso']);
 
 if ($a27['negacion']) {
 	$pdf->SetXY(86, 193.1);
@@ -80,18 +83,23 @@ $pdf->SetFontSize(7);
 $pdf->SetXY(52.7, 214.7);
 $pdf->Write(1, $a27['Horanegativa']);
 
+$Conductorsubstituto = utf8_encode(ucfirst($a27['Conductorsubstituto']));
+$Permisosubstituto   = utf8_encode(ucfirst($a27['Permisosubstituto']));
+$Clasesubstituto     = utf8_encode(strtoupper($a27['Clasesubstituto']));
+$Permisosubstituto   = utf8_encode(strtoupper($a27['Permisosubstituto']));
+
 $pdf->SetFontSize(10);
 if ($a13['Motivolevantamiento']) {
 	$pdf->SetXY(26.7, 239.5);
 	$pdf->Write(1, 'X');
 	$pdf->SetXY(26.7, 247.5);
-	$pdf->Write(1, $a27['Conductorsubstituto']);
+	$pdf->Write(1, $Conductorsubstituto);
 	$pdf->SetXY(90, 247.5);
-	$pdf->Write(1, $a27['Permisosubstituto']);
+	$pdf->Write(1, $Permisosubstituto);
 	$pdf->SetXY(153, 247.5);
-	$pdf->Write(1, $a27['Clasesubstituto']);
+	$pdf->Write(1, $Clasesubstituto);
 	$pdf->SetXY(166, 267.5);
-	$pdf->Write(1, $a27['Permisosubstituto']);
+	$pdf->Write(1, $Permisosubstituto);
 
 }
 

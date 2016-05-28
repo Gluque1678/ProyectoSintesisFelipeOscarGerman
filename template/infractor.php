@@ -100,12 +100,12 @@
 								</div>	
 
 								<div class="col-xs-2">
-									<input type="number" name="altura" id="altura" class="form-control" placeholder="Altura" maxlength="3"/>
+									<input type="number" name="altura" id="altura" class="form-control" placeholder="Altura" maxlength="3" min="1" max="250"/>
 								</div>
 
 								
 								<div class="col-xs-2">
-									<input type="number" name="peso" id="peso" class="form-control" placeholder="Peso" maxlength="3"/>
+									<input type="number" name="peso" id="peso" class="form-control" placeholder="Peso" maxlength="3" min="100" max="250"/>
 								</div>
 
 								</br></br></br>

@@ -13,6 +13,8 @@ include("conexion.proc.php");
 $diligencia = time();
 $hora       = date ("H:i:s",$diligencia);
 $fecha      = date ("d/m/Y",$diligencia);
+$fechamysql = date ("Y-m-d",$diligencia);
+$horamysql  = date ("H:i",$diligencia);
 
 ?>
 

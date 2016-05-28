@@ -34,10 +34,10 @@ $pdf->SetXY(150.5, 31);
 $pdf->Write(1, $a15['Hora']);
 
 $pdf->SetXY(130, 40);
-$pdf->Write(1, $a27['Lugar']);
+$pdf->Write(1, $Lugar);
 
 $pdf->SetXY(27, 58);
-$pdf->Write(1, $a21['Primerapellido']." ".$a21['Segundoapellido'].", ".$a21['Nombre']);
+$pdf->Write(1, $Primerapellido." ".$Segundoapellido.", ".$Nombre);
 
 $pdf->SetXY(121, 58);
 $pdf->Write(1, $a15['DNI']);

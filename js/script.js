@@ -1,8 +1,14 @@
 $(document).ready(function(){	
 
-$('#diacomparecer').blur(function(){
-  var fecha = $('#diacomparecer').val();
-  alert(fecha);
+//comprobar si la hora de la prueba 2 es menor que prueba 1
+$('#hora2').blur(function(){
+  if($('#hora2').val() < $('#hora1').val()) {
+     $('#hora2').focus();
+     $('#hora2').css("background-color", "#FFEBEE");
+    } else {
+      $('#hora2').css("background-color", "#fff");
+    }
+
 });
 
 $('#segundoconductor').hide();
@@ -78,6 +84,7 @@ $('#segundoconductor').hide();
         $('#errorDni').hide();
         return true;
       }
+      
   });
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -104,7 +111,7 @@ $('#segundoconductor').hide();
 /////////////////////////////////////////////////////////////////////////////////////////////
 
   //rellenar campo permiso en FIRMA
-  $('#permiso').blur(function(){
+  $('#numerosustituto').blur(function(){
     $('#permisoConductor2').val($('#permiso').val());
 
   });
