@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2016 a las 12:20:50
+-- Tiempo de generación: 29-05-2016 a las 12:54:23
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -34,15 +34,17 @@ CREATE TABLE IF NOT EXISTS `agente` (
   `Nombre` varchar(75) COLLATE utf8_bin NOT NULL,
   `Primerapellido` varchar(75) COLLATE utf8_bin NOT NULL,
   `Segundoapellido` varchar(75) COLLATE utf8_bin NOT NULL,
-  `Password` varchar(25) COLLATE utf8_bin NOT NULL
+  `Password` varchar(50) COLLATE utf8_bin NOT NULL,
+  `nivel` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `agente`
 --
 
-INSERT INTO `agente` (`TIP`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Password`) VALUES
-(666, 'Raul', 'Perez', 'Portoles', '1234');
+INSERT INTO `agente` (`TIP`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Password`, `nivel`) VALUES
+(123, 'Victor', 'Cruz', 'Calamar', '1234', 0),
+(666, 'Raul', 'Perez', 'Portoles', '1234', 1);
 
 -- --------------------------------------------------------
 
@@ -110,6 +112,14 @@ CREATE TABLE IF NOT EXISTS `f_a13pl` (
   `Paisexpedicionsustituto` varchar(40) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Volcado de datos para la tabla `f_a13pl`
+--
+
+INSERT INTO `f_a13pl` (`DNI`, `Numdiligencias`, `TIP1`, `Lugar`, `Dia`, `Hora`, `Motivoinmobilizacion`, `Numerodenuncia`, `Tipodenuncia`, `Sistemainmobilizacion`, `Quilometrosactuales`, `Vehiculodisposicion`, `Fecharoturainmobilizacion`, `Horaroturainmobilizacion`, `Atestadodesobedienciagrave`, `Observaciones`, `Motivolevantamiento`, `Dialevantamiento`, `Horalevantamiento`, `Nombresustituto`, `Permisosustituto`, `Clasesustituto`, `Paisexpedicionsustituto`) VALUES
+('46997126F', '1464259334', 666, '', '1995-12-19', '12:42:14', '', 1464259334, 'municipal', '', 0, 'Juzgado de Guardia', '', '', 0, '', '0', '', '', '', '', '', ''),
+('46997126F', '1464344472', 666, '', '1995-12-19', '12:21:12', '', 1464344472, 'municipal', '', 0, 'Juzgado de Guardia', '', '', 0, '', '0', '', '', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -161,6 +171,13 @@ CREATE TABLE IF NOT EXISTS `f_a21pl` (
   `Descripcionmotricidad` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Volcado de datos para la tabla `f_a21pl`
+--
+
+INSERT INTO `f_a21pl` (`DNI`, `Numdiligencias`, `TIP1`, `Dia`, `Hora`, `Lugar`, `Nombre`, `Primerapellido`, `Segundoapellido`, `Permiso`, `Sexo`, `Altura`, `Peso`, `Descripcionconduccion`, `Halitosi`, `Constitucion`, `Comportamiento_agresivo`, `Comportamiento_insultante`, `Comportamiento_irrespetuoso`, `Comportamiento_euforico`, `Comportamiento_muyloquaz`, `Comportamiento_excitado`, `Comportamiento_variaciones`, `Descripcioncomportamiento`, `Mirada_midriaticos`, `Mirada_mioticos`, `Mirada_brillantes`, `Mirada_somnolienta`, `Mirada_perdida`, `Habla_pastosa`, `Habla_clara`, `Habla_vacilante`, `Expresion_ininteligibles`, `Expresion_incoherentes`, `Expresion_repetitivo`, `Expresion_fugaideas`, `Psicomotricidad_vacilante`, `Psicomotricidad_imprecision`, `Psicomotricidad_disminucionreflejos`, `Psicomotricidad_apreciacionfalsa`, `Descripcionmotricidad`) VALUES
+('46997126F', '1464259334', 666, '26/05/2016', '12:42:14', 'C.Mineria 9 PO5 7', 'Oscar', 'Ortiz', 'Fernandez', '46997126F', 'Hombre', 0, 0, '', 1, 'Mediana', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+
 -- --------------------------------------------------------
 
 --
@@ -184,6 +201,14 @@ CREATE TABLE IF NOT EXISTS `f_n08pl` (
   `Causapenal_hora` varchar(10) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Volcado de datos para la tabla `f_n08pl`
+--
+
+INSERT INTO `f_n08pl` (`DNI`, `Numdiligencias`, `TIP1`, `Municipio`, `Cuerpoagente`, `Motivoimputacion`, `Abogado`, `Abogadooficio`, `Renuncialetrada`, `Idiomainterprete`, `Observaciones`, `Causapenal_fecha`, `Causapenal_hora`) VALUES
+('46997126F', '1464259334', 666, 'C.Mineria 9 PO5 7', 'Guardia Urbana', '', '0', 0, 0, '', '', '', ''),
+('46997126F', '1464344472', 666, 'C.Mineria 9 PO5 7', 'Guardia Urbana', '', '0', 0, 0, '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -200,6 +225,14 @@ CREATE TABLE IF NOT EXISTS `f_t15pl` (
   `Ticket1` varchar(255) COLLATE utf8_bin NOT NULL,
   `Ticket2` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `f_t15pl`
+--
+
+INSERT INTO `f_t15pl` (`DNI`, `Numdiligencias`, `TIP`, `Dia`, `Hora`, `Ticket1`, `Ticket2`) VALUES
+('46997126F', '1464259334', 666, '26/05/2016', '12:42:14', '', ''),
+('46997126F', '1464344472', 666, '27/05/2016', '12:21:12', '', '');
 
 -- --------------------------------------------------------
 
@@ -223,6 +256,13 @@ CREATE TABLE IF NOT EXISTS `f_t27pl` (
   `Clasesubstituto` varchar(5) COLLATE utf8_bin NOT NULL,
   `Lugar` char(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `f_t27pl`
+--
+
+INSERT INTO `f_t27pl` (`DNI`, `Numdiligencias`, `TIP1`, `Dia`, `Hora`, `Actuacion`, `negacion`, `Horanegativa`, `autorizacion`, `Conductorsubstituto`, `Permisosubstituto`, `Clasesubstituto`, `Lugar`) VALUES
+('46997126F', '1464259334', 666, '26/05/2016', '12:42:14', 'Control preventivo', 1, '00:00:00', 0, '', '', '', 'C.Mineria 9 PO5 7');
 
 -- --------------------------------------------------------
 
@@ -256,6 +296,14 @@ CREATE TABLE IF NOT EXISTS `f_t32pl` (
   `hora_traslado` time DEFAULT NULL,
   `centro_medico` char(255) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `f_t32pl`
+--
+
+INSERT INTO `f_t32pl` (`dni`, `Numdiligencias`, `tip1`, `seguridad_viaria`, `conducir_taxa`, `conducir_influencia`, `conducir_negacion`, `conducir_perdida`, `conducir_privat`, `conducir_sincarnet`, `conducir_velocidad`, `desobediencia`, `telefono`, `Marcaetilometro`, `Modelo`, `Numeroserie`, `Calibradohasta`, `prueba1_hora`, `prueba1_resultado`, `prueba2_hora`, `prueba2_resultado`, `hora_traslado`, `centro_medico`) VALUES
+('46997126F', '1464259334', 666, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Drager Alcotest', 'TT Sport', 0, '2017', '00:00:00', 0, '00:00:00', 0, '00:00:00', ''),
+('46997126F', '1464344472', 666, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Drager Alcotest', 'TT Sport', 0, '2017', '00:00:00', 0, '00:00:00', 0, '00:00:00', '');
 
 --
 -- Índices para tablas volcadas
